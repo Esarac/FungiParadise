@@ -2,3 +2,8 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.Properties.Resources.resources
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.GenerateResource.cache
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.CoreCompileInputs.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\FungiParadise.exe.config
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\FungiParadise.exe
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\FungiParadise.pdb
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.exe
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.pdb

@@ -37,7 +37,7 @@ namespace FungiParadise.Model
         public static readonly char[] HABITAD = { 'g', 'l', 'm', 'p', 'u', 'w', 'd' };
 
         //Attributes
-        //Class
+            //Class
         private Type type;
             //Vars
         private char capShape;
@@ -70,6 +70,54 @@ namespace FungiParadise.Model
         private char habitad;
 
         //Constructor
+        public Mushroom(Type type, char capShape, char capSurface, char capColor, char bruises, char odor, char gillAttachment, char gillSpacing, 
+        char gillSize, char gillColor, char stalkShape, char stalkRoot, char stalkSurfaceAboveRing, char stalkSurfaceBelowRing, char stalkColorAboveRing, 
+        char stalkColorBelowRing, char veilType, char veilColor, char ringNumber, char ringType, char sporePrintColor, char population, char habitad)
+        {
+            if (CAP_SHAPE.Contains(capShape) && CAP_SURFACE.Contains(capSurface) && CAP_COLOR.Contains(capColor) && BRUISES.Contains(bruises)
+            && ODOR.Contains(odor) && GILL_ATTACHMENT.Contains(gillAttachment) && GILL_SPACING.Contains(gillSpacing) && GILL_SIZE.Contains(gillSize)
+            && GILL_COLOR.Contains(gillColor) && STALK_SHAPE.Contains(stalkShape) && STALK_ROOT.Contains(stalkRoot)
+            && STALK_SURFACE_ABOVE_RING.Contains(stalkSurfaceAboveRing) && STALK_SURFACE_BELOW_RING.Contains(stalkSurfaceBelowRing)
+            && STALK_COLOR_ABOVE_RING.Contains(stalkColorAboveRing) && STALK_COLOR_BELOW_RING.Contains(stalkColorBelowRing) && VEIL_TYPE.Contains(veilType)
+            && VEIL_COLOR.Contains(veilColor) && RING_NUMBER.Contains(ringNumber) && RING_TYPE.Contains(ringType)
+            && SPORE_PRINT_COLOR.Contains(sporePrintColor) && POPULATION.Contains(population) && HABITAD.Contains(habitad))
+            {
+                this.type = type;
 
+                this.capShape = capShape;
+                this.capSurface = capSurface;
+                this.capColor = capColor;
+
+                this.bruises = bruises;
+                this.odor = odor;
+
+                this.gillAttachment = gillAttachment;
+                this.gillSpacing = gillSpacing;
+                this.gillSize = gillSize;
+                this.gillColor = gillColor;
+
+                this.stalkShape = stalkShape;
+                this.stalkRoot = stalkRoot;
+                this.stalkSurfaceAboveRing = stalkSurfaceAboveRing;
+                this.stalkSurfaceBelowRing = stalkSurfaceBelowRing;
+                this.stalkColorAboveRing = stalkColorAboveRing;
+                this.stalkColorBelowRing = stalkColorBelowRing;
+
+                this.veilType = veilType;
+                this.veilColor = veilColor;
+
+                this.ringNumber = ringNumber;
+                this.ringType = ringType;
+
+                this.sporePrintColor = sporePrintColor;
+                this.population = population;
+                this.habitad = habitad;
+            }
+            else
+            {
+                Console.WriteLine("Error bip bup");
+            }
+
+        }
     }
 }
