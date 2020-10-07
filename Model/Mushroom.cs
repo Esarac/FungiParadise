@@ -14,7 +14,8 @@ namespace FungiParadise.Model
         //Constants
         public enum Type {Edible, Poisonous}
         public static readonly char[] CAP_SHAPE = {'b', 'c', 'x', 'f', 'k', 's'};
-        //public static readonly char[] CAP_SHAPE = { 'b', 'c', 'x', 'f', 'k', 's' };
+        public static readonly char[] CAP_SURFACE = { 'b', 'c', 'x', 'f', 'k', 's' };
+        public static readonly char[] CAP_COLOR = { 'b', 'c', 'x', 'f', 'k', 's' };
 
         //Attributes
         //Class
