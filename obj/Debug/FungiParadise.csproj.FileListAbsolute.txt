@@ -1,0 +1,4 @@
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csprojAssemblyReference.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.Properties.Resources.resources
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.GenerateResource.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.CoreCompileInputs.cache
