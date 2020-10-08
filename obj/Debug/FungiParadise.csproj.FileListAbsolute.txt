@@ -7,3 +7,17 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\FungiParadise.
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\FungiParadise.pdb
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.exe
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\bin\Debug\FungiParadise.exe.config
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\bin\Debug\FungiParadise.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\bin\Debug\FungiParadise.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\bin\Debug\MetroFramework.Design.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\bin\Debug\MetroFramework.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\obj\Debug\FungiParadise.csprojAssemblyReference.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\obj\Debug\FungiParadise.Properties.Resources.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\obj\Debug\FungiParadise.csproj.GenerateResource.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\obj\Debug\FungiParadise.csproj.CoreCompileInputs.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\obj\Debug\FungiParadise.csproj.CopyComplete
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\obj\Debug\FungiParadise.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\obj\Debug\FungiParadise.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\obj\Debug\FungiParadise.Gui.window.resources
