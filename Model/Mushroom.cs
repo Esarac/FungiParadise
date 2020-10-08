@@ -12,112 +12,72 @@ namespace FungiParadise.Model
     class Mushroom
     {
         //Constants
-        public enum Type {Edible, Poisonous}
-        public static readonly char[] CAP_SHAPE = {'b', 'c', 'x', 'f', 'k', 's'};
-        public static readonly char[] CAP_SURFACE = {'f', 'g', 'y', 's'};
-        public static readonly char[] CAP_COLOR = {'n', 'b', 'c', 'g', 'r', 'p', 'u', 'e', 'w', 'y'};
-        public static readonly char[] BRUISES = {'t', 'f'};
-        public static readonly char[] ODOR = {'a', 'l', 'c', 'y', 'f', 'm', 'n', 'p', 's'};
-        public static readonly char[] GILL_ATTACHMENT = {'a', 'd', 'f', 'n'};
-        public static readonly char[] GILL_SPACING = {'c', 'w', 'd'};
-        public static readonly char[] GILL_SIZE = {'b', 'n'};
-        public static readonly char[] GILL_COLOR = {'k', 'n', 'b', 'h', 'g', 'r', 'o', 'p', 'u', 'e', 'w', 'y'};
-        public static readonly char[] STALK_SHAPE = {'e', 't'};
-        public static readonly char[] STALK_ROOT = {'b', 'c', 'u', 'e', 'z', 'r', '?' };
-        public static readonly char[] STALK_SURFACE_ABOVE_RING = {'f', 'y', 'k', 's' };
-        public static readonly char[] STALK_SURFACE_BELOW_RING = {'f', 'y', 'k', 's' };
-        public static readonly char[] STALK_COLOR_ABOVE_RING = {'n', 'b', 'c', 'g', 'o', 'p', 'e', 'w', 'y'};
-        public static readonly char[] STALK_COLOR_BELOW_RING = {'n', 'b', 'c', 'g', 'o', 'p', 'e', 'w', 'y' };
-        public static readonly char[] VEIL_TYPE = {'p', 'u'};
-        public static readonly char[] VEIL_COLOR = {'n', 'o', 'w', 'y'};
-        public static readonly char[] RING_NUMBER = {'n', 'o', 't' };
-        public static readonly char[] RING_TYPE = {'c', 'e', 'f', 'l', 'n', 'p', 's', 'z' };
-        public static readonly char[] SPORE_PRINT_COLOR = {'k', 'n', 'b', 'h', 'r', 'o', 'u', 'w', 'y'};
-        public static readonly char[] POPULATION = { 'a', 'c', 'n', 's', 'v', 'y' };
-        public static readonly char[] HABITAD = { 'g', 'l', 'm', 'p', 'u', 'w', 'd' };
+        public enum MushroomType {Edible, Poisonous}
+        public static readonly char[] CAP_SHAPE = {'b', 'c', 'x', 'f', 'k', 's'};//1
+        public static readonly char[] CAP_COLOR = {'n', 'b', 'c', 'g', 'r', 'p', 'u', 'e', 'w', 'y'};//3
+        public static readonly char[] BRUISES = {'t', 'f'};//4
+        public static readonly char[] ODOR = {'a', 'l', 'c', 'y', 'f', 'm', 'n', 'p', 's'};//5
+        public static readonly char[] GILL_SIZE = {'b', 'n'};//8
+        public static readonly char[] STALK_SHAPE = {'e', 't'};//10
+        public static readonly char[] STALK_ROOT = {'b', 'c', 'u', 'e', 'z', 'r', '?' };//11
+        public static readonly char[] RING_NUMBER = {'n', 'o', 't' };//18
+        public static readonly char[] HABITAD = { 'g', 'l', 'm', 'p', 'u', 'w', 'd' };//22
 
         //Attributes
             //Class
-        private Type type;
+        private MushroomType type;//0
             //Vars
-        private char capShape;
-        private char capSurface;
-        private char capColor;
+        private char capShape;//1
+        private char capColor;//3
+        private char bruises;//4
+        private char odor;//5
+        private char gillSize;//8
+        private char stalkShape;//10
+        private char stalkRoot;//11
+        private char ringNumber;//18
+        private char habitad;//22
 
-        private char bruises;
-        private char odor;
-
-        private char gillAttachment;
-        private char gillSpacing;
-        private char gillSize;
-        private char gillColor;
-
-        private char stalkShape;
-        private char stalkRoot;
-        private char stalkSurfaceAboveRing;
-        private char stalkSurfaceBelowRing;
-        private char stalkColorAboveRing;
-        private char stalkColorBelowRing;
-
-        private char veilType;
-        private char veilColor;
-
-        private char ringNumber;
-        private char ringType;
-
-        private char sporePrintColor;
-        private char population;
-        private char habitad;
+        //Properties
+        public MushroomType Type { get { return type; } set { type = value; } }
+        public char CapShape { get { return capShape; } set { capShape = value; } }
+        public char CapColor { get { return capColor; } set { capColor = value; } }
+        public char Bruises { get { return bruises; } set { bruises = value; } }
+        public char Odor { get { return odor; } set { odor = value; } }
+        public char GillSize { get { return gillSize; } set { gillSize = value; } }
+        public char StalkShape { get { return stalkShape; } set { stalkShape = value; } }
+        public char StalkRoot { get { return stalkRoot; } set { stalkRoot = value; } }
+        public char RingNumber { get { return ringNumber; } set { ringNumber = value; } }
+        public char Habitad { get { return habitad; } set { habitad = value; } }
 
         //Constructor
-        public Mushroom(Type type, char capShape, char capSurface, char capColor, char bruises, char odor, char gillAttachment, char gillSpacing, 
-        char gillSize, char gillColor, char stalkShape, char stalkRoot, char stalkSurfaceAboveRing, char stalkSurfaceBelowRing, char stalkColorAboveRing, 
-        char stalkColorBelowRing, char veilType, char veilColor, char ringNumber, char ringType, char sporePrintColor, char population, char habitad)
+        public Mushroom(MushroomType type, char capShape, char capColor, char bruises, char odor, char gillSize, char stalkShape, char stalkRoot, char ringNumber, char habitad)
         {
-            if (CAP_SHAPE.Contains(capShape) && CAP_SURFACE.Contains(capSurface) && CAP_COLOR.Contains(capColor) && BRUISES.Contains(bruises)
-            && ODOR.Contains(odor) && GILL_ATTACHMENT.Contains(gillAttachment) && GILL_SPACING.Contains(gillSpacing) && GILL_SIZE.Contains(gillSize)
-            && GILL_COLOR.Contains(gillColor) && STALK_SHAPE.Contains(stalkShape) && STALK_ROOT.Contains(stalkRoot)
-            && STALK_SURFACE_ABOVE_RING.Contains(stalkSurfaceAboveRing) && STALK_SURFACE_BELOW_RING.Contains(stalkSurfaceBelowRing)
-            && STALK_COLOR_ABOVE_RING.Contains(stalkColorAboveRing) && STALK_COLOR_BELOW_RING.Contains(stalkColorBelowRing) && VEIL_TYPE.Contains(veilType)
-            && VEIL_COLOR.Contains(veilColor) && RING_NUMBER.Contains(ringNumber) && RING_TYPE.Contains(ringType)
-            && SPORE_PRINT_COLOR.Contains(sporePrintColor) && POPULATION.Contains(population) && HABITAD.Contains(habitad))
+            if (CAP_SHAPE.Contains(capShape) && CAP_COLOR.Contains(capColor) && BRUISES.Contains(bruises) && ODOR.Contains(odor) && GILL_SIZE.Contains(gillSize) && STALK_SHAPE.Contains(stalkShape) && STALK_ROOT.Contains(stalkRoot) && RING_NUMBER.Contains(ringNumber) && HABITAD.Contains(habitad))
             {
                 this.type = type;
 
                 this.capShape = capShape;
-                this.capSurface = capSurface;
                 this.capColor = capColor;
 
                 this.bruises = bruises;
                 this.odor = odor;
 
-                this.gillAttachment = gillAttachment;
-                this.gillSpacing = gillSpacing;
                 this.gillSize = gillSize;
-                this.gillColor = gillColor;
 
                 this.stalkShape = stalkShape;
                 this.stalkRoot = stalkRoot;
-                this.stalkSurfaceAboveRing = stalkSurfaceAboveRing;
-                this.stalkSurfaceBelowRing = stalkSurfaceBelowRing;
-                this.stalkColorAboveRing = stalkColorAboveRing;
-                this.stalkColorBelowRing = stalkColorBelowRing;
-
-                this.veilType = veilType;
-                this.veilColor = veilColor;
 
                 this.ringNumber = ringNumber;
-                this.ringType = ringType;
 
-                this.sporePrintColor = sporePrintColor;
-                this.population = population;
                 this.habitad = habitad;
             }
             else
             {
                 Console.WriteLine("Error bip bup");
             }
-
         }
+
+
+
     }
 }
