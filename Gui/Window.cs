@@ -16,6 +16,7 @@ namespace FungiParadise.Gui
         public window()
         {
             InitializeComponent();
+            infoTab.GenerateInfo();
         }
 
         //Attributes

@@ -28,10 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.info = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.SuspendLayout();
+            // 
+            // info
+            // 
+            this.info.AutoScroll = true;
+            this.info.AutoScrollMinSize = new System.Drawing.Size(63, 48);
+            this.info.AutoSize = false;
+            this.info.BackColor = System.Drawing.SystemColors.Window;
+            this.info.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.info.Location = new System.Drawing.Point(0, 0);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(150, 150);
+            this.info.TabIndex = 0;
+            this.info.Text = "info";
+            // 
+            // InfoTab
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.info);
+            this.Name = "InfoTab";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private MetroFramework.Drawing.Html.HtmlLabel info;
     }
 }

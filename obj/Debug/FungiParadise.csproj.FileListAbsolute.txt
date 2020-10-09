@@ -30,3 +30,4 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\MetroFramework
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\MetroFramework.dll
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.CopyComplete
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.Gui.InfoTab.resources

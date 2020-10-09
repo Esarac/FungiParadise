@@ -90,6 +90,9 @@
     <EmbeddedResource Include="Gui\ChartTab.resx">
       <DependentUpon>ChartTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gui\InfoTab.resx">
+      <DependentUpon>InfoTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\TableTab.resx">
       <DependentUpon>TableTab.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,5 +123,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\info.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
