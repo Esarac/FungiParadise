@@ -1,6 +1,6 @@
 ﻿namespace FungiParadise.Gui
 {
-    partial class window
+    partial class Window
     {
         /// <summary>
         /// Required designer variable.

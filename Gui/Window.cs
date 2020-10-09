@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FungiParadise.Gui
 {
-    public partial class window : MetroFramework.Forms.MetroForm
+    public partial class Window : MetroFramework.Forms.MetroForm
     {
-        public window()
+        public Window()
         {
             InitializeComponent();
             infoTab.GenerateInfo();
