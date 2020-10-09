@@ -31,6 +31,7 @@ namespace FungiParadise.Gui
                 this.manager = new Manager(fileChooser.FileName);
                 //Init
                 tableTab.InitializeTableTab(manager);
+                chartTab.InitializeChartTab(manager);
             }
         }
 

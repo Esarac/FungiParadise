@@ -28,14 +28,34 @@ namespace FungiParadise.Model
             DataTable table = new DataTable();
 
             table.Columns.Add("TYPE", typeof(string));//0
+
             table.Columns.Add("CAP SHAPE", typeof(char));//1
+            table.Columns.Add("CAP SURFACE", typeof(char));//2
             table.Columns.Add("CAP COLOR", typeof(char));//3
+
             table.Columns.Add("BRUISES", typeof(char));//4
             table.Columns.Add("ODOR", typeof(char));//5
+
+            table.Columns.Add("GILL ATTACHMENT", typeof(char));//6
+            table.Columns.Add("GILL SPACING", typeof(char));//7
             table.Columns.Add("GILL SIZE", typeof(char));//8
+            table.Columns.Add("GILL COLOR", typeof(char));//9
+
             table.Columns.Add("STALK SHAPE", typeof(char));//10
             table.Columns.Add("STALK ROOT", typeof(char));//11
+            table.Columns.Add("STALK SURFACE ABOVE RING", typeof(char));//12
+            table.Columns.Add("STALK SURFACE BELOW RING", typeof(char));//13
+            table.Columns.Add("STALK COLOR ABOVE RING", typeof(char));//14
+            table.Columns.Add("STALK COLOR BELOW RING", typeof(char));//15
+
+            table.Columns.Add("VEIL TYPE", typeof(char));//16
+            table.Columns.Add("VEIL COLOR", typeof(char));//17
+
             table.Columns.Add("RING NUMBER", typeof(char));//18
+            table.Columns.Add("RING TYPE", typeof(char));//19
+
+            table.Columns.Add("SPORE PRINT COLOR", typeof(char));//20
+            table.Columns.Add("POPULATION", typeof(char));//21
             table.Columns.Add("HABITAD", typeof(char));//22
 
             return table;
@@ -50,14 +70,34 @@ namespace FungiParadise.Model
                 DataRow row = table.NewRow();
 
                 row["TYPE"] = mushroom.Type;//0
+
                 row["CAP SHAPE"] = mushroom.CapShape;//1
+                row["CAP SURFACE"] = mushroom.CapSurface;//2
                 row["CAP COLOR"] = mushroom.CapColor;//3
+
                 row["BRUISES"] = mushroom.Bruises;//4
                 row["ODOR"] = mushroom.Odor;//5
+
+                row["GILL ATTACHMENT"] = mushroom.GillAttachment;//6
+                row["GILL SPACING"] = mushroom.GillSpacing;//7
                 row["GILL SIZE"] = mushroom.GillSize;//8
+                row["GILL COLOR"] = mushroom.GillColor;//9
+
                 row["STALK SHAPE"] = mushroom.StalkShape;//10
                 row["STALK ROOT"] = mushroom.StalkRoot;//11
+                row["STALK SURFACE ABOVE RING"] = mushroom.StalkSurfaceAboveRing;//12
+                row["STALK SURFACE BELOW RING"] = mushroom.StalkSurfaceBelowRing;//13
+                row["STALK COLOR ABOVE RING"] = mushroom.StalkColorAboveRing;//14
+                row["STALK COLOR BELOW RING"] = mushroom.StalkColorBelowRing;//15
+
+                row["VEIL TYPE"] = mushroom.VeilType;//16
+                row["VEIL COLOR"] = mushroom.VeilColor;//17
+
                 row["RING NUMBER"] = mushroom.RingNumber;//18
+                row["RING TYPE"] = mushroom.RingType;//19
+
+                row["SPORE PRINT COLOR"] = mushroom.SporePrintColor;//20
+                row["POPULATION"] = mushroom.Population;//21
                 row["HABITAD"] = mushroom.Habitad;//22
 
                 table.Rows.Add(row);
@@ -66,254 +106,11 @@ namespace FungiParadise.Model
             return table;
         }
 
-        public DataTable GenerateCapShapeTable(char type)//1
+        public DataTable GenerateFilteredDataTable(string column, string value)
         {
-            DataTable table = GenerateEmptyTable();
+            DataTable table = GenerateDataTable();
 
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.CapShape))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
-
-            return table;
-        }
-
-        public DataTable GenerateCapColorTable(char type)//3
-        {
-            DataTable table = GenerateEmptyTable();
-
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.CapColor))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
-
-            return table;
-        }
-
-        public DataTable GenerateBruisesTable(char type)//4
-        {
-            DataTable table = GenerateEmptyTable();
-
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.Bruises))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
-
-            return table;
-        }
-
-        public DataTable GenerateOdorTable(char type)//5
-        {
-            DataTable table = GenerateEmptyTable();
-
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.Odor))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
-
-            return table;
-        }
-
-        public DataTable GenerateGillSizeTable(char type)//8
-        {
-            DataTable table = GenerateEmptyTable();
-
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.GillSize))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
-
-            return table;
-        }
-
-        public DataTable GenerateStalkShapeTable(char type)//10
-        {
-            DataTable table = GenerateEmptyTable();
-
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.StalkShape))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
-
-            return table;
-        }
-
-        public DataTable GenerateStalkRootTable(char type)//11
-        {
-            DataTable table = GenerateEmptyTable();
-
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.StalkRoot))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
-
-            return table;
-        }
-
-        public DataTable GenerateRingNumberTable(char type)//18
-        {
-            DataTable table = GenerateEmptyTable();
-
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.RingNumber))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
-
-            return table;
-        }
-
-        public DataTable GenerateHabitadTable(char type)//22
-        {
-            DataTable table = GenerateEmptyTable();
-
-            foreach (Mushroom mushroom in dataSet)
-            {
-                if (type.Equals(mushroom.Habitad))
-                {
-                    DataRow row = table.NewRow();
-
-                    row["TYPE"] = mushroom.Type;//0
-                    row["CAP SHAPE"] = mushroom.CapShape;//1
-                    row["CAP COLOR"] = mushroom.CapColor;//3
-                    row["BRUISES"] = mushroom.Bruises;//4
-                    row["ODOR"] = mushroom.Odor;//5
-                    row["GILL SIZE"] = mushroom.GillSize;//8
-                    row["STALK SHAPE"] = mushroom.StalkShape;//10
-                    row["STALK ROOT"] = mushroom.StalkRoot;//11
-                    row["RING NUMBER"] = mushroom.RingNumber;//18
-                    row["HABITAD"] = mushroom.Habitad;//22
-
-                    table.Rows.Add(row);
-                }
-            }
+            table.DefaultView.RowFilter = "[" +column + "] = '" + value + "'";
 
             return table;
         }
@@ -365,9 +162,9 @@ namespace FungiParadise.Model
             foreach (Mushroom mushroom in dataSet)
             {
                 bool found = false;
-                for (int i = 0; (i < quantity.Length) && found; i++)
+                for (int i = 0; (i < quantity.Length) && !found; i++)
                 {
-                    if (Mushroom.ODOR[i].Equals(mushroom.Odor))
+                    if (Mushroom.ODOR[i] == mushroom.Odor)
                     {
                         quantity[i]++;
                         found = true;
@@ -402,7 +199,7 @@ namespace FungiParadise.Model
             foreach (Mushroom mushroom in dataSet)
             {
                 bool found = false;
-                for (int i = 0; (i < quantity.Length) && found; i++)
+                for (int i = 0; (i < quantity.Length) && !found; i++)
                 {
                     if (Mushroom.RING_NUMBER[i].Equals(mushroom.RingNumber))
                     {
@@ -439,7 +236,7 @@ namespace FungiParadise.Model
             foreach (Mushroom mushroom in dataSet)
             {
                 bool found = false;
-                for (int i = 0; (i < quantity.Length) && found; i++)
+                for (int i = 0; (i < quantity.Length) && !found; i++)
                 {
                     if (Mushroom.BRUISES[i].Equals(mushroom.Bruises))
                     {
@@ -476,7 +273,7 @@ namespace FungiParadise.Model
             foreach (Mushroom mushroom in dataSet)
             {
                 bool found = false;
-                for (int i = 0; (i < quantity.Length) && found; i++)
+                for (int i = 0; (i < quantity.Length) && !found; i++)
                 {
                     if (Mushroom.CAP_COLOR[i].Equals(mushroom.CapColor))
                     {
@@ -523,17 +320,37 @@ namespace FungiParadise.Model
 
                     //Info
                     char capShape = Char.Parse(dataInfo[1]);//1
+                    char capSurface = Char.Parse(dataInfo[2]);//2
                     char capColor = Char.Parse(dataInfo[3]);//3
+
                     char bruises = Char.Parse(dataInfo[4]);//4
                     char odor= Char.Parse(dataInfo[5]);//5
+
+                    char gillAttachment = Char.Parse(dataInfo[6]);//6
+                    char gillSpacing = Char.Parse(dataInfo[7]);//7
                     char gillSize= Char.Parse(dataInfo[8]);//8
-                    char stalkShape= Char.Parse(dataInfo[10]);//10
-                    char stalkRoot= Char.Parse(dataInfo[11]);//11
-                    char ringNumber= Char.Parse(dataInfo[18]);//18
+                    char gillColor = Char.Parse(dataInfo[9]);//9
+
+                    char stalkShape = Char.Parse(dataInfo[10]);//10
+                    char stalkRoot = Char.Parse(dataInfo[11]);//11
+                    char stalkSurfaceAboveRing = Char.Parse(dataInfo[12]);//12
+                    char stalkSurfaceBelowRing = Char.Parse(dataInfo[13]);//13
+                    char stalkColorAboveRing = Char.Parse(dataInfo[14]);//14
+                    char stalkColorBelowRing = Char.Parse(dataInfo[15]);//15
+
+                    char veilType = Char.Parse(dataInfo[16]);//16
+                    char veilColor = Char.Parse(dataInfo[17]);//17
+
+                    char ringNumber = Char.Parse(dataInfo[18]);//18
+                    char ringType = Char.Parse(dataInfo[19]);//19
+
+                    char sporePrintColor = Char.Parse(dataInfo[20]);//20
+                    char population = Char.Parse(dataInfo[21]);//21
                     char habitad= Char.Parse(dataInfo[22]);//22
 
                     //Add
-                    Mushroom mushroom = new Mushroom(type, capShape, capColor, bruises, odor, gillSize, stalkShape, stalkRoot, ringNumber, habitad);
+                    Mushroom mushroom = new Mushroom(type, capShape, capSurface, capColor, bruises, odor, gillAttachment, gillSpacing, gillSize, gillColor, stalkShape, stalkRoot, stalkSurfaceAboveRing,
+                                                        stalkSurfaceBelowRing, stalkColorAboveRing, stalkColorBelowRing, veilType, veilColor, ringNumber, ringType, sporePrintColor, population, habitad);
                     dataSet.Add(mushroom);
                 }
                 catch (IndexOutOfRangeException)

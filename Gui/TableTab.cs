@@ -98,5 +98,14 @@ namespace FungiParadise.Gui
             filterButton.BackColor = Color.White;
             filterButton.ForeColor = Color.Black;
         }
+
+        private void filterButton_Click(object sender, EventArgs e)
+        {
+            int index = attributeComboBox.SelectedIndex;
+            if (index == 0)
+                table.DataSource = manager.GenerateDataTable();
+            else
+                table.DataSource = manager.GenerateFilteredDataTable(attributeComboBox.Items[attributeComboBox.SelectedIndex].ToString(), valueComboBox.Items[valueComboBox.SelectedIndex].ToString());
+        }
     }
 }

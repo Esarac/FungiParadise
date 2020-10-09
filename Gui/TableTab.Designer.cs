@@ -49,19 +49,20 @@
             this.flowLayoutPanel1.Controls.Add(this.filterButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 54);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 44);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // attributeComboBox
             // 
             this.attributeComboBox.Enabled = false;
             this.attributeComboBox.FormattingEnabled = true;
-            this.attributeComboBox.ItemHeight = 24;
-            this.attributeComboBox.Location = new System.Drawing.Point(11, 7);
-            this.attributeComboBox.Margin = new System.Windows.Forms.Padding(11, 7, 3, 2);
+            this.attributeComboBox.ItemHeight = 23;
+            this.attributeComboBox.Location = new System.Drawing.Point(8, 6);
+            this.attributeComboBox.Margin = new System.Windows.Forms.Padding(8, 6, 2, 2);
             this.attributeComboBox.Name = "attributeComboBox";
-            this.attributeComboBox.Size = new System.Drawing.Size(121, 30);
+            this.attributeComboBox.Size = new System.Drawing.Size(92, 29);
             this.attributeComboBox.TabIndex = 0;
             this.attributeComboBox.UseSelectable = true;
             this.attributeComboBox.SelectedIndexChanged += new System.EventHandler(this.attributeComboBoxSelectedIndexChanged);
@@ -70,11 +71,11 @@
             // 
             this.valueComboBox.Enabled = false;
             this.valueComboBox.FormattingEnabled = true;
-            this.valueComboBox.ItemHeight = 24;
-            this.valueComboBox.Location = new System.Drawing.Point(146, 7);
-            this.valueComboBox.Margin = new System.Windows.Forms.Padding(11, 7, 3, 2);
+            this.valueComboBox.ItemHeight = 23;
+            this.valueComboBox.Location = new System.Drawing.Point(110, 6);
+            this.valueComboBox.Margin = new System.Windows.Forms.Padding(8, 6, 2, 2);
             this.valueComboBox.Name = "valueComboBox";
-            this.valueComboBox.Size = new System.Drawing.Size(121, 30);
+            this.valueComboBox.Size = new System.Drawing.Size(92, 29);
             this.valueComboBox.TabIndex = 1;
             this.valueComboBox.UseSelectable = true;
             // 
@@ -85,14 +86,15 @@
             this.filterButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.filterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filterButton.Location = new System.Drawing.Point(281, 6);
-            this.filterButton.Margin = new System.Windows.Forms.Padding(11, 6, 3, 2);
+            this.filterButton.Location = new System.Drawing.Point(212, 5);
+            this.filterButton.Margin = new System.Windows.Forms.Padding(8, 5, 2, 2);
             this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(99, 34);
+            this.filterButton.Size = new System.Drawing.Size(74, 28);
             this.filterButton.TabIndex = 2;
             this.filterButton.TabStop = false;
             this.filterButton.Text = "Filter";
             this.filterButton.UseVisualStyleBackColor = false;
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             this.filterButton.MouseLeave += new System.EventHandler(this.OnMouseLeaveFilterButton);
             this.filterButton.MouseHover += new System.EventHandler(this.OnMouseHoverFilterButton);
             // 
@@ -127,7 +129,8 @@
             this.table.EnableHeadersVisualStyles = false;
             this.table.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.table.Location = new System.Drawing.Point(0, 54);
+            this.table.Location = new System.Drawing.Point(0, 44);
+            this.table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.table.Name = "table";
             this.table.ReadOnly = true;
             this.table.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -144,17 +147,18 @@
             this.table.RowTemplate.Height = 24;
             this.table.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.table.Size = new System.Drawing.Size(800, 546);
+            this.table.Size = new System.Drawing.Size(600, 444);
             this.table.TabIndex = 1;
             // 
             // TableTab
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.table);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TableTab";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(600, 488);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
