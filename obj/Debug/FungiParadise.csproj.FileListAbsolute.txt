@@ -1,4 +1,3 @@
-C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csprojAssemblyReference.cache
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.Properties.Resources.resources
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.GenerateResource.cache
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.CoreCompileInputs.cache
@@ -31,3 +30,4 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\MetroFramework
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.CopyComplete
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.Gui.InfoTab.resources
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csprojAssemblyReference.cache

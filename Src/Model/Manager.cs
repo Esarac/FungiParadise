@@ -56,7 +56,7 @@ namespace FungiParadise.Model
 
             table.Columns.Add("SPORE PRINT COLOR", typeof(char));//20
             table.Columns.Add("POPULATION", typeof(char));//21
-            table.Columns.Add("HABITAD", typeof(char));//22
+            table.Columns.Add("HABITAT", typeof(char));//22
 
             return table;
         }
@@ -98,7 +98,7 @@ namespace FungiParadise.Model
 
                 row["SPORE PRINT COLOR"] = mushroom.SporePrintColor;//20
                 row["POPULATION"] = mushroom.Population;//21
-                row["HABITAD"] = mushroom.Habitad;//22
+                row["HABITAT"] = mushroom.Habitat;//22
 
                 table.Rows.Add(row);
             }

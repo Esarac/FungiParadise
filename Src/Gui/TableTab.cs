@@ -231,7 +231,7 @@ namespace FungiParadise.Gui
                 //Habitad
                 case 23:
 
-                    valueComboBox.DataSource = Mushroom.HABITAD;
+                    valueComboBox.DataSource = Mushroom.HABITAT;
                     valueComboBox.Enabled = true;
                     break;
             }

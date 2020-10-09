@@ -41,7 +41,7 @@ namespace FungiParadise.Model
 
         public static readonly char[] SPORE_PRINT_COLOR = { 'k', 'n', 'b', 'h', 'r', 'o', 'u', 'w', 'y' };//20
         public static readonly char[] POPULATION = { 'a', 'c', 'n', 's', 'v', 'y' };//21
-        public static readonly char[] HABITAD = { 'g', 'l', 'm', 'p', 'u', 'w', 'd' };//22
+        public static readonly char[] HABITAT = { 'g', 'l', 'm', 'p', 'u', 'w', 'd' };//22
 
         //Attributes
             //Class
@@ -75,7 +75,7 @@ namespace FungiParadise.Model
 
         private char sporePrintColor;//20
         private char population;//21
-        private char habitad;//22
+        private char habitat;//22
 
         //Properties
         public MushroomType Type { get { return type; } set { type = value; } }//0
@@ -100,7 +100,7 @@ namespace FungiParadise.Model
         public char RingType { get { return ringType; } set { ringType = value; } }//19
         public char SporePrintColor { get { return sporePrintColor; } set { sporePrintColor = value; } }//20
         public char Population { get { return population; } set { population = value; } }//21
-        public char Habitad { get { return habitad; } set { habitad = value; } }//22
+        public char Habitat { get { return habitat; } set { habitat = value; } }//22
 
         //Constructor
         public Mushroom(MushroomType type, char capShape, char capSurface, char capColor, char bruises, char odor, char gillAttachment, char gillSpacing,
@@ -113,7 +113,7 @@ namespace FungiParadise.Model
             && STALK_SURFACE_ABOVE_RING.Contains(stalkSurfaceAboveRing) && STALK_SURFACE_BELOW_RING.Contains(stalkSurfaceBelowRing)
             && STALK_COLOR_ABOVE_RING.Contains(stalkColorAboveRing) && STALK_COLOR_BELOW_RING.Contains(stalkColorBelowRing) && VEIL_TYPE.Contains(veilType)
             && VEIL_COLOR.Contains(veilColor) && RING_NUMBER.Contains(ringNumber) && RING_TYPE.Contains(ringType)
-            && SPORE_PRINT_COLOR.Contains(sporePrintColor) && POPULATION.Contains(population) && HABITAD.Contains(habitad))
+            && SPORE_PRINT_COLOR.Contains(sporePrintColor) && POPULATION.Contains(population) && HABITAT.Contains(habitad))
             {
                 this.type = type;//0
 
@@ -144,7 +144,7 @@ namespace FungiParadise.Model
 
                 this.sporePrintColor = sporePrintColor;//20
                 this.population = population;//21
-                this.habitad = habitad;//22
+                this.habitat = habitad;//22
             }
             else
             {

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             this.styleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
             this.importButton = new System.Windows.Forms.Button();
@@ -56,9 +57,10 @@
             // 
             this.panel.Controls.Add(this.importButton);
             this.panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel.Location = new System.Drawing.Point(20, 60);
+            this.panel.Location = new System.Drawing.Point(15, 60);
+            this.panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1040, 47);
+            this.panel.Size = new System.Drawing.Size(780, 38);
             this.panel.TabIndex = 0;
             // 
             // importButton
@@ -67,10 +69,10 @@
             this.importButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.importButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.importButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.importButton.Location = new System.Drawing.Point(15, 12);
-            this.importButton.Margin = new System.Windows.Forms.Padding(15, 12, 0, 0);
+            this.importButton.Location = new System.Drawing.Point(11, 10);
+            this.importButton.Margin = new System.Windows.Forms.Padding(11, 10, 0, 0);
             this.importButton.Name = "importButton";
-            this.importButton.Size = new System.Drawing.Size(99, 34);
+            this.importButton.Size = new System.Drawing.Size(74, 28);
             this.importButton.TabIndex = 2;
             this.importButton.TabStop = false;
             this.importButton.Text = "Import";
@@ -85,10 +87,11 @@
             this.tabMenu.Controls.Add(this.tabCharts);
             this.tabMenu.Controls.Add(this.tabInfo);
             this.tabMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabMenu.Location = new System.Drawing.Point(20, 107);
+            this.tabMenu.Location = new System.Drawing.Point(15, 98);
+            this.tabMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabMenu.Name = "tabMenu";
             this.tabMenu.SelectedIndex = 0;
-            this.tabMenu.Size = new System.Drawing.Size(1040, 593);
+            this.tabMenu.Size = new System.Drawing.Size(780, 471);
             this.tabMenu.TabIndex = 1;
             this.tabMenu.UseSelectable = true;
             // 
@@ -99,8 +102,9 @@
             this.tabTable.HorizontalScrollbarHighlightOnWheel = false;
             this.tabTable.HorizontalScrollbarSize = 0;
             this.tabTable.Location = new System.Drawing.Point(4, 38);
+            this.tabTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabTable.Name = "tabTable";
-            this.tabTable.Size = new System.Drawing.Size(1032, 551);
+            this.tabTable.Size = new System.Drawing.Size(772, 429);
             this.tabTable.TabIndex = 0;
             this.tabTable.Text = "  Table";
             this.tabTable.VerticalScrollbarBarColor = false;
@@ -114,8 +118,9 @@
             this.tabCharts.HorizontalScrollbarHighlightOnWheel = false;
             this.tabCharts.HorizontalScrollbarSize = 0;
             this.tabCharts.Location = new System.Drawing.Point(4, 38);
+            this.tabCharts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabCharts.Name = "tabCharts";
-            this.tabCharts.Size = new System.Drawing.Size(1032, 551);
+            this.tabCharts.Size = new System.Drawing.Size(772, 429);
             this.tabCharts.TabIndex = 1;
             this.tabCharts.Text = "  Charts";
             this.tabCharts.VerticalScrollbarBarColor = true;
@@ -129,8 +134,9 @@
             this.tabInfo.HorizontalScrollbarHighlightOnWheel = false;
             this.tabInfo.HorizontalScrollbarSize = 0;
             this.tabInfo.Location = new System.Drawing.Point(4, 38);
+            this.tabInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabInfo.Name = "tabInfo";
-            this.tabInfo.Size = new System.Drawing.Size(1032, 551);
+            this.tabInfo.Size = new System.Drawing.Size(772, 429);
             this.tabInfo.TabIndex = 2;
             this.tabInfo.Text = "  Information";
             this.tabInfo.VerticalScrollbarBarColor = true;
@@ -141,36 +147,40 @@
             // 
             this.tableTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableTab.Location = new System.Drawing.Point(0, 0);
-            this.tableTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableTab.Name = "tableTab";
-            this.tableTab.Size = new System.Drawing.Size(1032, 551);
+            this.tableTab.Size = new System.Drawing.Size(772, 429);
             this.tableTab.TabIndex = 0;
             // 
             // chartTab
             // 
             this.chartTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartTab.Location = new System.Drawing.Point(0, 0);
-            this.chartTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chartTab.Name = "chartTab";
-            this.chartTab.Size = new System.Drawing.Size(1032, 551);
+            this.chartTab.Size = new System.Drawing.Size(772, 429);
             this.chartTab.TabIndex = 2;
             // 
             // infoTab
             // 
             this.infoTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.infoTab.Location = new System.Drawing.Point(0, 0);
+            this.infoTab.Margin = new System.Windows.Forms.Padding(2);
             this.infoTab.Name = "infoTab";
-            this.infoTab.Size = new System.Drawing.Size(1032, 551);
+            this.infoTab.Size = new System.Drawing.Size(772, 429);
             this.infoTab.TabIndex = 2;
             // 
-            // window
+            // Window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.ClientSize = new System.Drawing.Size(810, 585);
             this.Controls.Add(this.tabMenu);
             this.Controls.Add(this.panel);
-            this.Name = "window";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Window";
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Fungi Paradise";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

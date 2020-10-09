@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{61468511-DB0C-431B-B0FD-1307DDC7890C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>FungiParadise</RootNamespace>
     <AssemblyName>FungiParadise</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -59,44 +59,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gui\ChartTab.cs">
+    <Compile Include="Src\Gui\ChartTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Gui\ChartTab.Designer.cs">
+    <Compile Include="Src\Gui\ChartTab.Designer.cs">
       <DependentUpon>ChartTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\Window.cs">
+    <Compile Include="Src\Gui\Window.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gui\Window.Designer.cs">
+    <Compile Include="Src\Gui\Window.Designer.cs">
       <DependentUpon>Window.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\InfoTab.cs">
+    <Compile Include="Src\Gui\InfoTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Gui\InfoTab.Designer.cs">
+    <Compile Include="Src\Gui\InfoTab.Designer.cs">
       <DependentUpon>InfoTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\TableTab.cs">
+    <Compile Include="Src\Gui\TableTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Gui\TableTab.Designer.cs">
+    <Compile Include="Src\Gui\TableTab.Designer.cs">
       <DependentUpon>TableTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\Program.cs" />
-    <Compile Include="Model\Manager.cs" />
-    <Compile Include="Model\Mushroom.cs" />
+    <Compile Include="Src\Gui\Program.cs" />
+    <Compile Include="Src\Model\Manager.cs" />
+    <Compile Include="Src\Model\Mushroom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Gui\ChartTab.resx">
+    <EmbeddedResource Include="Src\Gui\ChartTab.resx">
       <DependentUpon>ChartTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui\InfoTab.resx">
+    <EmbeddedResource Include="Src\Gui\InfoTab.resx">
       <DependentUpon>InfoTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui\TableTab.resx">
+    <EmbeddedResource Include="Src\Gui\TableTab.resx">
       <DependentUpon>TableTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui\Window.resx">
+    <EmbeddedResource Include="Src\Gui\Window.resx">
       <DependentUpon>Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -108,6 +108,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Doc\agaricus-lepiota.data" />
+    <None Include="Doc\Engineering Method.docx" />
+    <None Include="Doc\Engineering Method.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -125,6 +128,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Data\info.html" />
+    <Content Include="Data\Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
