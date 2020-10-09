@@ -34,10 +34,10 @@
             this.importButton = new System.Windows.Forms.Button();
             this.tabMenu = new MetroFramework.Controls.MetroTabControl();
             this.tabTable = new MetroFramework.Controls.MetroTabPage();
-            this.tableTab = new FungiParadise.Gui.TableTab();
             this.tabCharts = new MetroFramework.Controls.MetroTabPage();
-            this.chartTab = new FungiParadise.Gui.ChartTab();
             this.tabInfo = new MetroFramework.Controls.MetroTabPage();
+            this.tableTab = new FungiParadise.Gui.TableTab();
+            this.chartTab = new FungiParadise.Gui.ChartTab();
             this.infoTab = new FungiParadise.Gui.InfoTab();
             ((System.ComponentModel.ISupportInitialize)(this.styleManager)).BeginInit();
             this.panel.SuspendLayout();
@@ -95,7 +95,7 @@
             // tabTable
             // 
             this.tabTable.Controls.Add(this.tableTab);
-            this.tabTable.HorizontalScrollbarBarColor = true;
+            this.tabTable.HorizontalScrollbarBarColor = false;
             this.tabTable.HorizontalScrollbarHighlightOnWheel = false;
             this.tabTable.HorizontalScrollbarSize = 0;
             this.tabTable.Location = new System.Drawing.Point(4, 38);
@@ -103,17 +103,9 @@
             this.tabTable.Size = new System.Drawing.Size(1032, 551);
             this.tabTable.TabIndex = 0;
             this.tabTable.Text = "  Table";
-            this.tabTable.VerticalScrollbarBarColor = true;
+            this.tabTable.VerticalScrollbarBarColor = false;
             this.tabTable.VerticalScrollbarHighlightOnWheel = false;
             this.tabTable.VerticalScrollbarSize = 0;
-            // 
-            // tableTab
-            // 
-            this.tableTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableTab.Location = new System.Drawing.Point(0, 0);
-            this.tableTab.Name = "tableTab";
-            this.tableTab.Size = new System.Drawing.Size(1032, 551);
-            this.tableTab.TabIndex = 0;
             // 
             // tabCharts
             // 
@@ -130,14 +122,6 @@
             this.tabCharts.VerticalScrollbarHighlightOnWheel = false;
             this.tabCharts.VerticalScrollbarSize = 0;
             // 
-            // chartTab
-            // 
-            this.chartTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartTab.Location = new System.Drawing.Point(0, 0);
-            this.chartTab.Name = "chartTab";
-            this.chartTab.Size = new System.Drawing.Size(1032, 551);
-            this.chartTab.TabIndex = 2;
-            // 
             // tabInfo
             // 
             this.tabInfo.Controls.Add(this.infoTab);
@@ -152,6 +136,24 @@
             this.tabInfo.VerticalScrollbarBarColor = true;
             this.tabInfo.VerticalScrollbarHighlightOnWheel = false;
             this.tabInfo.VerticalScrollbarSize = 0;
+            // 
+            // tableTab
+            // 
+            this.tableTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableTab.Location = new System.Drawing.Point(0, 0);
+            this.tableTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableTab.Name = "tableTab";
+            this.tableTab.Size = new System.Drawing.Size(1032, 551);
+            this.tableTab.TabIndex = 0;
+            // 
+            // chartTab
+            // 
+            this.chartTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartTab.Location = new System.Drawing.Point(0, 0);
+            this.chartTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartTab.Name = "chartTab";
+            this.chartTab.Size = new System.Drawing.Size(1032, 551);
+            this.chartTab.TabIndex = 2;
             // 
             // infoTab
             // 
