@@ -9,7 +9,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace FungiParadise.Model
 {
-    class Mushroom
+    public class Mushroom
     {
         //Constants
         public enum MushroomType {Edible, Poisonous}

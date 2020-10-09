@@ -1,6 +1,6 @@
 ﻿namespace FungiParadise.Gui
 {
-    partial class InformationTab
+    partial class InfoTab
     {
         /// <summary> 
         /// Required designer variable.

@@ -10,14 +10,15 @@ using System.Threading.Tasks;
 
 namespace FungiParadise.Model
 {
-    class Manager
+    public class Manager
     {
         //Attributes
         private List<Mushroom> dataSet;
 
         //Constructor
-        private Manager(string path)
+        public Manager(string path)
         {
+            dataSet = new List<Mushroom>();
             Load(path);
         }
 
@@ -39,8 +40,6 @@ namespace FungiParadise.Model
 
             return table;
         }
-
-
 
         public DataTable GenerateDataTable()
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FungiParadise.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,22 @@ namespace FungiParadise.Gui
             InitializeComponent();
         }
 
+        //Attributes
+        private Manager manager;
+
         //Triggers
+        private void ImportButtonClick(object sender, EventArgs e)
+        {
+            OpenFileDialog fileChooser = new OpenFileDialog();
+
+            if (fileChooser.ShowDialog() == DialogResult.OK)
+            {
+                this.manager = new Manager(fileChooser.FileName);
+                //Init
+                tableTab.InitializeTableTab(manager);
+            }
+        }
+
         private void OnMouseHoverImportButton(object sender, EventArgs e)
         {
             importButton.BackColor = Color.FromArgb(58, 145, 84);

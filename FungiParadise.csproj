@@ -61,11 +61,17 @@
     <Compile Include="Gui\ChartTab.Designer.cs">
       <DependentUpon>ChartTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\InformationTab.cs">
+    <Compile Include="Gui\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\InfoTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Gui\InformationTab.Designer.cs">
-      <DependentUpon>InformationTab.cs</DependentUpon>
+    <Compile Include="Gui\InfoTab.Designer.cs">
+      <DependentUpon>InfoTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\TableTab.cs">
       <SubType>UserControl</SubType>
@@ -73,16 +79,16 @@
     <Compile Include="Gui\TableTab.Designer.cs">
       <DependentUpon>TableTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\Window.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\Window.Designer.cs">
-      <DependentUpon>Window.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gui\Program.cs" />
     <Compile Include="Model\Manager.cs" />
     <Compile Include="Model\Mushroom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gui\ChartTab.resx">
+      <DependentUpon>ChartTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\TableTab.resx">
+      <DependentUpon>TableTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\Window.resx">
       <DependentUpon>Window.cs</DependentUpon>
     </EmbeddedResource>

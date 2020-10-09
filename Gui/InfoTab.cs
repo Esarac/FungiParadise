@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FungiParadise.Gui
 {
-    public partial class InformationTab : UserControl
+    public partial class InfoTab : UserControl
     {
-        public InformationTab()
+        public InfoTab()
         {
             InitializeComponent();
         }
