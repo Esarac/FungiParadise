@@ -87,6 +87,8 @@
     <Compile Include="Src\Model\Manager.cs" />
     <Compile Include="Src\Model\Mushroom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Util\Decision.cs" />
+    <Compile Include="Src\Util\DecisionTree.cs" />
     <EmbeddedResource Include="Src\Gui\ChartTab.resx">
       <DependentUpon>ChartTab.cs</DependentUpon>
     </EmbeddedResource>
