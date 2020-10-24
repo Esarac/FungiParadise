@@ -47,10 +47,6 @@ namespace FungiParadise.Gui
         //Methods
         public void GenerateTable()
         {
-            //Test
-            Tree tree = new Tree();
-            tree.GenerateDecisionTree(manager.GenerateDataTable(), "CAP SHAPE");
-            //...
 
             //Config
             table.DataSource = manager.GenerateDataTable();
