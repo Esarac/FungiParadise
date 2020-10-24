@@ -31,3 +31,6 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\MetroFramework
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csproj.CopyComplete
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.Gui.InfoTab.resources
 C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\obj\Debug\FungiParadise.csprojAssemblyReference.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\DecisionTree.exe
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\DecisionTree.pdb
+C:\Users\ariza\OneDrive\Documentos\GitHub\FungiParadise\bin\Debug\DecisionTree.exe.config

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FungiParadise.Model;
+using DecisionTree.Model;
 
 namespace FungiParadise.Gui
 {
@@ -46,6 +47,11 @@ namespace FungiParadise.Gui
         //Methods
         public void GenerateTable()
         {
+            //Test
+            Tree tree = new Tree();
+            tree.GenerateDecisionTree(manager.GenerateDataTable(), "CAP SHAPE");
+            //...
+
             //Config
             table.DataSource = manager.GenerateDataTable();
             table.EnableHeadersVisualStyles = false;
