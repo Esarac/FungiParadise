@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FungiParadise", "FungiParadise.csproj", "{61468511-DB0C-431B-B0FD-1307DDC7890C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTree", "..\DecisionTree\DecisionTree.csproj", "{3C3B2EB8-DA5E-46FB-B28C-C2C41F2F882F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61468511-DB0C-431B-B0FD-1307DDC7890C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61468511-DB0C-431B-B0FD-1307DDC7890C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61468511-DB0C-431B-B0FD-1307DDC7890C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61468511-DB0C-431B-B0FD-1307DDC7890C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C3B2EB8-DA5E-46FB-B28C-C2C41F2F882F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C3B2EB8-DA5E-46FB-B28C-C2C41F2F882F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C3B2EB8-DA5E-46FB-B28C-C2C41F2F882F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C3B2EB8-DA5E-46FB-B28C-C2C41F2F882F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C143C13B-4C16-42FF-BAA4-4F89F8494270}
+	EndGlobalSection
+EndGlobal
