@@ -47,7 +47,6 @@ namespace FungiParadise.Gui
         //Methods
         public void GenerateTable()
         {
-
             //Config
             table.DataSource = manager.GenerateDataTable();
             table.EnableHeadersVisualStyles = false;
@@ -57,6 +56,12 @@ namespace FungiParadise.Gui
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+
+
+            //Generate Decision Tree in Console
+            Tree tree = new Tree(manager.GenerateDataTable());
+            Console.WriteLine(tree.ToString());
+            //...
         }
 
         public void attributeComboBoxSelectedIndexChanged(object sender, EventArgs e)
