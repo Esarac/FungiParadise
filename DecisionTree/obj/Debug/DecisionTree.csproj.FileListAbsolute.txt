@@ -5,3 +5,10 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\DecisionTree\obj\Debug\DecisionTree.cs
 C:\Users\ariza\OneDrive\Documentos\GitHub\DecisionTree\obj\Debug\DecisionTree.csproj.CoreCompileInputs.cache
 C:\Users\ariza\OneDrive\Documentos\GitHub\DecisionTree\obj\Debug\DecisionTree.exe
 C:\Users\ariza\OneDrive\Documentos\GitHub\DecisionTree\obj\Debug\DecisionTree.pdb
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\bin\Debug\DecisionTree.exe.config
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\bin\Debug\DecisionTree.exe
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\bin\Debug\DecisionTree.pdb
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\obj\Debug\DecisionTree.csprojAssemblyReference.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\obj\Debug\DecisionTree.csproj.CoreCompileInputs.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\obj\Debug\DecisionTree.exe
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\obj\Debug\DecisionTree.pdb

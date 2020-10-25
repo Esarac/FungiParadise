@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace DecisionTree.Model
 {
-    public class Tree
+    public class DecisionTree
     {
         //Attribute
         private Node rootNode;
 
         //Constructor
-        public Tree(DataTable data){
+        public DecisionTree(DataTable data){
             GenerateDecisionTree(data);
         }
 

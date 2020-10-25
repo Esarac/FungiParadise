@@ -59,7 +59,7 @@ namespace FungiParadise.Gui
 
 
             //Generate Decision Tree in Console
-            Tree tree = new Tree(manager.GenerateDataTable());
+            DecisionTree.Model.DecisionTree tree = new DecisionTree.Model.DecisionTree(manager.GenerateDataTable());
             Console.WriteLine(tree.ToString());
             //...
         }
