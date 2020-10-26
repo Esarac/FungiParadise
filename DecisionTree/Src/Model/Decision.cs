@@ -16,9 +16,37 @@ namespace DecisionTree.Model
         private Node[] childrens;
         private string[] questions;
 
+        //Property
+        public Node[] Childrens { get { return childrens; } set { this.childrens = value; } }
+        public string[] Questions { get { return questions; } set { this.questions = value; } }
+
         //Constructor
         public Decision(DataTable data) {
             Grow(data);
+        }
+
+        //Classify
+        public string Classify(DataRow data)
+        {
+            string classValue = "";
+
+            string value = ""+data[attribute];
+
+            bool run = true;
+            for (int i = 0; (i < questions.Length) && run; i++)
+            {
+                if (value.Equals(questions[i]))
+                {
+                    run = false;
+
+                    if (childrens[i] is Decision)
+                        classValue = ((Decision)childrens[i]).Classify(data);
+                    else
+                        classValue = ((Answer)childrens[i]).ClassValue;
+                }
+            }
+
+            return classValue;
         }
 
         //Train
@@ -74,6 +102,7 @@ namespace DecisionTree.Model
             //...
         }
 
+        //Aux
         private string BestValue(DataTable data)
         {
             string[] columnNames = data.Columns.Cast<DataColumn>().Select(x => x.ColumnName).ToArray();
@@ -154,6 +183,7 @@ namespace DecisionTree.Model
             return entropy;
         }
 
+        //ToString
         public override string ToString(int number)
         {
             string text = "Decision: "+attribute;

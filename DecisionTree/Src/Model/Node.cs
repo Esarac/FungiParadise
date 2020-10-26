@@ -12,11 +12,11 @@ namespace DecisionTree.Model
         //Attribute
         protected string attribute;
 
-        //Properties
+        //Property
         public string Attribute { get { return attribute; } set { this.attribute = value; } }
 
         //Aux
-        public bool IsLeaf(DataTable data)
+        protected bool IsLeaf(DataTable data)
         {
             //Get Classes
             List<string> classes = new List<string>(data.Rows.Count);
@@ -28,6 +28,7 @@ namespace DecisionTree.Model
             return classes.Count == 1;
         }
 
+        //ToString
         public abstract string ToString(int number);
 
     }

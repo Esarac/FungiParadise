@@ -57,10 +57,10 @@ namespace FungiParadise.Gui
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
-
             //Generate Decision Tree in Console
             DecisionTree.Model.DecisionTree tree = new DecisionTree.Model.DecisionTree(manager.GenerateDataTable());
             Console.WriteLine(tree.ToString());
+            Console.WriteLine( tree.Test(manager.GenerateDataTable()) );
             //...
         }
 
