@@ -12,7 +12,7 @@ namespace DecisionTree.Model
         private string classValue;
 
         //Constructor
-        public Answer(string attribute, string classValue, int number)
+        public Answer(string attribute, string classValue)
         {
             this.attribute = attribute;
             this.classValue = classValue;

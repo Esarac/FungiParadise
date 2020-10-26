@@ -14,13 +14,13 @@ namespace DecisionTree.Model
 
         //Constructor
         public DecisionTree(DataTable data){
-            GenerateDecisionTree(data);
+            Train(data);
         }
 
         //Methods
-        public void GenerateDecisionTree(DataTable data)
+        public void Train(DataTable data)
         {
-            rootNode = new Decision(data, 1);
+            rootNode = new Decision(data);
         }
 
         public override string ToString()

@@ -16,32 +16,12 @@ namespace DecisionTree.Model
         public string Attribute { get { return attribute; } set { this.attribute = value; } }
 
         //Aux
-        public string FindClass(DataTable data)
-        {
-            //Find columnClass
-            string columnClass = "";
-            bool run = true;
-            for (int i = 0; (i < data.Columns.Count) && run; i++)
-            {
-                if (data.Columns[i].DataType == typeof(string))
-                {
-                    columnClass = data.Columns[i].ColumnName;
-                    run = false;
-                }
-            }
-            //...
-
-            return columnClass;
-        }
-
         public bool IsLeaf(DataTable data)
         {
-            string columnClass = FindClass(data);
-
             //Get Classes
             List<string> classes = new List<string>(data.Rows.Count);
             foreach (DataRow row in data.Rows)
-                classes.Add("" + row[columnClass]);
+                classes.Add("" + row[data.Columns[0].ColumnName]);
             classes = classes.Distinct().ToList();
             //...
 

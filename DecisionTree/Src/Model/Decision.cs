@@ -14,27 +14,30 @@ namespace DecisionTree.Model
     {
         //Attribute
         private Node[] childrens;
-        private char[] questions;
+        private string[] questions;
 
         //Constructor
-        public Decision(DataTable data, int number) {
-            Grow(data, number);
+        public Decision(DataTable data) {
+            Grow(data);
         }
 
-        //Learn
-        public void Grow(DataTable data, int number)
+        //Train
+        private void Grow(DataTable data)
         {
+            //Find the value
             this.attribute = BestValue(data);
+            //...
 
-            //Generate Branches
-            List<char> allQuestions = new List<char>(data.Rows.Count);
+            //Generate Questions and Branches
+            List<string> allQuestions = new List<string>(data.Rows.Count);
             foreach (DataRow row in data.Rows)
-                allQuestions.Add((char)row[attribute]);
+                allQuestions.Add(""+row[attribute]);
             this.questions = allQuestions.Distinct().ToList().ToArray();
 
             this.childrens = new Node[this.questions.Length];
             //...
 
+            //Create the nodes for each question
             for (int i = 0; i < questions.Length; i++)
             {
                 //Sub DataTable
@@ -43,7 +46,7 @@ namespace DecisionTree.Model
                 List<DataRow> rows = new List<DataRow>();
                 foreach (DataRow row in subData.Rows)
                 {
-                    if ((char)row[attribute] != questions[i])
+                    if (!questions[i].Equals(""+row[attribute]))
                     {
                         rows.Add(row);
                     }
@@ -57,28 +60,26 @@ namespace DecisionTree.Model
                 //Add Decision
                 if (!IsLeaf(subData))
                 {
-                    this.childrens[i] = new Decision(subData, number+1);
+                    this.childrens[i] = new Decision(subData);
                 }
                 else
                 {
-                    List<string> classes = new List<string>(subData.Rows.Count);
-                    foreach (DataRow row in subData.Rows)
-                        classes.Add("" + row[FindClass(subData)]);
-                    classes = classes.Distinct().ToList();
-                    string singleClass = classes[0];
-                    this.childrens[i] = new Answer(FindClass(subData), singleClass, number+1);
+                    string columnClass = data.Columns[0].ColumnName;
+                    string valueClass = (string)subData.Rows[0][columnClass];
+                    this.childrens[i] = new Answer(columnClass, valueClass);
                 }
                     
                 //...
             }
+            //...
         }
 
-        public string BestValue(DataTable data)
+        private string BestValue(DataTable data)
         {
             string[] columnNames = data.Columns.Cast<DataColumn>().Select(x => x.ColumnName).ToArray();
 
             //Find columnClass
-            string columnClass = FindClass(data);
+            string columnClass = data.Columns[0].ColumnName;
             //...
 
             //Find Min Entropy
@@ -88,7 +89,7 @@ namespace DecisionTree.Model
             {
                 if (!columnClass.Equals(attribute))
                 {
-                    double entropy = Entropy(data, attribute, columnClass);
+                    double entropy = Entropy(data, attribute);
                     if (entropy < minEntropy)
                     {
                         minEntropy = entropy;
@@ -101,34 +102,34 @@ namespace DecisionTree.Model
             return bestAttribute;
         }
 
-        public double Entropy(DataTable data, string columnName, string columnClass){
+        private double Entropy(DataTable data, string columnName){
             //Get Classes
             List<string> classes = new List<string>(data.Rows.Count);
             foreach (DataRow row in data.Rows)
-                classes.Add(""+row[columnClass]);
+                classes.Add(""+row[data.Columns[0].ColumnName]);
             classes = classes.Distinct().ToList();
             //...
 
             //Get Values
-            List<char> values = new List<char>(data.Rows.Count);
+            List<string> values = new List<string>(data.Rows.Count);
             foreach (DataRow row in data.Rows)
-                values.Add((char)row[columnName]);
+                values.Add(""+row[columnName]);
             values = values.Distinct().ToList();
             //...
 
             double entropy = 0;
-            foreach(char value in values){
+            foreach(string value in values){
 
                 int[] valueProportion = new int[classes.Count];
                 int valueTotal = 0;
                 foreach (DataRow row in data.Rows)
                 {
-                    //If Value
-                    if ((char)row[columnName] == value)
+                    //If is actual value sum to the total and sum the total of the specific class
+                    if (value.Equals(""+row[columnName]))
                     {
                         for (int i = 0; i < classes.Count; i++)
                         {
-                            if (classes[i].Equals((string)row[columnClass]))
+                            if (classes[i].Equals((string)row[data.Columns[0].ColumnName]))
                             {
                                 valueProportion[i] += 1;
                             }
