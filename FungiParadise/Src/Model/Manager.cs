@@ -12,14 +12,26 @@ namespace FungiParadise.Model
 {
     public class Manager
     {
+        //Constants
+        public const double TRAINING_PERCENTAGE = 0.8;
+
         //Attributes
         private List<Mushroom> dataSet;
+        private DecisionTree.Model.DecisionTree decisionTree;
 
         //Constructor
         public Manager(string path)
         {
             dataSet = new List<Mushroom>();
             Load(path);
+        }
+
+        //Machine Learning
+        public void GenerateDecisionTree()
+        {
+            decisionTree = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTable());
+            /*Console.WriteLine(decisionTree.ToString());
+            Console.WriteLine("Classification: "+ decisionTree.Test(GenerateTestingDataTable()));*/
         }
 
         //Table
@@ -99,6 +111,96 @@ namespace FungiParadise.Model
                 row["SPORE PRINT COLOR"] = mushroom.SporePrintColor;//20
                 row["POPULATION"] = mushroom.Population;//21
                 row["HABITAT"] = mushroom.Habitat;//22
+
+                table.Rows.Add(row);
+            }
+
+            return table;
+        }
+
+        public DataTable GenerateTrainingDataTable()
+        {
+            DataTable table = GenerateEmptyTable();
+
+            for(int i = 0; i < (dataSet.Count*TRAINING_PERCENTAGE); i++)
+            {
+                DataRow row = table.NewRow();
+
+                row["TYPE"] = dataSet[i].Type;//0
+
+                row["CAP SHAPE"] = dataSet[i].CapShape;//1
+                row["CAP SURFACE"] = dataSet[i].CapSurface;//2
+                row["CAP COLOR"] = dataSet[i].CapColor;//3
+
+                row["BRUISES"] = dataSet[i].Bruises;//4
+                row["ODOR"] = dataSet[i].Odor;//5
+
+                row["GILL ATTACHMENT"] = dataSet[i].GillAttachment;//6
+                row["GILL SPACING"] = dataSet[i].GillSpacing;//7
+                row["GILL SIZE"] = dataSet[i].GillSize;//8
+                row["GILL COLOR"] = dataSet[i].GillColor;//9
+
+                row["STALK SHAPE"] = dataSet[i].StalkShape;//10
+                row["STALK ROOT"] = dataSet[i].StalkRoot;//11
+                row["STALK SURFACE ABOVE RING"] = dataSet[i].StalkSurfaceAboveRing;//12
+                row["STALK SURFACE BELOW RING"] = dataSet[i].StalkSurfaceBelowRing;//13
+                row["STALK COLOR ABOVE RING"] = dataSet[i].StalkColorAboveRing;//14
+                row["STALK COLOR BELOW RING"] = dataSet[i].StalkColorBelowRing;//15
+
+                row["VEIL TYPE"] = dataSet[i].VeilType;//16
+                row["VEIL COLOR"] = dataSet[i].VeilColor;//17
+
+                row["RING NUMBER"] = dataSet[i].RingNumber;//18
+                row["RING TYPE"] = dataSet[i].RingType;//19
+
+                row["SPORE PRINT COLOR"] = dataSet[i].SporePrintColor;//20
+                row["POPULATION"] = dataSet[i].Population;//21
+                row["HABITAT"] = dataSet[i].Habitat;//22
+
+                table.Rows.Add(row);
+            }
+
+            return table;
+        }
+
+        public DataTable GenerateTestingDataTable()
+        {
+            DataTable table = GenerateEmptyTable();
+
+            for (int i = (int)(dataSet.Count*TRAINING_PERCENTAGE); i < dataSet.Count; i++)
+            {
+                DataRow row = table.NewRow();
+
+                row["TYPE"] = dataSet[i].Type;//0
+
+                row["CAP SHAPE"] = dataSet[i].CapShape;//1
+                row["CAP SURFACE"] = dataSet[i].CapSurface;//2
+                row["CAP COLOR"] = dataSet[i].CapColor;//3
+
+                row["BRUISES"] = dataSet[i].Bruises;//4
+                row["ODOR"] = dataSet[i].Odor;//5
+
+                row["GILL ATTACHMENT"] = dataSet[i].GillAttachment;//6
+                row["GILL SPACING"] = dataSet[i].GillSpacing;//7
+                row["GILL SIZE"] = dataSet[i].GillSize;//8
+                row["GILL COLOR"] = dataSet[i].GillColor;//9
+
+                row["STALK SHAPE"] = dataSet[i].StalkShape;//10
+                row["STALK ROOT"] = dataSet[i].StalkRoot;//11
+                row["STALK SURFACE ABOVE RING"] = dataSet[i].StalkSurfaceAboveRing;//12
+                row["STALK SURFACE BELOW RING"] = dataSet[i].StalkSurfaceBelowRing;//13
+                row["STALK COLOR ABOVE RING"] = dataSet[i].StalkColorAboveRing;//14
+                row["STALK COLOR BELOW RING"] = dataSet[i].StalkColorBelowRing;//15
+
+                row["VEIL TYPE"] = dataSet[i].VeilType;//16
+                row["VEIL COLOR"] = dataSet[i].VeilColor;//17
+
+                row["RING NUMBER"] = dataSet[i].RingNumber;//18
+                row["RING TYPE"] = dataSet[i].RingType;//19
+
+                row["SPORE PRINT COLOR"] = dataSet[i].SporePrintColor;//20
+                row["POPULATION"] = dataSet[i].Population;//21
+                row["HABITAT"] = dataSet[i].Habitat;//22
 
                 table.Rows.Add(row);
             }

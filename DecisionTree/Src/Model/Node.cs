@@ -21,7 +21,7 @@ namespace DecisionTree.Model
             //Get Classes
             List<string> classes = new List<string>(data.Rows.Count);
             foreach (DataRow row in data.Rows)
-                classes.Add("" + row[data.Columns[0].ColumnName]);
+                classes.Add("" + row[0]);
             classes = classes.Distinct().ToList();
             //...
 

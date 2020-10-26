@@ -12,6 +12,9 @@ namespace DecisionTree.Model
 {
     public class Decision : Node
     {
+        //Constants
+        private readonly Random random= new Random();
+
         //Attribute
         private Node[] childrens;
         private string[] questions;
@@ -32,18 +35,27 @@ namespace DecisionTree.Model
 
             string value = ""+data[attribute];
 
-            bool run = true;
-            for (int i = 0; (i < questions.Length) && run; i++)
+            bool found = false;
+            for (int i = 0; (i < questions.Length) && !found; i++)
             {
                 if (value.Equals(questions[i]))
                 {
-                    run = false;
+                    found = true;
 
                     if (childrens[i] is Decision)
                         classValue = ((Decision)childrens[i]).Classify(data);
                     else
                         classValue = ((Answer)childrens[i]).ClassValue;
                 }
+            }
+
+            if (!found)
+            {
+                int i = random.Next(childrens.Length);
+                if (childrens[i] is Decision)
+                    classValue = ((Decision)childrens[i]).Classify(data);
+                else
+                    classValue = ((Answer)childrens[i]).ClassValue;
             }
 
             return classValue;
@@ -135,7 +147,7 @@ namespace DecisionTree.Model
             //Get Classes
             List<string> classes = new List<string>(data.Rows.Count);
             foreach (DataRow row in data.Rows)
-                classes.Add(""+row[data.Columns[0].ColumnName]);
+                classes.Add(""+row[0]);
             classes = classes.Distinct().ToList();
             //...
 
@@ -158,7 +170,7 @@ namespace DecisionTree.Model
                     {
                         for (int i = 0; i < classes.Count; i++)
                         {
-                            if (classes[i].Equals((string)row[data.Columns[0].ColumnName]))
+                            if (classes[i].Equals(""+row[0]))
                             {
                                 valueProportion[i] += 1;
                             }
