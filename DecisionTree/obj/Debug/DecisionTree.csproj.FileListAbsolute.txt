@@ -12,3 +12,10 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\obj\Debug\DecisionT
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\obj\Debug\DecisionTree.csproj.CoreCompileInputs.cache
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\obj\Debug\DecisionTree.exe
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\DecisionTree\obj\Debug\DecisionTree.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\bin\Debug\DecisionTree.exe.config
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\bin\Debug\DecisionTree.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\bin\Debug\DecisionTree.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\obj\Debug\DecisionTree.csprojAssemblyReference.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\obj\Debug\DecisionTree.csproj.CoreCompileInputs.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\obj\Debug\DecisionTree.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\obj\Debug\DecisionTree.pdb

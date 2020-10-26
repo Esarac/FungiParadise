@@ -54,3 +54,24 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiPar
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.csproj.CopyComplete
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.exe
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\FungiParadise.exe.config
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\FungiParadise.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\FungiParadise.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\DecisionTree.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\MetroFramework.Design.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\MetroFramework.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\DecisionTree.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\DecisionTree.exe.config
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.csprojAssemblyReference.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Gui.ChartTab.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Gui.InfoTab.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Gui.TableTab.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Src.Gui.TreeTab.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Gui.Window.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Properties.Resources.resources
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.csproj.GenerateResource.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.csproj.CoreCompileInputs.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.csproj.CopyComplete
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.pdb

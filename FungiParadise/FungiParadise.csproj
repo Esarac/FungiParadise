@@ -65,6 +65,12 @@
     <Compile Include="Src\Gui\ChartTab.Designer.cs">
       <DependentUpon>ChartTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Src\Gui\TreeTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Src\Gui\TreeTab.Designer.cs">
+      <DependentUpon>TreeTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Src\Gui\Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Src\Gui\TableTab.resx">
       <DependentUpon>TableTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src\Gui\TreeTab.resx">
+      <DependentUpon>TreeTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Src\Gui\Window.resx">
       <DependentUpon>Window.cs</DependentUpon>
