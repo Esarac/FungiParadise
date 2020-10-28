@@ -45,7 +45,7 @@ namespace TreeView.Model
             children = new List<TreeNode<T>>();
 
             //Drawing properties
-            this.font = new Font("Times New Roman", 12);
+            this.font = new Font("Microsoft Sans Serif", 10);
             pen = Pens.Black;
             fontBrush = Brushes.Black;
             bgBrush = Brushes.White;
