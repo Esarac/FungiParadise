@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.Drawing;
 
-namespace TreeView.Src.Model
+namespace TreeView.Model
 {
-    class CircleNode : IDrawable
+    public class CircleNode : IDrawable
     {
         //Attributes
         public string text;
@@ -25,20 +27,17 @@ namespace TreeView.Src.Model
         void IDrawable.Draw(float x, float y, Graphics gr, Pen pen, Brush bgBrush, Brush textBrush, Font font)
         {
             // Fill and draw an ellipse at our location.
-            SizeF my_size = GetSize(gr, font);
-            RectangleF rect = new RectangleF(
-                x - my_size.Width / 2,
-                y - my_size.Height / 2,
-                my_size.Width, my_size.Height);
+            SizeF mySize = GetSize(gr, font);
+            RectangleF rect = new RectangleF((x - mySize.Width / 2),(y - mySize.Height / 2), mySize.Width, mySize.Height);
             gr.FillEllipse(bgBrush, rect);
             gr.DrawEllipse(pen, rect);
 
             // Draw the text.
-            using (StringFormat string_format = new StringFormat())
+            using (StringFormat stringFormat = new StringFormat())
             {
-                string_format.Alignment = StringAlignment.Center;
-                string_format.LineAlignment = StringAlignment.Center;
-                gr.DrawString(text, font, textBrush, x, y, string_format);
+                stringFormat.Alignment = StringAlignment.Center;
+                stringFormat.LineAlignment = StringAlignment.Center;
+                gr.DrawString(text, font, textBrush, x, y, stringFormat);
             }
         }
     }

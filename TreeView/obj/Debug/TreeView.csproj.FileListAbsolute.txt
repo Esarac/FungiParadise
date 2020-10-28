@@ -1,0 +1,8 @@
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\bin\Debug\TreeView.exe.config
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\bin\Debug\TreeView.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\bin\Debug\TreeView.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\bin\Debug\System.Drawing.Common.dll
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.csproj.CoreCompileInputs.cache
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.csproj.CopyComplete
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.pdb

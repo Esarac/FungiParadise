@@ -41,12 +41,14 @@
             this.tableTab = new FungiParadise.Gui.TableTab();
             this.chartTab = new FungiParadise.Gui.ChartTab();
             this.infoTab = new FungiParadise.Gui.InfoTab();
+            this.treeTab = new FungiParadise.Src.Gui.TreeTab();
             ((System.ComponentModel.ISupportInitialize)(this.styleManager)).BeginInit();
             this.panel.SuspendLayout();
             this.tabMenu.SuspendLayout();
             this.tabTable.SuspendLayout();
             this.tabCharts.SuspendLayout();
             this.tabInfo.SuspendLayout();
+            this.tabTree.SuspendLayout();
             this.SuspendLayout();
             // 
             // styleManager
@@ -92,7 +94,7 @@
             this.tabMenu.Location = new System.Drawing.Point(20, 121);
             this.tabMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabMenu.Name = "tabMenu";
-            this.tabMenu.SelectedIndex = 1;
+            this.tabMenu.SelectedIndex = 3;
             this.tabMenu.Size = new System.Drawing.Size(1040, 579);
             this.tabMenu.TabIndex = 1;
             this.tabMenu.UseSelectable = true;
@@ -147,6 +149,7 @@
             // 
             // tabTree
             // 
+            this.tabTree.Controls.Add(this.treeTab);
             this.tabTree.HorizontalScrollbarBarColor = true;
             this.tabTree.HorizontalScrollbarHighlightOnWheel = false;
             this.tabTree.HorizontalScrollbarSize = 0;
@@ -186,6 +189,14 @@
             this.infoTab.Size = new System.Drawing.Size(1032, 537);
             this.infoTab.TabIndex = 2;
             // 
+            // treeTab
+            // 
+            this.treeTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeTab.Location = new System.Drawing.Point(0, 0);
+            this.treeTab.Name = "treeTab";
+            this.treeTab.Size = new System.Drawing.Size(1032, 537);
+            this.treeTab.TabIndex = 2;
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,6 +217,7 @@
             this.tabTable.ResumeLayout(false);
             this.tabCharts.ResumeLayout(false);
             this.tabInfo.ResumeLayout(false);
+            this.tabTree.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -223,5 +235,6 @@
         private ChartTab chartTab;
         private InfoTab infoTab;
         private MetroFramework.Controls.MetroTabPage tabTree;
+        private Src.Gui.TreeTab treeTab;
     }
 }

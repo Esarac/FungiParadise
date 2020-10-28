@@ -1,4 +1,0 @@
-C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\bin\Debug\netcoreapp3.1\TreeView.exe
-C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\netcoreapp3.1\TreeView.csprojAssemblyReference.cache
-C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\netcoreapp3.1\TreeView.AssemblyInfoInputs.cache
-C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\netcoreapp3.1\TreeView.AssemblyInfo.cs

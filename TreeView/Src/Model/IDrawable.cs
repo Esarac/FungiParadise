@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Drawing;
 
-namespace TreeView.Src.Model
+namespace TreeView.Model
 {
-    interface IDrawable
+    public interface IDrawable
     {
         // Return the object's needed size.
         SizeF GetSize(Graphics gr, Font font);

@@ -75,3 +75,6 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\o
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.csproj.CopyComplete
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.exe
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\TreeView.exe
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\TreeView.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\TreeView.exe.config

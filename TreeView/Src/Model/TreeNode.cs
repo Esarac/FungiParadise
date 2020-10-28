@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.Drawing;
 
-namespace TreeView.Src.Model
+namespace TreeView.Model
 {
-    class TreeNode<T> where T : IDrawable
+    public class TreeNode<T> where T : IDrawable
     {
         //Attributes
         public T data;
@@ -28,14 +30,14 @@ namespace TreeView.Src.Model
         private PointF spotCenter;
 
         //Constructor
-        public TreeNode(T data, Font font)
+        public TreeNode(T data)
         {
             //Attributes
             this.data = data;
             children = new List<TreeNode<T>>();
 
             //Drawing properties
-            this.font = font;
+            this.font = new Font("Times New Roman", 12);
             pen = Pens.Black;
             frontBrush = Brushes.Black;
             bgBrush = Brushes.White;
@@ -53,7 +55,7 @@ namespace TreeView.Src.Model
             children.Add(child);
         }
 
-        public void Arrange(Graphics gr, float xmin, float ymin)
+        public void Arrange(Graphics gr, float xmin, ref float ymin)
         {
             SizeF mySize = data.GetSize(gr, font);
             mySize.Width += 3 * spotRadius;
@@ -65,13 +67,13 @@ namespace TreeView.Src.Model
 
             foreach (TreeNode<T> child in children)
             {
-                child.Arrange(gr, (xmin + indent), ymin);
+                child.Arrange(gr, (xmin + indent), ref ymin);
             }
         }
 
-        public void DrawTree(Graphics gr, float x, float y)
+        public void DrawTree(Graphics gr, ref float x, float y)
         {
-            Arrange(gr, x, y);
+            Arrange(gr, x, ref y);
             DrawTree(gr);
         }
 
@@ -94,6 +96,9 @@ namespace TreeView.Src.Model
 
         public void DrawSubtreeNodes(Graphics gr)
         {
+            Console.WriteLine("Enter");
+            Console.WriteLine(children.Count);
+
             data.Draw(dataCenter.X, dataCenter.Y, gr, pen, bgBrush, frontBrush, font);
 
             RectangleF rect = new RectangleF((spotCenter.X - spotRadius), (spotCenter.Y - spotRadius), (2 * spotRadius), (2 * spotRadius));
