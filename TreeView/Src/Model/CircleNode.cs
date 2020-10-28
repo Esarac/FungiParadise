@@ -26,13 +26,12 @@ namespace TreeView.Model
 
         void IDrawable.Draw(float x, float y, Graphics gr, Pen pen, Brush bgBrush, Brush textBrush, Font font)
         {
-            // Fill and draw an ellipse at our location.
+
             SizeF mySize = GetSize(gr, font);
-            RectangleF rect = new RectangleF((x - mySize.Width / 2),(y - mySize.Height / 2), mySize.Width, mySize.Height);
+            RectangleF rect = new RectangleF((x - mySize.Width / 2), (y - mySize.Height / 2), mySize.Width, mySize.Height);
             gr.FillEllipse(bgBrush, rect);
             gr.DrawEllipse(pen, rect);
 
-            // Draw the text.
             using (StringFormat stringFormat = new StringFormat())
             {
                 stringFormat.Alignment = StringAlignment.Center;

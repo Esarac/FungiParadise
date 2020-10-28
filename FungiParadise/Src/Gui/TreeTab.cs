@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TreeView.Model;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
+using System.ComponentModel.Design.Serialization;
 
 namespace FungiParadise.Src.Gui
 {
@@ -25,27 +26,33 @@ namespace FungiParadise.Src.Gui
 
         private void load(object sender, EventArgs e)
         {
-            
-            TreeNode<CircleNode> a_node = new TreeNode<CircleNode>(new CircleNode("RO2"));
-            TreeNode<CircleNode> b_node = new TreeNode<CircleNode>(new CircleNode("Cr"));
-            TreeNode<CircleNode> c_node = new TreeNode<CircleNode>(new CircleNode("Cfg3"));
-            TreeNode<CircleNode> d_node = new TreeNode<CircleNode>(new CircleNode("F34"));
-            TreeNode<CircleNode> e_node = new TreeNode<CircleNode>(new CircleNode("cv"));
-            TreeNode<CircleNode> f_node = new TreeNode<CircleNode>(new CircleNode("G"));
-            TreeNode<CircleNode> g_node = new TreeNode<CircleNode>(new CircleNode("ht"));
-            TreeNode<CircleNode> h_node = new TreeNode<CircleNode>(new CircleNode("45g"));
+            TreeNode<CircleNode> aNode = new TreeNode<CircleNode>(new CircleNode("RO2"));
+            TreeNode<CircleNode> bNode = new TreeNode<CircleNode>(new CircleNode("Cr"));
+            TreeNode<CircleNode> cNode = new TreeNode<CircleNode>(new CircleNode("Cfg3"));
+            TreeNode<CircleNode> dNode = new TreeNode<CircleNode>(new CircleNode("F34"));
+            TreeNode<CircleNode> eNode = new TreeNode<CircleNode>(new CircleNode("cv"));
+            TreeNode<CircleNode> fNode = new TreeNode<CircleNode>(new CircleNode("G"));
+            TreeNode<CircleNode> gNode = new TreeNode<CircleNode>(new CircleNode("Ft"));
+            TreeNode<CircleNode> hNode = new TreeNode<CircleNode>(new CircleNode("45g"));
+            TreeNode<CircleNode> iNode = new TreeNode<CircleNode>(new CircleNode("Edible"));
+            TreeNode<CircleNode> jNode = new TreeNode<CircleNode>(new CircleNode("Edible"));
+            TreeNode<CircleNode> kNode = new TreeNode<CircleNode>(new CircleNode("Poison"));
 
-            root.AddChild(a_node);
-            root.AddChild(b_node);
-            a_node.AddChild(c_node);
-            a_node.AddChild(d_node);
-            b_node.AddChild(e_node);
-            b_node.AddChild(f_node);
-            b_node.AddChild(g_node);
-            e_node.AddChild(h_node);
 
-            // Position the tree.
+            root.AddChild(aNode);
+            root.AddChild(bNode);
+            aNode.AddChild(cNode);
+            aNode.AddChild(dNode);
+            bNode.AddChild(eNode);
+            bNode.AddChild(fNode);
+            bNode.AddChild(gNode);
+            eNode.AddChild(hNode);
+            hNode.AddChild(iNode);
+            cNode.AddChild(jNode);
+            cNode.AddChild(kNode);
+
             ArrangeTree();
+            verticalOrientation();
         }
 
         //Triggers
@@ -66,9 +73,21 @@ namespace FungiParadise.Src.Gui
         {
             using (Graphics gr = picTree.CreateGraphics())
             {
-                float xmin = root.indent;
-                float ymin = xmin;
-                root.Arrange(gr, xmin, ref ymin);
+                if (root.orientation == TreeNode<CircleNode>.Orientations.Horizontal)
+                {
+                    float xmin = 0, ymin = 0;
+                    root.Arrange(gr, ref xmin, ref ymin);
+
+                    xmin = (picTree.ClientSize.Width - xmin) / 2;
+                    ymin = 10;
+                    root.Arrange(gr, ref xmin, ref ymin);
+                }
+                else
+                {
+                    float xmin = root.indent;
+                    float ymin = xmin;
+                    root.Arrange(gr, ref xmin, ref ymin);
+                }
             }
 
             picTree.Refresh();
@@ -78,6 +97,12 @@ namespace FungiParadise.Src.Gui
         {
             TreeNode<CircleNode> child = new TreeNode<CircleNode>(new CircleNode(text));
             father.AddChild(child);
+            ArrangeTree();
+        }
+
+        private void verticalOrientation()
+        {
+            root.SetTreeDrawingParameters(5, 2, 20, 5, TreeNode<CircleNode>.Orientations.Vertical);
             ArrangeTree();
         }
     }

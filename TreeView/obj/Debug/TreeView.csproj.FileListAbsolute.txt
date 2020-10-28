@@ -6,3 +6,4 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\De
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.csproj.CopyComplete
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.exe
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.csprojAssemblyReference.cache

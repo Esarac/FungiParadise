@@ -12,11 +12,12 @@ namespace TreeView.Model
         //Attributes
         public T data;
         public List<TreeNode<T>> children;
+        public Orientations orientation;
 
         //Drawing properties
         public Font font;
         public Pen pen;
-        public Brush frontBrush;
+        public Brush fontBrush;
         public Brush bgBrush;
 
         //Spacing properties
@@ -29,6 +30,13 @@ namespace TreeView.Model
         private PointF dataCenter;
         private PointF spotCenter;
 
+        //Enum
+        public enum Orientations
+        {
+            Horizontal,
+            Vertical
+        }
+
         //Constructor
         public TreeNode(T data)
         {
@@ -39,7 +47,7 @@ namespace TreeView.Model
             //Drawing properties
             this.font = new Font("Times New Roman", 12);
             pen = Pens.Black;
-            frontBrush = Brushes.Black;
+            fontBrush = Brushes.Black;
             bgBrush = Brushes.White;
 
             //Spacing properties
@@ -50,12 +58,77 @@ namespace TreeView.Model
         }
 
         //Methods
+        public void SetTreeDrawingParameters(float hOffSet, float vOffSet, float indent, float spotRadius, Orientations orientation)
+        {
+            this.hOffSet = hOffSet;
+            this.vOffSet = vOffSet;
+            this.indent = indent;
+            this.spotRadius = spotRadius;
+            this.orientation = orientation;
+
+            foreach (TreeNode<T> child in children)
+                child.SetTreeDrawingParameters(hOffSet, vOffSet, indent, spotRadius, orientation);
+        }
+
         public void AddChild(TreeNode<T> child)
         {
             children.Add(child);
         }
 
-        public void Arrange(Graphics gr, float xmin, ref float ymin)
+        public void Arrange(Graphics gr, ref float xmin, ref float ymin)
+        {
+            if (orientation == TreeNode<T>.Orientations.Horizontal)
+            {
+                ArrangeHorizontally(gr, ref xmin, ref ymin);
+            }
+            else
+            {
+                ArrangeVertically(gr, xmin, ref ymin);
+            }
+        }
+
+        public void ArrangeHorizontally(Graphics gr, ref float xmin, ref float ymin)
+        {
+            SizeF mySize = data.GetSize(gr, font);
+
+            float x = xmin;
+            float biggestYmin = ymin + mySize.Height;
+            float subtreeYmin = ymin + mySize.Height + vOffSet;
+
+            foreach (TreeNode<T> child in children)
+            {
+                float childYmin = subtreeYmin;
+                child.Arrange(gr, ref x, ref childYmin);
+
+                if (biggestYmin < childYmin) 
+                    biggestYmin = childYmin;
+
+                x += hOffSet;
+            }
+
+            if (children.Count > 0) 
+                x -= hOffSet;
+
+            float subtreeWidth = x - xmin;
+            if (mySize.Width > subtreeWidth)
+            {
+                x = xmin + (mySize.Width - subtreeWidth) / 2;
+                foreach (TreeNode<T> child in children)
+                {
+                    child.Arrange(gr, ref x, ref subtreeYmin);
+                    x += hOffSet;
+                }
+
+                subtreeWidth = mySize.Width;
+            }
+
+            dataCenter = new PointF((xmin + subtreeWidth / 2), (ymin + mySize.Height / 2));
+
+            xmin += subtreeWidth;
+            ymin = biggestYmin;
+        }
+
+        public void ArrangeVertically(Graphics gr, float xmin, ref float ymin)
         {
             SizeF mySize = data.GetSize(gr, font);
             mySize.Width += 3 * spotRadius;
@@ -67,13 +140,13 @@ namespace TreeView.Model
 
             foreach (TreeNode<T> child in children)
             {
-                child.Arrange(gr, (xmin + indent), ref ymin);
+                child.ArrangeVertically(gr, (xmin + indent), ref ymin);
             }
         }
 
         public void DrawTree(Graphics gr, ref float x, float y)
         {
-            Arrange(gr, x, ref y);
+            Arrange(gr, ref x, ref y);
             DrawTree(gr);
         }
 
@@ -83,36 +156,61 @@ namespace TreeView.Model
             DrawSubtreeNodes(gr);
         }
 
-        public void DrawSubtreeLinks(Graphics gr)
+        private void DrawSubtreeLinks(Graphics gr)
+        {
+            if (orientation == TreeNode<T>.Orientations.Horizontal)
+            {
+                DrawSubtreeLinksHorizontal(gr);
+            }
+            else
+            {
+                DrawSubtreeLinksVertical(gr);
+            }
+        }
+
+        private void DrawSubtreeLinksHorizontal(Graphics gr)
+        {
+            foreach (TreeNode<T> child in children)
+            {
+                gr.DrawLine(pen, dataCenter, child.dataCenter);
+                child.DrawSubtreeLinksHorizontal(gr);
+            }
+        }
+
+        private void DrawSubtreeLinksVertical(Graphics gr)
         {
             foreach (TreeNode<T> child in children)
             {
                 gr.DrawLine(pen, spotCenter.X, spotCenter.Y, spotCenter.X, child.spotCenter.Y);
                 gr.DrawLine(pen, spotCenter.X, child.spotCenter.Y, child.spotCenter.X, child.spotCenter.Y);
-
-                child.DrawSubtreeLinks(gr);
+                child.DrawSubtreeLinksVertical(gr);
             }
         }
 
-        public void DrawSubtreeNodes(Graphics gr)
+        private void DrawSubtreeNodes(Graphics gr)
         {
-            Console.WriteLine("Enter");
-            Console.WriteLine(children.Count);
+            data.Draw(dataCenter.X, dataCenter.Y, gr, pen, bgBrush, fontBrush, font);
 
-            data.Draw(dataCenter.X, dataCenter.Y, gr, pen, bgBrush, frontBrush, font);
+            if (orientation == TreeNode<T>.Orientations.Vertical)
+            {
+                RectangleF rect = new RectangleF((spotCenter.X - spotRadius), (spotCenter.Y - spotRadius), (2 * spotRadius), (2 * spotRadius));
 
-            RectangleF rect = new RectangleF((spotCenter.X - spotRadius), (spotCenter.Y - spotRadius), (2 * spotRadius), (2 * spotRadius));
+                if (children.Count > 0)
+                {
+                    gr.FillEllipse(Brushes.DarkGreen, rect);
+                }
+                else
+                {
+                    gr.FillEllipse(Brushes.LightGreen, rect);
+                }
 
-            if (children.Count > 0)
-                gr.FillEllipse(Brushes.DarkSeaGreen, rect);
-            else
-                gr.FillEllipse(Brushes.LightGreen, rect);
+                gr.DrawEllipse(pen, rect);
 
-            gr.DrawEllipse(pen, rect);
+            }
 
             foreach (TreeNode<T> child in children)
             {
-                child.DrawSubtreeLinks(gr);
+                child.DrawSubtreeNodes(gr);
             }
         }
     }
