@@ -18,3 +18,4 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\bi
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\obj\Debug\DecisionTree.csproj.CoreCompileInputs.cache
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\obj\Debug\DecisionTree.exe
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\obj\Debug\DecisionTree.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\DecisionTree\obj\Debug\DecisionTree.csprojAssemblyReference.cache
