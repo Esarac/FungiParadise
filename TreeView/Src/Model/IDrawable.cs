@@ -13,6 +13,6 @@ namespace TreeView.Model
         SizeF GetSize(Graphics gr, Font font);
 
         // Draw the object centered at (x, y).
-        void Draw(float x, float y, Graphics gr, Pen pen, Brush bg_brush, Brush text_brush, Font font);
+        void Draw(float x, float y, Graphics gr, Pen pen, Brush bg_brush, Brush text_brush, Font font, bool circle);
     }
 }

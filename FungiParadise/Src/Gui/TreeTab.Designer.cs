@@ -51,7 +51,6 @@
             this.Controls.Add(this.picTree);
             this.Name = "TreeTab";
             this.Size = new System.Drawing.Size(800, 600);
-            this.Load += new System.EventHandler(this.load);
             ((System.ComponentModel.ISupportInitialize)(this.picTree)).EndInit();
             this.ResumeLayout(false);
 

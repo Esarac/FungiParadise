@@ -78,3 +78,7 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\o
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\TreeView.exe
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\TreeView.pdb
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\TreeView.exe.config
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\bin\Debug\TreeView.exe
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\bin\Debug\TreeView.pdb
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\bin\Debug\TreeView.exe.config
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Src.Gui.TreeTab.resources

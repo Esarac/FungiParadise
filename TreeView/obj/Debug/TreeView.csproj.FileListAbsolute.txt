@@ -7,3 +7,12 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\De
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.exe
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.pdb
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.csprojAssemblyReference.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\bin\Debug\TreeView.exe.config
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\bin\Debug\TreeView.exe
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\bin\Debug\TreeView.pdb
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\bin\Debug\System.Drawing.Common.dll
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.csprojAssemblyReference.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.csproj.CoreCompileInputs.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.csproj.CopyComplete
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.exe
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.pdb

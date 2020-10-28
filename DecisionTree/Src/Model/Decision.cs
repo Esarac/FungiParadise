@@ -196,6 +196,11 @@ namespace DecisionTree.Model
         }
 
         //ToString
+        public override string ToString()
+        {
+            return attribute;
+        }
+
         public override string ToString(int number)
         {
             string text = "Decision: "+attribute;

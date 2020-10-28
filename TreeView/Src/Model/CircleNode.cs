@@ -24,14 +24,18 @@ namespace TreeView.Model
             return gr.MeasureString(text, font) + new SizeF(10, 10);
         }
 
-        void IDrawable.Draw(float x, float y, Graphics gr, Pen pen, Brush bgBrush, Brush textBrush, Font font)
+        void IDrawable.Draw(float x, float y, Graphics gr, Pen pen, Brush bgBrush, Brush textBrush, Font font, bool circle)
         {
 
             SizeF mySize = GetSize(gr, font);
             RectangleF rect = new RectangleF((x - mySize.Width / 2), (y - mySize.Height / 2), mySize.Width, mySize.Height);
-            gr.FillEllipse(bgBrush, rect);
-            gr.DrawEllipse(pen, rect);
 
+            if (circle)
+            {
+                gr.FillEllipse(bgBrush, rect);
+                gr.DrawEllipse(pen, rect);
+            }
+                
             using (StringFormat stringFormat = new StringFormat())
             {
                 stringFormat.Alignment = StringAlignment.Center;

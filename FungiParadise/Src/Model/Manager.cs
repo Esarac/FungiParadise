@@ -19,6 +19,9 @@ namespace FungiParadise.Model
         private List<Mushroom> dataSet;
         private DecisionTree.Model.DecisionTree decisionTree;
 
+        //Property
+        public DecisionTree.Model.DecisionTree DecisionTree{ get { return decisionTree; } }
+
         //Constructor
         public Manager(string path)
         {

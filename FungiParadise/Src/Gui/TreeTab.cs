@@ -11,48 +11,77 @@ using TreeView.Model;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.ComponentModel.Design.Serialization;
+using FungiParadise.Model;
 
 namespace FungiParadise.Src.Gui
 {
     public partial class TreeTab : UserControl
     {
+        //Attributes
+        private Manager manager;
+        private TreeNode<CircleNode> root = new TreeNode<CircleNode>(new CircleNode(""));
+
         public TreeTab()
         {
             InitializeComponent();
         }
 
-        //Attributes
-        private TreeNode<CircleNode> root = new TreeNode<CircleNode>(new CircleNode("Root"));
-
-        private void load(object sender, EventArgs e)
+        public void InitializeTreeTab(Manager manager)
         {
-            TreeNode<CircleNode> aNode = new TreeNode<CircleNode>(new CircleNode("RO2"));
-            TreeNode<CircleNode> bNode = new TreeNode<CircleNode>(new CircleNode("Cr"));
-            TreeNode<CircleNode> cNode = new TreeNode<CircleNode>(new CircleNode("Cfg3"));
-            TreeNode<CircleNode> dNode = new TreeNode<CircleNode>(new CircleNode("F34"));
-            TreeNode<CircleNode> eNode = new TreeNode<CircleNode>(new CircleNode("cv"));
-            TreeNode<CircleNode> fNode = new TreeNode<CircleNode>(new CircleNode("G"));
-            TreeNode<CircleNode> gNode = new TreeNode<CircleNode>(new CircleNode("Ft"));
-            TreeNode<CircleNode> hNode = new TreeNode<CircleNode>(new CircleNode("45g"));
-            TreeNode<CircleNode> iNode = new TreeNode<CircleNode>(new CircleNode("Edible"));
-            TreeNode<CircleNode> jNode = new TreeNode<CircleNode>(new CircleNode("Edible"));
-            TreeNode<CircleNode> kNode = new TreeNode<CircleNode>(new CircleNode("Poison"));
+            this.manager = manager;
+            GenerateDecisionTree();
+        }
 
+        private void GenerateDecisionTree()
+        {
+            //Generate Tree
+            manager.GenerateDecisionTree();
 
-            root.AddChild(aNode);
-            root.AddChild(bNode);
-            aNode.AddChild(cNode);
-            aNode.AddChild(dNode);
-            bNode.AddChild(eNode);
-            bNode.AddChild(fNode);
-            bNode.AddChild(gNode);
-            eNode.AddChild(hNode);
-            hNode.AddChild(iNode);
-            cNode.AddChild(jNode);
-            cNode.AddChild(kNode);
+            //Root
+            this.root = new TreeNode<CircleNode>(new CircleNode(manager.DecisionTree.RootNode.ToString()));
 
+            List<Tuple<string, string>> questionsPerClasses = new List<Tuple<string, string>>();
+            //Branches
+            for (int i = 0; i < manager.DecisionTree.RootNode.Childrens.Length; i++)
+            {
+                AddNode(root, manager.DecisionTree.RootNode.Questions[i], manager.DecisionTree.RootNode.Childrens[i]);
+                /*if (manager.DecisionTree.RootNode.Childrens[i] is DecisionTree.Model.Decision)
+                {
+                    AddNode(root, manager.DecisionTree.RootNode.Questions[i], manager.DecisionTree.RootNode.Childrens[i]);
+                }
+                else
+                {
+                    DecisionTree.Model.Answer answ = (DecisionTree.Model.Answer)manager.DecisionTree.RootNode.Childrens[i];
+
+                    for (int j = 0; j < questionsPerClasses.Count; j++)
+                    {
+                        if (questionsPerClasses[i].Item1 == answ.ClassValue)
+                        {
+
+                        }
+                        
+                    }
+                }*/
+            }
+
+            //Arrnage
             ArrangeTree();
             verticalOrientation();
+        }
+
+        private void AddNode(TreeNode<CircleNode> parent, string question, DecisionTree.Model.Node child)
+        {
+            TreeNode<CircleNode> parentDraw = new TreeNode<CircleNode>(new CircleNode(question + ". " + child.ToString()));
+            parent.AddChild(parentDraw);
+
+            if (child is DecisionTree.Model.Decision)
+            {
+                DecisionTree.Model.Decision dChild = (DecisionTree.Model.Decision)child;
+                for (int i = 0; i < dChild.Childrens.Length; i++)
+                {
+                    AddNode(parentDraw, dChild.Questions[i], dChild.Childrens[i]);
+                }
+            }
         }
 
         //Triggers
@@ -93,15 +122,11 @@ namespace FungiParadise.Src.Gui
             picTree.Refresh();
         }
 
-        private void addNode(string text, TreeNode<CircleNode> father)
-        {
-            TreeNode<CircleNode> child = new TreeNode<CircleNode>(new CircleNode(text));
-            father.AddChild(child);
-            ArrangeTree();
-        }
-
         private void verticalOrientation()
         {
+            //Horizontal
+            //root.SetTreeDrawingParameters(15, 80, 20, 5, TreeNode<CircleNode>.Orientations.Horizontal);
+            //Vertical
             root.SetTreeDrawingParameters(5, 2, 20, 5, TreeNode<CircleNode>.Orientations.Vertical);
             ArrangeTree();
         }

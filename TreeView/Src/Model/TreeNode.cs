@@ -189,7 +189,10 @@ namespace TreeView.Model
 
         private void DrawSubtreeNodes(Graphics gr)
         {
-            data.Draw(dataCenter.X, dataCenter.Y, gr, pen, bgBrush, fontBrush, font);
+            bool circle = true;
+            if (orientation == TreeNode<T>.Orientations.Vertical)
+                circle = false;
+            data.Draw(dataCenter.X, dataCenter.Y, gr, pen, bgBrush, fontBrush, font, circle);
 
             if (orientation == TreeNode<T>.Orientations.Vertical)
             {

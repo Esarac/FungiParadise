@@ -23,9 +23,15 @@ namespace DecisionTree.Model
         }
 
         //Method
+        public override string ToString()
+        {
+            return classValue;
+        }
+
         public override string ToString(int number)
         {
             return "Answer: " + classValue;
         }
+
     }
 }

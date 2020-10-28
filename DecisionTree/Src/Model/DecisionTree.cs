@@ -12,6 +12,9 @@ namespace DecisionTree.Model
         //Attribute
         private Decision rootNode;
 
+        //Property
+        public Decision RootNode { get { return rootNode; } set { this.rootNode = value; } }
+
         //Constructor
         public DecisionTree(DataTable data){
             Train(data);
