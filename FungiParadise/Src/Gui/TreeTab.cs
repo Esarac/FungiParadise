@@ -19,13 +19,15 @@ namespace FungiParadise.Src.Gui
     {
         //Attributes
         private Manager manager;
-        private TreeNode<CircleNode> root = new TreeNode<CircleNode>(new CircleNode(""));
+        private TreeNode<CircleNode> root;
 
+        //Constructor
         public TreeTab()
         {
             InitializeComponent();
         }
 
+        //Method
         public void InitializeTreeTab(Manager manager)
         {
             this.manager = manager;
@@ -40,33 +42,14 @@ namespace FungiParadise.Src.Gui
             //Root
             this.root = new TreeNode<CircleNode>(new CircleNode(manager.DecisionTree.RootNode.ToString()));
 
-            List<Tuple<string, string>> questionsPerClasses = new List<Tuple<string, string>>();
             //Branches
             for (int i = 0; i < manager.DecisionTree.RootNode.Childrens.Length; i++)
             {
                 AddNode(root, manager.DecisionTree.RootNode.Questions[i], manager.DecisionTree.RootNode.Childrens[i]);
-                /*if (manager.DecisionTree.RootNode.Childrens[i] is DecisionTree.Model.Decision)
-                {
-                    AddNode(root, manager.DecisionTree.RootNode.Questions[i], manager.DecisionTree.RootNode.Childrens[i]);
-                }
-                else
-                {
-                    DecisionTree.Model.Answer answ = (DecisionTree.Model.Answer)manager.DecisionTree.RootNode.Childrens[i];
-
-                    for (int j = 0; j < questionsPerClasses.Count; j++)
-                    {
-                        if (questionsPerClasses[i].Item1 == answ.ClassValue)
-                        {
-
-                        }
-                        
-                    }
-                }*/
             }
 
-            //Arrnage
-            ArrangeTree();
-            verticalOrientation();
+            //Arrange
+            VerticalOrientation();
         }
 
         private void AddNode(TreeNode<CircleNode> parent, string question, DecisionTree.Model.Node child)
@@ -84,20 +67,18 @@ namespace FungiParadise.Src.Gui
             }
         }
 
-        //Triggers
-        private void PicTreePaint(object sender, PaintEventArgs e)
+        private void VerticalOrientation()
         {
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
-            root.DrawTree(e.Graphics);
-        }
-
-        private void PictTreeReSize(object sender, EventArgs e)
-        {
+            root.SetTreeDrawingParameters(20, 2, 20, 8, TreeNode<CircleNode>.Orientations.Vertical);
             ArrangeTree();
         }
 
-        //Methods
+        private void HorizontalOrientation()
+        {
+            root.SetTreeDrawingParameters(5, 80, 20, 5, TreeNode<CircleNode>.Orientations.Horizontal);
+            ArrangeTree();
+        }
+
         private void ArrangeTree()
         {
             using (Graphics gr = picTree.CreateGraphics())
@@ -122,13 +103,22 @@ namespace FungiParadise.Src.Gui
             picTree.Refresh();
         }
 
-        private void verticalOrientation()
+        //Trigger
+        private void PicTreePaint(object sender, PaintEventArgs e)
         {
-            //Horizontal
-            //root.SetTreeDrawingParameters(15, 80, 20, 5, TreeNode<CircleNode>.Orientations.Horizontal);
-            //Vertical
-            root.SetTreeDrawingParameters(5, 2, 20, 5, TreeNode<CircleNode>.Orientations.Vertical);
-            ArrangeTree();
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
+            if(root != null)
+                root.DrawTree(e.Graphics);
         }
+
+        private void PictTreeReSize(object sender, EventArgs e)
+        {
+            if (root != null)
+            {
+                ArrangeTree();
+            }
+        }
+
     }
 }

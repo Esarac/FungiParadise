@@ -140,7 +140,7 @@ namespace TreeView.Model
 
             foreach (TreeNode<T> child in children)
             {
-                child.ArrangeVertically(gr, (xmin + indent), ref ymin);
+                child.ArrangeVertically(gr, (xmin + indent + hOffSet), ref ymin);//Cambiar por si las moscas
             }
         }
 
