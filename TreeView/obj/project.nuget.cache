@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "szg1wN7nwauFLOfQuBw9bpl0kqkSxWwCMoRKf+BXxL3rqNoiuyDppWGsBA45NzcI+C76hXOoV+BsUeY3WFq23Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jseba\\Desktop\\ALL\\PROGRAMING\\Integrador I\\FungiParadise\\TreeView\\TreeView.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jseba\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\jseba\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\jseba\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
