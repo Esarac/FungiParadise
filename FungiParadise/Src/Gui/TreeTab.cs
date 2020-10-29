@@ -27,21 +27,11 @@ namespace FungiParadise.Src.Gui
             InitializeComponent();
         }
 
-        //Initializers
-        public void InitializeOrientationComboBox()
-        {
-            orientationComboBox.Items.Add("Vertical");
-            orientationComboBox.Items.Add("Horizontal");
-            orientationComboBox.SelectedIndex = 0;
-            orientationComboBox.Enabled = true;
-        }
-
         //Method
         public void InitializeTreeTab(Manager manager)
         {
             this.manager = manager;
             GenerateDecisionTree();
-            InitializeOrientationComboBox();
         }
 
         private void GenerateDecisionTree()
@@ -81,7 +71,6 @@ namespace FungiParadise.Src.Gui
         {
             root.SetTreeDrawingParameters(20, 2, 20, 8, TreeNode<CircleNode>.Orientations.Vertical);
             ArrangeTree();
-            picTree.Size = new Size(800, 880);
         }
 
         private void HorizontalOrientation()
@@ -123,10 +112,13 @@ namespace FungiParadise.Src.Gui
                 root.DrawTree(e.Graphics);
         }
 
-        private void PicTreeReSize(object sender, EventArgs e)
+        private void PictTreeReSize(object sender, EventArgs e)
         {
-           if(root != null)
+            if (root != null)
+            {
                 ArrangeTree();
+            }
         }
+
     }
 }
