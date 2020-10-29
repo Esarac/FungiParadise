@@ -27,11 +27,27 @@ namespace FungiParadise.Src.Gui
             InitializeComponent();
         }
 
+        //Initializers
+        public void InitializeOrientationComboBox()
+        {
+            orientationComboBox.Items.Add("Vertical");
+            orientationComboBox.Items.Add("Horizontal");
+            orientationComboBox.SelectedIndex = 0;
+            orientationComboBox.Enabled = true;
+        }
+
+        public void InitializeLabel()
+        {
+            successLabel.Text = "Success Percentage: " + (manager.DecisionTreeSuccesssPercentage() * 100) + "%";
+        }
+
         //Method
         public void InitializeTreeTab(Manager manager)
         {
             this.manager = manager;
             GenerateDecisionTree();
+            InitializeOrientationComboBox();
+            InitializeLabel();
         }
 
         private void GenerateDecisionTree()
@@ -43,9 +59,9 @@ namespace FungiParadise.Src.Gui
             this.root = new TreeNode<CircleNode>(new CircleNode(manager.DecisionTree.RootNode.ToString()));
 
             //Branches
-            for (int i = 0; i < manager.DecisionTree.RootNode.Childrens.Length; i++)
+            for (int i = 0; i < manager.DecisionTree.RootNode.Children.Length; i++)
             {
-                AddNode(root, manager.DecisionTree.RootNode.Questions[i], manager.DecisionTree.RootNode.Childrens[i]);
+                AddNode(root, manager.DecisionTree.RootNode.Questions[i], manager.DecisionTree.RootNode.Children[i]);
             }
 
             //Arrange
@@ -60,9 +76,9 @@ namespace FungiParadise.Src.Gui
             if (child is DecisionTree.Model.Decision)
             {
                 DecisionTree.Model.Decision dChild = (DecisionTree.Model.Decision)child;
-                for (int i = 0; i < dChild.Childrens.Length; i++)
+                for (int i = 0; i < dChild.Children.Length; i++)
                 {
-                    AddNode(parentDraw, dChild.Questions[i], dChild.Childrens[i]);
+                    AddNode(parentDraw, dChild.Questions[i], dChild.Children[i]);
                 }
             }
         }
@@ -71,12 +87,14 @@ namespace FungiParadise.Src.Gui
         {
             root.SetTreeDrawingParameters(20, 2, 20, 8, TreeNode<CircleNode>.Orientations.Vertical);
             ArrangeTree();
+            picTree.Size = new Size(500, 900);
         }
 
         private void HorizontalOrientation()
         {
             root.SetTreeDrawingParameters(5, 80, 20, 5, TreeNode<CircleNode>.Orientations.Horizontal);
             ArrangeTree();
+            picTree.Size = new Size(2080, 600);
         }
 
         private void ArrangeTree()
@@ -108,17 +126,30 @@ namespace FungiParadise.Src.Gui
         {
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
-            if(root != null)
+            if (root != null)
                 root.DrawTree(e.Graphics);
         }
 
-        private void PictTreeReSize(object sender, EventArgs e)
+        private void PicTreeReSize(object sender, EventArgs e)
         {
             if (root != null)
-            {
                 ArrangeTree();
-            }
         }
 
+        public void OrientationComboBoxSelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = orientationComboBox.SelectedIndex;
+
+            switch (index)
+            {
+                case 0:
+                    VerticalOrientation();
+                    break;
+
+                case 1:
+                    HorizontalOrientation();
+                    break;
+            }
+        }
     }
 }

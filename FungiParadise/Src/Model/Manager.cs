@@ -33,8 +33,11 @@ namespace FungiParadise.Model
         public void GenerateDecisionTree()
         {
             decisionTree = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTable());
-            /*Console.WriteLine(decisionTree.ToString());
-            Console.WriteLine("Classification: "+ decisionTree.Test(GenerateTestingDataTable()));*/
+        }
+
+        public double DecisionTreeSuccesssPercentage()
+        {
+            return decisionTree.Test(GenerateTestingDataTable());
         }
 
         //Table

@@ -16,11 +16,11 @@ namespace DecisionTree.Model
         private readonly Random random= new Random();
 
         //Attribute
-        private Node[] childrens;
+        private Node[] children;
         private string[] questions;
 
         //Property
-        public Node[] Childrens { get { return childrens; } set { this.childrens = value; } }
+        public Node[] Children { get { return children; } set { this.children = value; } }
         public string[] Questions { get { return questions; } set { this.questions = value; } }
 
         //Constructor
@@ -42,20 +42,20 @@ namespace DecisionTree.Model
                 {
                     found = true;
 
-                    if (childrens[i] is Decision)
-                        classValue = ((Decision)childrens[i]).Classify(data);
+                    if (children[i] is Decision)
+                        classValue = ((Decision)children[i]).Classify(data);
                     else
-                        classValue = ((Answer)childrens[i]).ClassValue;
+                        classValue = ((Answer)children[i]).ClassValue;
                 }
             }
 
             if (!found)
             {
-                int i = random.Next(childrens.Length);
-                if (childrens[i] is Decision)
-                    classValue = ((Decision)childrens[i]).Classify(data);
+                int i = random.Next(children.Length);
+                if (children[i] is Decision)
+                    classValue = ((Decision)children[i]).Classify(data);
                 else
-                    classValue = ((Answer)childrens[i]).ClassValue;
+                    classValue = ((Answer)children[i]).ClassValue;
             }
 
             return classValue;
@@ -74,7 +74,7 @@ namespace DecisionTree.Model
                 allQuestions.Add(""+row[attribute]);
             this.questions = allQuestions.Distinct().ToList().ToArray();
 
-            this.childrens = new Node[this.questions.Length];
+            this.children = new Node[this.questions.Length];
             //...
 
             //Create the nodes for each question
@@ -100,13 +100,13 @@ namespace DecisionTree.Model
                 //Add Decision
                 if (!IsLeaf(subData))
                 {
-                    this.childrens[i] = new Decision(subData);
+                    this.children[i] = new Decision(subData);
                 }
                 else
                 {
                     string columnClass = data.Columns[0].ColumnName;
                     string valueClass = (string)subData.Rows[0][columnClass];
-                    this.childrens[i] = new Answer(columnClass, valueClass);
+                    this.children[i] = new Answer(columnClass, valueClass);
                 }
                     
                 //...
@@ -204,12 +204,12 @@ namespace DecisionTree.Model
         public override string ToString(int number)
         {
             string text = "Decision: "+attribute;
-            for(int i=0; i < childrens.Length; i++)
+            for(int i=0; i < children.Length; i++)
             {
                 text += "\n";
                 for (int j = 0; j < number; j++)
                     text += "   ";
-                text += questions[i] + ". " + childrens[i].ToString(number+1);
+                text += questions[i] + ". " + children[i].ToString(number+1);
             }
 
             return text;
