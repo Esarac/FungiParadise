@@ -11,3 +11,5 @@ https://youtu.be/9rjkg9MA6Mw
 [http://archive.ics.uci.edu/ml/datasets/Mushroom](http://archive.ics.uci.edu/ml/datasets/Mushroom)
 
 Written in C# in a Windows 10 Machine
+
+This project uses classification decision trees
