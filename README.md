@@ -10,6 +10,17 @@ https://youtu.be/9rjkg9MA6Mw
 ## Database
 [http://archive.ics.uci.edu/ml/datasets/Mushroom](http://archive.ics.uci.edu/ml/datasets/Mushroom)
 
+## Documentation
+[Engineering Method](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Engineering_Method.pdf)
+
+[Object Diagram](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Object_Diagram.pdf)
+
+[Sequence Diagram](https://github.com/Esarac/FungiParadise/tree/master/DecisionTree/Doc/Sequence_Diagram.pdf)
+
+[Class Diagram - Fungi Paradise](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Class_Diagram.pdf)
+
+[Class Diagram - Decision Tree](https://github.com/Esarac/FungiParadise/tree/master/DecisionTree/Doc/Class_Diagram.pdf)
+
 Written in C# in a Windows 10 Machine
 
 This project uses classification decision trees
