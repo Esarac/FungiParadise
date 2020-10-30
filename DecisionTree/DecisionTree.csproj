@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Src\Model\Answer.cs" />
     <Compile Include="Src\Model\Node.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Src\Model\Decision.cs" />
     <Compile Include="Src\Model\DecisionTree.cs" />
