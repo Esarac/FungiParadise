@@ -84,3 +84,5 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\bin\Debug\TreeView
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Src.Gui.TreeTab.resources
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Src.Gui.ClassifyTab.resources
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Src.Gui.MessageClassify.resources
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Src.Gui.ClassifyTab.resources
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Src.Gui.MessageClassify.resources
