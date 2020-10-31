@@ -35,6 +35,7 @@ namespace FungiParadise.Gui
                 tableTab.InitializeTableTab(manager);
                 chartTab.InitializeChartTab(manager);
                 treeTab.InitializeTreeTab(manager);
+                classifyTab.InitializeClassifyTab(manager);
             }
         }
 

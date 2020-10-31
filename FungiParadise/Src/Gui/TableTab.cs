@@ -92,7 +92,7 @@ namespace FungiParadise.Gui
                 //Cap surface
                 case 3:
 
-                    valueComboBox.DataSource = Mushroom.CAP_SHAPE;
+                    valueComboBox.DataSource = Mushroom.CAP_SURFACE;
                     valueComboBox.Enabled = true;
                     break;
 
@@ -233,7 +233,7 @@ namespace FungiParadise.Gui
                     valueComboBox.Enabled = true;
                     break;
 
-                //Habitad
+                //Habitat
                 case 23:
 
                     valueComboBox.DataSource = Mushroom.HABITAT;
