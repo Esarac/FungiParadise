@@ -1,4 +1,4 @@
-﻿namespace FungiParadise.Src.Gui
+﻿namespace FungiParadise.Gui
 {
     partial class TreeTab
     {

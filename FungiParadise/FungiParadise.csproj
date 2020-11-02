@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{61468511-DB0C-431B-B0FD-1307DDC7890C}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>FungiParadise</RootNamespace>
     <AssemblyName>FungiParadise</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -65,9 +65,11 @@
     <Compile Include="Src\Gui\ChartTab.Designer.cs">
       <DependentUpon>ChartTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Src\Gui\ClasifyTab.cs" />
-    <Compile Include="Src\Gui\ClasifyTab.designer.cs">
-      <DependentUpon>ClasifyTab.cs</DependentUpon>
+    <Compile Include="Src\Gui\ClassifyTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Src\Gui\ClassifyTab.designer.cs">
+      <DependentUpon>ClassifyTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Src\Gui\MessageClassify.cs">
       <SubType>Form</SubType>
@@ -106,8 +108,8 @@
     <EmbeddedResource Include="Src\Gui\ChartTab.resx">
       <DependentUpon>ChartTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Src\Gui\ClasifyTab.resx">
-      <DependentUpon>ClasifyTab.cs</DependentUpon>
+    <EmbeddedResource Include="Src\Gui\ClassifyTab.resx">
+      <DependentUpon>ClassifyTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Src\Gui\InfoTab.resx">
       <DependentUpon>InfoTab.cs</DependentUpon>

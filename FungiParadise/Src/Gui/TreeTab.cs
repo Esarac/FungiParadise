@@ -13,7 +13,7 @@ using System.Drawing.Text;
 using System.ComponentModel.Design.Serialization;
 using FungiParadise.Model;
 
-namespace FungiParadise.Src.Gui
+namespace FungiParadise.Gui
 {
     public partial class TreeTab : UserControl
     {
