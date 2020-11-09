@@ -23,6 +23,8 @@ The biologists say that we must first read the data already available regarding 
 
 [Class Diagram - Decision Tree](https://github.com/Esarac/FungiParadise/tree/master/DecisionTree/Doc/Class_Diagram.pdf)
 
+[Team Roles](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Roles.pdf)
+
 Written in C# in a Windows 10 Machine
 
 This project uses classification decision trees
