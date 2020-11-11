@@ -15,3 +15,4 @@ C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.cspr
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.csproj.CopyComplete
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.exe
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\TreeView\obj\Debug\TreeView.pdb
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\TreeView\obj\Debug\TreeView.csprojAssemblyReference.cache

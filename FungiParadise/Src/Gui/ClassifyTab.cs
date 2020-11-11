@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FungiParadise.Model;
 
-namespace FungiParadise.Src.Gui
+namespace FungiParadise.Gui
 {
     public partial class ClassifyTab : UserControl
     {
@@ -72,26 +72,26 @@ namespace FungiParadise.Src.Gui
         //Triggers
         public void OnActionNextButton(object sender, EventArgs e)
         {
+            values.Add((char)valueComboBox.SelectedValue);
+            if (attributeIndex == 0)
+                backButton.Enabled = true;
+
             attributeIndex++;
 
-            if (attributeIndex >= table.Columns.Count - 1)
+            if (attributeIndex < (table.Columns.Count - 1))
             {
-                Button classify = (Button)sender;
-                classify.Text = "Clasify";
-                classify.Click -= new EventHandler(OnActionNextButton);
-                classify.Click += new EventHandler(Classify);
+                attributeLabel.Text = attributes[attributeIndex];
+                ChangeValueComboBox();
+            }
+            else
+            {
+                nextButton.Text = "Classify";
+                nextButton.Click -= new EventHandler(OnActionNextButton);
+                nextButton.Click += new EventHandler(Classify);
 
                 backButton.Text = "Reset";
                 backButton.Click -= new EventHandler(OnActionBackButton);
                 backButton.Click += new EventHandler(Reset);
-            }
-            else
-            {
-                if (attributeIndex > 0 && backButton.Enabled == false)
-                    backButton.Enabled = true;
-                values.Add((char)valueComboBox.SelectedValue);
-                attributeLabel.Text = attributes[attributeIndex];
-                ChangeValueComboBox();
             }
         }
 
@@ -119,7 +119,7 @@ namespace FungiParadise.Src.Gui
             string classification = manager.DecisionTree.Classify(table)[0];
 
             MessageClassify message = new MessageClassify();
-            message.InitializeClassifyMessage(attributes, values, classification);
+            message.InitializeClassifyMessage(attributes, values, classification, this);
             message.Show();
         }
 
@@ -128,16 +128,15 @@ namespace FungiParadise.Src.Gui
             InitializeAttributeList();
             InitializeValueComboBox();
             InitializeAttributeLabel();
-            InitializeButtons();
-
-            backButton.Text = "Back";
-            backButton.Enabled = false;
-            backButton.Click += new EventHandler(OnActionBackButton);
-            backButton.Click -= new EventHandler(Reset);
 
             nextButton.Text = "Next";
-            nextButton.Click += new EventHandler(OnActionNextButton);
             nextButton.Click -= new EventHandler(Classify);
+            nextButton.Click += new EventHandler(OnActionNextButton);
+
+            backButton.Text = "Back";
+            backButton.Click -= new EventHandler(Reset);
+            backButton.Click += new EventHandler(OnActionBackButton);
+            backButton.Enabled = false;
         }
 
         public void OnMouseEnter(object sender, EventArgs e)

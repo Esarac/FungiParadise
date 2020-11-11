@@ -1,4 +1,4 @@
-﻿namespace FungiParadise.Src.Gui
+﻿namespace FungiParadise.Gui
 {
     partial class MessageClassify
     {
@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageClassify));
             this.messageLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.SuspendLayout();
             // 
             // messageLabel
             // 
+            this.messageLabel.AutoScroll = true;
             this.messageLabel.AutoScrollMinSize = new System.Drawing.Size(64, 25);
             this.messageLabel.AutoSize = false;
             this.messageLabel.BackColor = System.Drawing.SystemColors.Window;
@@ -49,11 +51,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 556);
             this.Controls.Add(this.messageLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MessageClassify";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Mushroom characteristics";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnFormClosed);
             this.ResumeLayout(false);
 
         }

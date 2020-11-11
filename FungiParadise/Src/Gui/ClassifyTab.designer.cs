@@ -1,4 +1,4 @@
-﻿namespace FungiParadise.Src.Gui
+﻿namespace FungiParadise.Gui
 {
     partial class ClassifyTab
     {
@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.form = new System.Windows.Forms.TableLayoutPanel();
+            this.grid = new System.Windows.Forms.TableLayoutPanel();
             this.top = new System.Windows.Forms.FlowLayoutPanel();
             this.attributeLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.valueComboBox = new MetroFramework.Controls.MetroComboBox();
-            this.buttom = new System.Windows.Forms.FlowLayoutPanel();
+            this.bottom = new System.Windows.Forms.FlowLayoutPanel();
             this.backButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
-            this.form.SuspendLayout();
+            this.grid.SuspendLayout();
             this.top.SuspendLayout();
-            this.buttom.SuspendLayout();
+            this.bottom.SuspendLayout();
             this.SuspendLayout();
             // 
-            // form
+            // grid
             // 
-            this.form.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.form.ColumnCount = 1;
-            this.form.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.form.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.form.Controls.Add(this.top, 0, 0);
-            this.form.Controls.Add(this.buttom, 0, 1);
-            this.form.Location = new System.Drawing.Point(82, 180);
-            this.form.Name = "form";
-            this.form.RowCount = 2;
-            this.form.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.form.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.form.Size = new System.Drawing.Size(465, 159);
-            this.form.TabIndex = 0;
+            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.grid.ColumnCount = 1;
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.grid.Controls.Add(this.top, 0, 0);
+            this.grid.Controls.Add(this.bottom, 0, 1);
+            this.grid.Location = new System.Drawing.Point(82, 180);
+            this.grid.Name = "grid";
+            this.grid.RowCount = 2;
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.grid.Size = new System.Drawing.Size(465, 159);
+            this.grid.TabIndex = 0;
             // 
             // top
             // 
@@ -72,7 +72,8 @@
             this.attributeLabel.AutoScrollMinSize = new System.Drawing.Size(10, 0);
             this.attributeLabel.AutoSize = false;
             this.attributeLabel.BackColor = System.Drawing.SystemColors.Window;
-            this.attributeLabel.Location = new System.Drawing.Point(3, 3);
+            this.attributeLabel.Location = new System.Drawing.Point(3, 8);
+            this.attributeLabel.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.attributeLabel.Name = "attributeLabel";
             this.attributeLabel.Size = new System.Drawing.Size(239, 56);
             this.attributeLabel.TabIndex = 0;
@@ -88,15 +89,15 @@
             this.valueComboBox.UseSelectable = true;
             this.valueComboBox.Visible = false;
             // 
-            // buttom
+            // bottom
             // 
-            this.buttom.Controls.Add(this.backButton);
-            this.buttom.Controls.Add(this.nextButton);
-            this.buttom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttom.Location = new System.Drawing.Point(3, 82);
-            this.buttom.Name = "buttom";
-            this.buttom.Size = new System.Drawing.Size(459, 74);
-            this.buttom.TabIndex = 1;
+            this.bottom.Controls.Add(this.backButton);
+            this.bottom.Controls.Add(this.nextButton);
+            this.bottom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bottom.Location = new System.Drawing.Point(3, 82);
+            this.bottom.Name = "bottom";
+            this.bottom.Size = new System.Drawing.Size(459, 74);
+            this.bottom.TabIndex = 1;
             // 
             // backButton
             // 
@@ -142,21 +143,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.form);
+            this.Controls.Add(this.grid);
             this.Name = "ClassifyTab";
             this.Size = new System.Drawing.Size(824, 534);
-            this.form.ResumeLayout(false);
+            this.grid.ResumeLayout(false);
             this.top.ResumeLayout(false);
-            this.buttom.ResumeLayout(false);
+            this.bottom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel form;
+        private System.Windows.Forms.TableLayoutPanel grid;
         private System.Windows.Forms.FlowLayoutPanel top;
-        private System.Windows.Forms.FlowLayoutPanel buttom;
+        private System.Windows.Forms.FlowLayoutPanel bottom;
         private MetroFramework.Drawing.Html.HtmlLabel attributeLabel;
         private MetroFramework.Controls.MetroComboBox valueComboBox;
         private System.Windows.Forms.Button backButton;
