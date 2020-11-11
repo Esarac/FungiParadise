@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FungiParadise.Exception;
+using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -144,7 +145,7 @@ namespace FungiParadise.Model
             }
             else
             {
-                Console.WriteLine("Error bip bup");
+                throw new InvalidValuesException();
             }
         }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using FungiParadise.Exception;
 
 namespace FungiParadise.Model
 {
@@ -406,10 +407,12 @@ namespace FungiParadise.Model
         }
 
         //Load
-        public void Load(string path)
+        public int Load(string path)
         {
             string[] info = File.ReadAllLines(path);
             System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+
+            int invalidData = 0;
 
             for (int i = 1; i < info.Length; i++)
             {
@@ -417,6 +420,7 @@ namespace FungiParadise.Model
                 string[] dataInfo = Regex.Split(info[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
                 //...
 
+                //...
                 try
                 {
                     //Type
@@ -463,12 +467,16 @@ namespace FungiParadise.Model
                 }
                 catch (IndexOutOfRangeException)
                 {
-                    Console.WriteLine("Error en dato!");
+                    invalidData++;
+                }
+                catch (InvalidValuesException)
+                {
+                    invalidData++;
                 }
                 //...
             }
+            return invalidData;
         }
-
 
     }
 }

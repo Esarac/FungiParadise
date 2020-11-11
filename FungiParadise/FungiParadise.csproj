@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Src\Exception\InvalidValuesException.cs" />
     <Compile Include="Src\Gui\ChartTab.cs">
       <SubType>UserControl</SubType>
     </Compile>

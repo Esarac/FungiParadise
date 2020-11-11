@@ -80,9 +80,9 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\b
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\bin\Debug\TreeView.exe
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\bin\Debug\TreeView.pdb
 C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\bin\Debug\TreeView.exe.config
-C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Src.Gui.TreeTab.resources
-C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Src.Gui.ClassifyTab.resources
-C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Src.Gui.MessageClassify.resources
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Gui.ClassifyTab.resources
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Gui.MessageClassify.resources
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Gui.TreeTab.resources
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Gui.ClassifyTab.resources
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Gui.MessageClassify.resources
+C:\Users\ariza\OneDrive\Documentos\GitHub\Fungi\FungiParadise\obj\Debug\FungiParadise.Gui.TreeTab.resources

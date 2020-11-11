@@ -38,7 +38,7 @@ namespace FungiParadise.Gui
 
         public void InitializeLabel()
         {
-            successLabel.Text = "Success Percentage: " + (manager.DecisionTreeSuccesssPercentage() * 100) + "%";
+            successLabel.Text = "Success Percentage: " + (manager.DecisionTreeSuccessPercentage() * 100) + "%";
         }
 
         //Method
