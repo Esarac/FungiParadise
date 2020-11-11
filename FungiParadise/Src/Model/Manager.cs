@@ -35,7 +35,7 @@ namespace FungiParadise.Model
             decisionTree = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTable());
         }
 
-        public double DecisionTreeSuccesssPercentage()
+        public double DecisionTreeSuccessPercentage()
         {
             return decisionTree.Test(GenerateTestingDataTable());
         }
