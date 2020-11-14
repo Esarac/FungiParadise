@@ -21,7 +21,10 @@ namespace FungiParadise.Model
 
         //Attributes
         private List<Mushroom> dataSet;
+
         private DecisionTree.Model.DecisionTree decisionTree;
+
+        private Codification codebook;
         private Accord.MachineLearning.DecisionTrees.DecisionTree decisionTreeL;
 
         //Property
@@ -43,12 +46,24 @@ namespace FungiParadise.Model
             //Library
             DataTable data = GenerateTrainingDataTableAccord();
 
-            var codebook = new Codification(data);
+            codebook = new Codification(data);
 
             DataTable symbols = codebook.Apply(data);
 
-            int[][] inputs = null;//symbols.ToArray<int>("Outlook", "Temperature", "Humidity", "Wind");
-            int[] outputs = null;//symbols.ToArray<int>("PlayTennis");
+            int[][] inputs = DataTableToMatrix(symbols, new string[] { "CAP SHAPE" , "CAP SURFACE" , "CAP COLOR" ,
+                                                                        "BRUISES" , "ODOR","GILL ATTACHMENT", 
+                                                                        "GILL SPACING", "GILL SIZE", "GILL COLOR",
+                                                                        "STALK SHAPE","STALK ROOT","STALK SURFACE ABOVE RING",
+                                                                        "STALK SURFACE BELOW RING","STALK COLOR ABOVE RING","STALK COLOR BELOW RING",
+                                                                        "VEIL TYPE","VEIL COLOR","RING NUMBER",
+                                                                        "RING TYPE","SPORE PRINT COLOR","POPULATION",
+                                                                        "HABITAT"
+            });
+
+            int[][] mOutputs = DataTableToMatrix(symbols, new string[] { "TYPE" });
+            int[] outputs = new int[mOutputs.Length];
+            for (int i = 0; i < mOutputs.Length; i++)
+                outputs[i] = mOutputs[i][0];
 
             ID3Learning id3learning = new ID3Learning()
             {
@@ -82,7 +97,7 @@ namespace FungiParadise.Model
                 new DecisionVariable("HABITAT", Mushroom.HABITAT.Length)//22
             };
 
-            //decisionTreeL = id3learning.Learn(inputs, outputs);
+            decisionTreeL = id3learning.Learn(inputs, outputs);
         }
 
         public double DecisionTreeSuccessPercentage()
@@ -298,6 +313,24 @@ namespace FungiParadise.Model
 
             return table;
         }
+
+        public int[][] DataTableToMatrix(DataTable table, string[] columns)
+        {
+            int[][] matrix = new int[table.Rows.Count][];
+            for (int i = 0; i < matrix.Length; i++)
+                matrix[i] = new int[columns.Length];
+
+            for(int r=0; r <table.Rows.Count; r++)
+            {
+                DataRow row = table.Rows[r];
+                for (int c=0; c < columns.Length; c++)
+                {
+                    matrix[r][c] = (int) row[columns[c]];
+                }
+            }
+
+            return matrix;
+        } 
 
         public DataTable GenerateTestingDataTable()
         {
