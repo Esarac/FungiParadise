@@ -8,6 +8,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using FungiParadise.Exception;
+using Accord.MachineLearning.DecisionTrees;
+using Accord.MachineLearning.DecisionTrees.Learning;
+using Accord.Statistics.Filters;
 
 namespace FungiParadise.Model
 {
@@ -19,6 +22,7 @@ namespace FungiParadise.Model
         //Attributes
         private List<Mushroom> dataSet;
         private DecisionTree.Model.DecisionTree decisionTree;
+        private Accord.MachineLearning.DecisionTrees.DecisionTree decisionTreeL;
 
         //Property
         public DecisionTree.Model.DecisionTree DecisionTree{ get { return decisionTree; } }
@@ -33,7 +37,52 @@ namespace FungiParadise.Model
         //Machine Learning
         public void GenerateDecisionTree()
         {
+            //My
             decisionTree = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTable());
+
+            //Library
+            DataTable data = GenerateTrainingDataTableAccord();
+
+            var codebook = new Codification(data);
+
+            DataTable symbols = codebook.Apply(data);
+
+            int[][] inputs = null;//symbols.ToArray<int>("Outlook", "Temperature", "Humidity", "Wind");
+            int[] outputs = null;//symbols.ToArray<int>("PlayTennis");
+
+            ID3Learning id3learning = new ID3Learning()
+            {
+                new DecisionVariable("CAP SHAPE", Mushroom.CAP_SHAPE.Length),//1
+                new DecisionVariable("CAP SURFACE", Mushroom.CAP_SURFACE.Length),//2
+                new DecisionVariable("CAP COLOR", Mushroom.CAP_COLOR.Length),//3
+
+                new DecisionVariable("BRUISES", Mushroom.BRUISES.Length),//4
+                new DecisionVariable("ODOR", Mushroom.ODOR.Length),//5
+
+                new DecisionVariable("GILL ATTACHMENT", Mushroom.GILL_ATTACHMENT.Length),//6
+                new DecisionVariable("GILL SPACING", Mushroom.GILL_SPACING.Length),//7
+                new DecisionVariable("GILL SIZE", Mushroom.GILL_SIZE.Length),//8
+                new DecisionVariable("GILL COLOR", Mushroom.GILL_COLOR.Length),//9
+
+                new DecisionVariable("STALK SHAPE", Mushroom.STALK_SHAPE.Length),//10
+                new DecisionVariable("STALK ROOT", Mushroom.STALK_ROOT.Length),//11
+                new DecisionVariable("STALK SURFACE ABOVE RING", Mushroom.STALK_SURFACE_ABOVE_RING.Length),//12
+                new DecisionVariable("STALK SURFACE BELOW RING", Mushroom.STALK_SURFACE_BELOW_RING.Length),//13
+                new DecisionVariable("STALK COLOR ABOVE RING", Mushroom.STALK_COLOR_ABOVE_RING.Length),//14
+                new DecisionVariable("STALK COLOR BELOW RING", Mushroom.STALK_COLOR_BELOW_RING.Length),//15
+
+                new DecisionVariable("VEIL TYPE", Mushroom.VEIL_TYPE.Length),//16
+                new DecisionVariable("VEIL COLOR", Mushroom.VEIL_COLOR.Length),//17
+
+                new DecisionVariable("RING NUMBER", Mushroom.RING_NUMBER.Length),//18
+                new DecisionVariable("RING TYPE", Mushroom.RING_TYPE.Length),//19
+
+                new DecisionVariable("SPORE PRINT COLOR", Mushroom.SPORE_PRINT_COLOR.Length),//20
+                new DecisionVariable("POPULATION", Mushroom.POPULATION.Length),//21
+                new DecisionVariable("HABITAT", Mushroom.HABITAT.Length)//22
+            };
+
+            //decisionTreeL = id3learning.Learn(inputs, outputs);
         }
 
         public double DecisionTreeSuccessPercentage()
@@ -166,6 +215,86 @@ namespace FungiParadise.Model
 
                 table.Rows.Add(row);
             }
+
+            return table;
+        }
+
+        public DataTable GenerateTrainingDataTableAccord()
+        {
+            //Columns
+            DataTable table = new DataTable();
+
+            table.Columns.Add("TYPE", typeof(string));//0
+
+            table.Columns.Add("CAP SHAPE", typeof(string));//1
+            table.Columns.Add("CAP SURFACE", typeof(string));//2
+            table.Columns.Add("CAP COLOR", typeof(string));//3
+
+            table.Columns.Add("BRUISES", typeof(string));//4
+            table.Columns.Add("ODOR", typeof(string));//5
+
+            table.Columns.Add("GILL ATTACHMENT", typeof(string));//6
+            table.Columns.Add("GILL SPACING", typeof(string));//7
+            table.Columns.Add("GILL SIZE", typeof(string));//8
+            table.Columns.Add("GILL COLOR", typeof(string));//9
+
+            table.Columns.Add("STALK SHAPE", typeof(string));//10
+            table.Columns.Add("STALK ROOT", typeof(string));//11
+            table.Columns.Add("STALK SURFACE ABOVE RING", typeof(string));//12
+            table.Columns.Add("STALK SURFACE BELOW RING", typeof(string));//13
+            table.Columns.Add("STALK COLOR ABOVE RING", typeof(string));//14
+            table.Columns.Add("STALK COLOR BELOW RING", typeof(string));//15
+
+            table.Columns.Add("VEIL TYPE", typeof(string));//16
+            table.Columns.Add("VEIL COLOR", typeof(string));//17
+
+            table.Columns.Add("RING NUMBER", typeof(string));//18
+            table.Columns.Add("RING TYPE", typeof(string));//19
+
+            table.Columns.Add("SPORE PRINT COLOR", typeof(string));//20
+            table.Columns.Add("POPULATION", typeof(string));//21
+            table.Columns.Add("HABITAT", typeof(string));//22
+            //...
+
+            //Rows
+            for (int i = 0; i < (dataSet.Count * TRAINING_PERCENTAGE); i++)
+            {
+                DataRow row = table.NewRow();
+
+                row["TYPE"] = dataSet[i].Type;//0
+
+                row["CAP SHAPE"] = dataSet[i].CapShape;//1
+                row["CAP SURFACE"] = dataSet[i].CapSurface;//2
+                row["CAP COLOR"] = dataSet[i].CapColor;//3
+
+                row["BRUISES"] = dataSet[i].Bruises;//4
+                row["ODOR"] = dataSet[i].Odor;//5
+
+                row["GILL ATTACHMENT"] = dataSet[i].GillAttachment;//6
+                row["GILL SPACING"] = dataSet[i].GillSpacing;//7
+                row["GILL SIZE"] = dataSet[i].GillSize;//8
+                row["GILL COLOR"] = dataSet[i].GillColor;//9
+
+                row["STALK SHAPE"] = dataSet[i].StalkShape;//10
+                row["STALK ROOT"] = dataSet[i].StalkRoot;//11
+                row["STALK SURFACE ABOVE RING"] = dataSet[i].StalkSurfaceAboveRing;//12
+                row["STALK SURFACE BELOW RING"] = dataSet[i].StalkSurfaceBelowRing;//13
+                row["STALK COLOR ABOVE RING"] = dataSet[i].StalkColorAboveRing;//14
+                row["STALK COLOR BELOW RING"] = dataSet[i].StalkColorBelowRing;//15
+
+                row["VEIL TYPE"] = dataSet[i].VeilType;//16
+                row["VEIL COLOR"] = dataSet[i].VeilColor;//17
+
+                row["RING NUMBER"] = dataSet[i].RingNumber;//18
+                row["RING TYPE"] = dataSet[i].RingType;//19
+
+                row["SPORE PRINT COLOR"] = dataSet[i].SporePrintColor;//20
+                row["POPULATION"] = dataSet[i].Population;//21
+                row["HABITAT"] = dataSet[i].Habitat;//22
+
+                table.Rows.Add(row);
+            }
+            //...
 
             return table;
         }
