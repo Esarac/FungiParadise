@@ -22,13 +22,15 @@ namespace FungiParadise.Model
         //Attributes
         private List<Mushroom> dataSet;
 
-        private DecisionTree.Model.DecisionTree decisionTree;
+        private DecisionTree.Model.DecisionTree decisionTreeOrg;
 
         private Codification codebook;
-        private Accord.MachineLearning.DecisionTrees.DecisionTree decisionTreeL;
+        private Accord.MachineLearning.DecisionTrees.DecisionTree decisionTreeLib;
 
         //Property
-        public DecisionTree.Model.DecisionTree DecisionTree{ get { return decisionTree; } }
+        public DecisionTree.Model.DecisionTree DecisionTreeOrg{ get { return decisionTreeOrg; } }
+        public Codification Codebook { get { return codebook; } }
+        public Accord.MachineLearning.DecisionTrees.DecisionTree DecisionTreeLib { get { return decisionTreeLib; } }
 
         //Constructor
         public Manager(string path)
@@ -40,8 +42,8 @@ namespace FungiParadise.Model
         //Machine Learning
         public void GenerateDecisionTree()
         {
-            //My
-            decisionTree = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTable());
+            //Original
+            decisionTreeOrg = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTable());
 
             //Library
             DataTable data = GenerateTrainingDataTableAccord();
@@ -97,12 +99,12 @@ namespace FungiParadise.Model
                 new DecisionVariable("HABITAT", Mushroom.HABITAT.Length)//22
             };
 
-            decisionTreeL = id3learning.Learn(inputs, outputs);
+            decisionTreeLib = id3learning.Learn(inputs, outputs);
         }
 
         public double DecisionTreeSuccessPercentage()
         {
-            return decisionTree.Test(GenerateTestingDataTable());
+            return decisionTreeOrg.Test(GenerateTestingDataTable());
         }
 
         //Table

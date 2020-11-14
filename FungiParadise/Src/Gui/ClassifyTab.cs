@@ -116,7 +116,7 @@ namespace FungiParadise.Gui
             }
 
             table.Rows.Add(row);
-            string classification = manager.DecisionTree.Classify(table)[0];
+            string classification = manager.DecisionTreeOrg.Classify(table)[0];
 
             MessageClassify message = new MessageClassify();
             message.InitializeClassifyMessage(attributes, values, classification, this);

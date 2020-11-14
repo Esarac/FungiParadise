@@ -56,12 +56,12 @@ namespace FungiParadise.Gui
             manager.GenerateDecisionTree();
 
             //Root
-            this.root = new TreeNode<CircleNode>(new CircleNode(manager.DecisionTree.RootNode.ToString()));
+            this.root = new TreeNode<CircleNode>(new CircleNode(manager.DecisionTreeOrg.RootNode.ToString()));
 
             //Branches
-            for (int i = 0; i < manager.DecisionTree.RootNode.Children.Length; i++)
+            for (int i = 0; i < manager.DecisionTreeOrg.RootNode.Children.Length; i++)
             {
-                AddNode(root, manager.DecisionTree.RootNode.Questions[i], manager.DecisionTree.RootNode.Children[i]);
+                AddNode(root, manager.DecisionTreeOrg.RootNode.Questions[i], manager.DecisionTreeOrg.RootNode.Children[i]);
             }
 
             //Arrange
