@@ -11,6 +11,7 @@ using FungiParadise.Exception;
 using Accord.MachineLearning.DecisionTrees;
 using Accord.MachineLearning.DecisionTrees.Learning;
 using Accord.Statistics.Filters;
+using Accord.Math.Optimization.Losses;
 
 namespace FungiParadise.Model
 {
@@ -43,7 +44,6 @@ namespace FungiParadise.Model
         //Original
         public void GenerateDecisionTreeOrg()
         {
-            
             decisionTreeOrg = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTableOrg());
         }
 
@@ -110,11 +110,61 @@ namespace FungiParadise.Model
             };
 
             decisionTreeLib = id3learning.Learn(inputs, outputs);
+
         }
 
         public double DecisionTreeSuccessPercentageLib()
         {
-            return 0;//decisionTreeOrg.Test(GenerateTestingDataTableOrg());
+            DataTable data = GenerateTestingDataTableLib();
+
+            DataTable symbols = codebook.Apply(data);
+
+            int[][] inputs = DataTableToMatrix(symbols, new string[] { "CAP SHAPE" , "CAP SURFACE" , "CAP COLOR" ,
+                                                                        "BRUISES" , "ODOR","GILL ATTACHMENT",
+                                                                        "GILL SPACING", "GILL SIZE", "GILL COLOR",
+                                                                        "STALK SHAPE","STALK ROOT","STALK SURFACE ABOVE RING",
+                                                                        "STALK SURFACE BELOW RING","STALK COLOR ABOVE RING","STALK COLOR BELOW RING",
+                                                                        "VEIL TYPE","VEIL COLOR","RING NUMBER",
+                                                                        "RING TYPE","SPORE PRINT COLOR","POPULATION",
+                                                                        "HABITAT"
+            });
+
+            int[][] mOutputs = DataTableToMatrix(symbols, new string[] { "TYPE" });
+            int[] outputs = new int[mOutputs.Length];
+            for (int i = 0; i < mOutputs.Length; i++)
+                outputs[i] = mOutputs[i][0];
+
+            double error = new ZeroOneLoss(outputs).Loss(decisionTreeLib.Decide(inputs));
+
+            Console.WriteLine(1 - error);
+
+            return 1 - error;
+        }
+
+        public string[] DecisionTreeClassifyLib(DataTable data)
+        {
+            DataTable symbols = codebook.Apply(data);
+
+            int[][] inputs = DataTableToMatrix(symbols, new string[] { "CAP SHAPE" , "CAP SURFACE" , "CAP COLOR" ,
+                                                                        "BRUISES" , "ODOR","GILL ATTACHMENT",
+                                                                        "GILL SPACING", "GILL SIZE", "GILL COLOR",
+                                                                        "STALK SHAPE","STALK ROOT","STALK SURFACE ABOVE RING",
+                                                                        "STALK SURFACE BELOW RING","STALK COLOR ABOVE RING","STALK COLOR BELOW RING",
+                                                                        "VEIL TYPE","VEIL COLOR","RING NUMBER",
+                                                                        "RING TYPE","SPORE PRINT COLOR","POPULATION",
+                                                                        "HABITAT"
+            });
+
+            int[] predicted = decisionTreeLib.Decide(inputs);
+
+            string[] predictedString = new string[predicted.Length];
+            for(int i = 0; i < predicted.Length; i++)
+            {
+                predictedString[i] = codebook.Revert("TYPE", predicted[i]);
+                Console.WriteLine(predictedString[i]);
+            }
+            
+            return predictedString;
         }
         //...
 

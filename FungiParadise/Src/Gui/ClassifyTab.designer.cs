@@ -45,15 +45,16 @@
             this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.grid.ColumnCount = 1;
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.grid.Controls.Add(this.top, 0, 0);
             this.grid.Controls.Add(this.bottom, 0, 1);
-            this.grid.Location = new System.Drawing.Point(82, 180);
+            this.grid.Location = new System.Drawing.Point(62, 146);
+            this.grid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grid.Name = "grid";
             this.grid.RowCount = 2;
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.grid.Size = new System.Drawing.Size(465, 159);
+            this.grid.Size = new System.Drawing.Size(349, 129);
             this.grid.TabIndex = 0;
             // 
             // top
@@ -61,9 +62,10 @@
             this.top.Controls.Add(this.attributeLabel);
             this.top.Controls.Add(this.valueComboBox);
             this.top.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.top.Location = new System.Drawing.Point(3, 3);
+            this.top.Location = new System.Drawing.Point(2, 2);
+            this.top.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.top.Name = "top";
-            this.top.Size = new System.Drawing.Size(459, 73);
+            this.top.Size = new System.Drawing.Size(345, 60);
             this.top.TabIndex = 0;
             // 
             // attributeLabel
@@ -72,19 +74,20 @@
             this.attributeLabel.AutoScrollMinSize = new System.Drawing.Size(10, 0);
             this.attributeLabel.AutoSize = false;
             this.attributeLabel.BackColor = System.Drawing.SystemColors.Window;
-            this.attributeLabel.Location = new System.Drawing.Point(3, 8);
-            this.attributeLabel.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.attributeLabel.Location = new System.Drawing.Point(2, 6);
+            this.attributeLabel.Margin = new System.Windows.Forms.Padding(2, 6, 2, 2);
             this.attributeLabel.Name = "attributeLabel";
-            this.attributeLabel.Size = new System.Drawing.Size(239, 56);
+            this.attributeLabel.Size = new System.Drawing.Size(179, 46);
             this.attributeLabel.TabIndex = 0;
             // 
             // valueComboBox
             // 
             this.valueComboBox.FormattingEnabled = true;
-            this.valueComboBox.ItemHeight = 24;
-            this.valueComboBox.Location = new System.Drawing.Point(248, 3);
+            this.valueComboBox.ItemHeight = 23;
+            this.valueComboBox.Location = new System.Drawing.Point(185, 2);
+            this.valueComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.valueComboBox.Name = "valueComboBox";
-            this.valueComboBox.Size = new System.Drawing.Size(121, 30);
+            this.valueComboBox.Size = new System.Drawing.Size(92, 29);
             this.valueComboBox.TabIndex = 1;
             this.valueComboBox.UseSelectable = true;
             this.valueComboBox.Visible = false;
@@ -94,9 +97,10 @@
             this.bottom.Controls.Add(this.backButton);
             this.bottom.Controls.Add(this.nextButton);
             this.bottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bottom.Location = new System.Drawing.Point(3, 82);
+            this.bottom.Location = new System.Drawing.Point(2, 66);
+            this.bottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bottom.Name = "bottom";
-            this.bottom.Size = new System.Drawing.Size(459, 74);
+            this.bottom.Size = new System.Drawing.Size(345, 61);
             this.bottom.TabIndex = 1;
             // 
             // backButton
@@ -106,10 +110,10 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(85, 6);
-            this.backButton.Margin = new System.Windows.Forms.Padding(85, 6, 3, 2);
+            this.backButton.Location = new System.Drawing.Point(64, 5);
+            this.backButton.Margin = new System.Windows.Forms.Padding(64, 5, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(99, 34);
+            this.backButton.Size = new System.Drawing.Size(74, 28);
             this.backButton.TabIndex = 3;
             this.backButton.TabStop = false;
             this.backButton.Text = "Back";
@@ -125,10 +129,10 @@
             this.nextButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextButton.Location = new System.Drawing.Point(198, 6);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(11, 6, 3, 2);
+            this.nextButton.Location = new System.Drawing.Point(148, 5);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(8, 5, 2, 2);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(99, 34);
+            this.nextButton.Size = new System.Drawing.Size(74, 28);
             this.nextButton.TabIndex = 4;
             this.nextButton.TabStop = false;
             this.nextButton.Text = "Next";
@@ -140,12 +144,13 @@
             // 
             // ClassifyTab
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.grid);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ClassifyTab";
-            this.Size = new System.Drawing.Size(824, 534);
+            this.Size = new System.Drawing.Size(618, 434);
             this.grid.ResumeLayout(false);
             this.top.ResumeLayout(false);
             this.bottom.ResumeLayout(false);
