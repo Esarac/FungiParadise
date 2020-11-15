@@ -40,20 +40,30 @@ namespace FungiParadise.Model
         }
 
         //Machine Learning
-        public void GenerateDecisionTree()
+        //Original
+        public void GenerateDecisionTreeOrg()
         {
-            //Original
-            decisionTreeOrg = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTable());
+            
+            decisionTreeOrg = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTableOrg());
+        }
 
-            //Library
-            DataTable data = GenerateTrainingDataTableAccord();
+        public double DecisionTreeSuccessPercentageOrg()
+        {
+            return decisionTreeOrg.Test(GenerateTestingDataTableOrg());
+        }
+        //...
+
+        //Library
+        public void GenerateDecisionTreeLib()
+        {
+            DataTable data = GenerateTrainingDataTableLib();
 
             codebook = new Codification(data);
 
             DataTable symbols = codebook.Apply(data);
 
             int[][] inputs = DataTableToMatrix(symbols, new string[] { "CAP SHAPE" , "CAP SURFACE" , "CAP COLOR" ,
-                                                                        "BRUISES" , "ODOR","GILL ATTACHMENT", 
+                                                                        "BRUISES" , "ODOR","GILL ATTACHMENT",
                                                                         "GILL SPACING", "GILL SIZE", "GILL COLOR",
                                                                         "STALK SHAPE","STALK ROOT","STALK SURFACE ABOVE RING",
                                                                         "STALK SURFACE BELOW RING","STALK COLOR ABOVE RING","STALK COLOR BELOW RING",
@@ -102,10 +112,11 @@ namespace FungiParadise.Model
             decisionTreeLib = id3learning.Learn(inputs, outputs);
         }
 
-        public double DecisionTreeSuccessPercentage()
+        public double DecisionTreeSuccessPercentageLib()
         {
-            return decisionTreeOrg.Test(GenerateTestingDataTable());
+            return 0;//decisionTreeOrg.Test(GenerateTestingDataTableOrg());
         }
+        //...
 
         //Table
         public DataTable GenerateEmptyTable()
@@ -191,7 +202,35 @@ namespace FungiParadise.Model
             return table;
         }
 
-        public DataTable GenerateTrainingDataTable()
+        public int[][] DataTableToMatrix(DataTable table, string[] columns)
+        {
+            int[][] matrix = new int[table.Rows.Count][];
+            for (int i = 0; i < matrix.Length; i++)
+                matrix[i] = new int[columns.Length];
+
+            for (int r = 0; r < table.Rows.Count; r++)
+            {
+                DataRow row = table.Rows[r];
+                for (int c = 0; c < columns.Length; c++)
+                {
+                    matrix[r][c] = (int)row[columns[c]];
+                }
+            }
+
+            return matrix;
+        }
+
+        public DataTable GenerateFilteredDataTable(string column, string value)
+        {
+            DataTable table = GenerateDataTable();
+
+            table.DefaultView.RowFilter = "[" + column + "] = '" + value + "'";
+
+            return table;
+        }
+
+        //Original
+        public DataTable GenerateTrainingDataTableOrg()
         {
             DataTable table = GenerateEmptyTable();
 
@@ -236,9 +275,55 @@ namespace FungiParadise.Model
             return table;
         }
 
-        public DataTable GenerateTrainingDataTableAccord()
+        public DataTable GenerateTestingDataTableOrg()
         {
-            //Columns
+            DataTable table = GenerateEmptyTable();
+
+            for (int i = (int)(dataSet.Count * TRAINING_PERCENTAGE); i < dataSet.Count; i++)
+            {
+                DataRow row = table.NewRow();
+
+                row["TYPE"] = dataSet[i].Type;//0
+
+                row["CAP SHAPE"] = dataSet[i].CapShape;//1
+                row["CAP SURFACE"] = dataSet[i].CapSurface;//2
+                row["CAP COLOR"] = dataSet[i].CapColor;//3
+
+                row["BRUISES"] = dataSet[i].Bruises;//4
+                row["ODOR"] = dataSet[i].Odor;//5
+
+                row["GILL ATTACHMENT"] = dataSet[i].GillAttachment;//6
+                row["GILL SPACING"] = dataSet[i].GillSpacing;//7
+                row["GILL SIZE"] = dataSet[i].GillSize;//8
+                row["GILL COLOR"] = dataSet[i].GillColor;//9
+
+                row["STALK SHAPE"] = dataSet[i].StalkShape;//10
+                row["STALK ROOT"] = dataSet[i].StalkRoot;//11
+                row["STALK SURFACE ABOVE RING"] = dataSet[i].StalkSurfaceAboveRing;//12
+                row["STALK SURFACE BELOW RING"] = dataSet[i].StalkSurfaceBelowRing;//13
+                row["STALK COLOR ABOVE RING"] = dataSet[i].StalkColorAboveRing;//14
+                row["STALK COLOR BELOW RING"] = dataSet[i].StalkColorBelowRing;//15
+
+                row["VEIL TYPE"] = dataSet[i].VeilType;//16
+                row["VEIL COLOR"] = dataSet[i].VeilColor;//17
+
+                row["RING NUMBER"] = dataSet[i].RingNumber;//18
+                row["RING TYPE"] = dataSet[i].RingType;//19
+
+                row["SPORE PRINT COLOR"] = dataSet[i].SporePrintColor;//20
+                row["POPULATION"] = dataSet[i].Population;//21
+                row["HABITAT"] = dataSet[i].Habitat;//22
+
+                table.Rows.Add(row);
+            }
+
+            return table;
+        }
+        //...
+
+        //Library
+        public DataTable GenerateEmptyTableLib()
+        {
             DataTable table = new DataTable();
 
             table.Columns.Add("TYPE", typeof(string));//0
@@ -271,7 +356,13 @@ namespace FungiParadise.Model
             table.Columns.Add("SPORE PRINT COLOR", typeof(string));//20
             table.Columns.Add("POPULATION", typeof(string));//21
             table.Columns.Add("HABITAT", typeof(string));//22
-            //...
+
+            return table;
+        }
+
+        public DataTable GenerateTrainingDataTableLib()
+        {
+            DataTable table = GenerateEmptyTableLib();
 
             //Rows
             for (int i = 0; i < (dataSet.Count * TRAINING_PERCENTAGE); i++)
@@ -316,29 +407,11 @@ namespace FungiParadise.Model
             return table;
         }
 
-        public int[][] DataTableToMatrix(DataTable table, string[] columns)
+        public DataTable GenerateTestingDataTableLib()
         {
-            int[][] matrix = new int[table.Rows.Count][];
-            for (int i = 0; i < matrix.Length; i++)
-                matrix[i] = new int[columns.Length];
+            DataTable table = GenerateEmptyTableLib();
 
-            for(int r=0; r <table.Rows.Count; r++)
-            {
-                DataRow row = table.Rows[r];
-                for (int c=0; c < columns.Length; c++)
-                {
-                    matrix[r][c] = (int) row[columns[c]];
-                }
-            }
-
-            return matrix;
-        } 
-
-        public DataTable GenerateTestingDataTable()
-        {
-            DataTable table = GenerateEmptyTable();
-
-            for (int i = (int)(dataSet.Count*TRAINING_PERCENTAGE); i < dataSet.Count; i++)
+            for (int i = (int)(dataSet.Count * TRAINING_PERCENTAGE); i < dataSet.Count; i++)
             {
                 DataRow row = table.NewRow();
 
@@ -378,15 +451,7 @@ namespace FungiParadise.Model
 
             return table;
         }
-
-        public DataTable GenerateFilteredDataTable(string column, string value)
-        {
-            DataTable table = GenerateDataTable();
-
-            table.DefaultView.RowFilter = "[" +column + "] = '" + value + "'";
-
-            return table;
-        }
+        //...
 
         //Chart
         public DataTable GenerateTypeChart()//1

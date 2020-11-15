@@ -38,7 +38,7 @@ namespace FungiParadise.Gui
 
         public void InitializeLabel()
         {
-            successLabel.Text = "Success Percentage: " + (manager.DecisionTreeSuccessPercentage() * 100) + "%";
+            successLabel.Text = "Success Percentage: " + (manager.DecisionTreeSuccessPercentageOrg() * 100) + "%";
         }
 
         //Method
@@ -53,7 +53,7 @@ namespace FungiParadise.Gui
         private void GenerateDecisionTree()
         {
             //Generate Tree
-            manager.GenerateDecisionTree();
+            manager.GenerateDecisionTreeOrg();
 
             //Root
             this.root = new TreeNode<CircleNode>(new CircleNode(manager.DecisionTreeOrg.RootNode.ToString()));

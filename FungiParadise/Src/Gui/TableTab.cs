@@ -56,10 +56,6 @@ namespace FungiParadise.Gui
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-
-            //Generate Decision Tree in Console
-            manager.GenerateDecisionTree();
-            //...
         }
 
         public void attributeComboBoxSelectedIndexChanged(object sender, EventArgs e)
