@@ -30,13 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.headerPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.orientationLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.orientationComboBox = new MetroFramework.Controls.MetroComboBox();
             this.picPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.picTree = new System.Windows.Forms.PictureBox();
             this.styleManager = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.orientationLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.successLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.successPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.typeLabel = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.typeComboBox = new MetroFramework.Controls.MetroComboBox();
             this.headerPanel.SuspendLayout();
             this.picPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTree)).BeginInit();
@@ -48,11 +50,27 @@
             // 
             this.headerPanel.Controls.Add(this.orientationLabel);
             this.headerPanel.Controls.Add(this.orientationComboBox);
+            this.headerPanel.Controls.Add(this.typeLabel);
+            this.headerPanel.Controls.Add(this.typeComboBox);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(800, 40);
             this.headerPanel.TabIndex = 0;
+            // 
+            // orientationLabel
+            // 
+            this.orientationLabel.AutoScroll = true;
+            this.orientationLabel.AutoScrollMinSize = new System.Drawing.Size(86, 27);
+            this.orientationLabel.AutoSize = false;
+            this.orientationLabel.BackColor = System.Drawing.SystemColors.Window;
+            this.orientationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orientationLabel.Location = new System.Drawing.Point(0, 7);
+            this.orientationLabel.Margin = new System.Windows.Forms.Padding(0, 7, 0, 3);
+            this.orientationLabel.Name = "orientationLabel";
+            this.orientationLabel.Size = new System.Drawing.Size(110, 40);
+            this.orientationLabel.TabIndex = 3;
+            this.orientationLabel.Text = "       Orientation";
             // 
             // orientationComboBox
             // 
@@ -95,23 +113,10 @@
             this.styleManager.Owner = this;
             this.styleManager.Style = MetroFramework.MetroColorStyle.Green;
             // 
-            // orientationLabel
-            // 
-            this.orientationLabel.AutoScroll = true;
-            this.orientationLabel.AutoScrollMinSize = new System.Drawing.Size(86, 27);
-            this.orientationLabel.AutoSize = false;
-            this.orientationLabel.BackColor = System.Drawing.SystemColors.Window;
-            this.orientationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orientationLabel.Location = new System.Drawing.Point(0, 7);
-            this.orientationLabel.Margin = new System.Windows.Forms.Padding(0, 7, 0, 3);
-            this.orientationLabel.Name = "orientationLabel";
-            this.orientationLabel.Size = new System.Drawing.Size(110, 40);
-            this.orientationLabel.TabIndex = 3;
-            this.orientationLabel.Text = "       Orientation";
-            // 
             // successLabel
             // 
-            this.successLabel.AutoScrollMinSize = new System.Drawing.Size(10, 10);
+            this.successLabel.AutoScroll = true;
+            this.successLabel.AutoScrollMinSize = new System.Drawing.Size(10, 0);
             this.successLabel.AutoSize = false;
             this.successLabel.BackColor = System.Drawing.SystemColors.Window;
             this.successLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,6 +134,33 @@
             this.successPanel.Name = "successPanel";
             this.successPanel.Size = new System.Drawing.Size(800, 18);
             this.successPanel.TabIndex = 2;
+            // 
+            // typeLabel
+            // 
+            this.typeLabel.AutoScroll = true;
+            this.typeLabel.AutoScrollMinSize = new System.Drawing.Size(44, 27);
+            this.typeLabel.AutoSize = false;
+            this.typeLabel.BackColor = System.Drawing.SystemColors.Window;
+            this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLabel.Location = new System.Drawing.Point(241, 7);
+            this.typeLabel.Margin = new System.Windows.Forms.Padding(8, 7, 0, 3);
+            this.typeLabel.Name = "typeLabel";
+            this.typeLabel.Size = new System.Drawing.Size(56, 40);
+            this.typeLabel.TabIndex = 4;
+            this.typeLabel.Text = "Type";
+            // 
+            // typeComboBox
+            // 
+            this.typeComboBox.Enabled = false;
+            this.typeComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.ItemHeight = 21;
+            this.typeComboBox.Location = new System.Drawing.Point(297, 7);
+            this.typeComboBox.Margin = new System.Windows.Forms.Padding(0, 7, 3, 2);
+            this.typeComboBox.Name = "typeComboBox";
+            this.typeComboBox.Size = new System.Drawing.Size(120, 27);
+            this.typeComboBox.TabIndex = 5;
+            this.typeComboBox.UseSelectable = true;
             // 
             // TreeTab
             // 
@@ -160,5 +192,7 @@
         private MetroFramework.Drawing.Html.HtmlLabel orientationLabel;
         private MetroFramework.Drawing.Html.HtmlLabel successLabel;
         private System.Windows.Forms.FlowLayoutPanel successPanel;
+        private MetroFramework.Drawing.Html.HtmlLabel typeLabel;
+        private MetroFramework.Controls.MetroComboBox typeComboBox;
     }
 }

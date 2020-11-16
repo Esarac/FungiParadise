@@ -41,6 +41,11 @@ namespace FungiParadise.Gui
             successLabel.Text = "Success Percentage: " + (manager.DecisionTreeSuccessPercentageOrg() * 100) + "%";
         }
 
+        public void InitializeTypeComboBox()
+        {
+            //TO DO
+        }
+
         //Method
         public void InitializeTreeTab(Manager manager)
         {
