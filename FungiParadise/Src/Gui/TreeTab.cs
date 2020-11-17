@@ -22,6 +22,9 @@ namespace FungiParadise.Gui
         private Manager manager;
         private TreeNode<CircleNode> root;
 
+        //Aux
+        private Dictionary<string, List<string>> children;
+
         //Constructor
         public TreeTab()
         {
@@ -80,7 +83,7 @@ namespace FungiParadise.Gui
             //Generate Tree
             manager.GenerateDecisionTreeLib();
 
-            string[] lines = manager.getDesicionTreeLib().Split('\n');
+            string[] lines = manager.GetDesicionTreeLib().Split('\n');
 
             string root = new Regex(@"\(([^)]*)\)").Match(lines[0]).ToString();
             root = string.Concat(Regex.Matches(root, "[A-Z]").OfType<Match>().Select(match => match.Value));
@@ -88,16 +91,15 @@ namespace FungiParadise.Gui
             //Root
             this.root = new TreeNode<CircleNode>(new CircleNode(root));
 
-            string[] children = GetChildren(lines[10]);
+            //Height of the tree
+            int height = manager.GetDesicionTreeLibHeight();
 
-            foreach (string child in children)
-            {
-                Console.WriteLine(child);
-            }
+            //Maps children
+            MapChildren(lines, height);
 
-            for (int i = 0; i < lines.Length; i++)
+            foreach (string child in children[root])
             {
-                
+                AddNodeLib(this.root, child);
             }
 
             //AccuracyPercentage
@@ -107,18 +109,66 @@ namespace FungiParadise.Gui
             VerticalOrientation();
         }
 
-        public int GetHeight(string line)
+        public void MapChildren(string[] lines, int height)
         {
-            return new Regex(@"\(([^)]*)\)").Matches(line).Count;
+            children = new Dictionary<string, List<string>>();
+
+            for (int level = 0; level < (height - 1); level++)
+            {
+                List<string> childrenOfThisNode = new List<string>();
+
+                for (int i = 0; i < (lines.Length - 1); i++)
+                {
+                    string[] nodes = GetNodes(lines[i]);
+
+                    if (level < nodes.Length)
+                    {
+                        if(!childrenOfThisNode.Contains(nodes[level]))
+                        childrenOfThisNode.Add(nodes[level]);
+                    }
+                }
+
+                string parent = GetParent(lines, level, height);
+                children.Add(parent, childrenOfThisNode);
+            }
         }
 
-        public string[] GetChildren(string line)
+        public string GetParent(string[] lines, int level, int height)
+        {
+            string branch = null;
+
+            bool found = false;
+
+            for (int i = 0; i < (lines.Length -1) && !found; i++)
+            {
+                if(GetNodes(lines[i]).Length == height)
+                {
+                    branch = lines[i];
+                    found = true;
+                }
+            }
+
+            MatchCollection matches = new Regex(@"\(([^)]*)\)").Matches(branch);
+
+            string root = matches[level].ToString();
+            root = string.Concat(Regex.Matches(root, "[A-Z]").OfType<Match>().Select(match => match.Value));
+            return root;
+        }
+
+        public bool isLeaf(string node)
+        {
+            string parent = string.Concat(Regex.Matches(node, "[A-Z]").OfType<Match>().Select(match => match.Value));
+            
+            return !children.ContainsKey(parent);
+        }
+
+        public string[] GetNodes(string line)
         {
             MatchCollection matches = new Regex(@"\(([^)]*)\)").Matches(line);
 
             string answer, variable, attribute;
 
-            string[] children = new string[matches.Count];
+            string[] nodes = new string[matches.Count];
 
             for (int i = 0; i < matches.Count; i++)
             {
@@ -127,40 +177,33 @@ namespace FungiParadise.Gui
                     string[] parts = line.Split('=');
                     answer = new Regex(@"\s|[().]").Replace(parts[0], "");
                     variable = new Regex("[a-z]").Match(matches[i].ToString()).ToString();
-                    children[i] = variable + ". " + answer;
+                    nodes[i] = variable + ". " + answer;
                 }
                 else
                 {
                     variable = new Regex("[a-z]").Match(matches[i].ToString()).ToString();
                     attribute = string.Concat(Regex.Matches(matches[i+1].ToString(), "[A-Z]").OfType<Match>().Select(match => match.Value));
-                    children[i] = variable + ". " + attribute; 
+                    nodes[i] = variable + ". " + attribute; 
                 }
             }
-            return children;
+            return nodes;
         }
 
-        public void AddNodeLib(TreeNode<CircleNode> parent, string question, int level, string[] childs) 
+        public void AddNodeLib(TreeNode<CircleNode> parent, string child)
         {
-            TreeNode<CircleNode> parentDraw = new TreeNode<CircleNode>(new CircleNode(question + childs[level]));
+            TreeNode<CircleNode> parentDraw = new TreeNode<CircleNode>(new CircleNode(child));
             parent.AddChild(parentDraw);
-        }
 
-        public void GenerateDecisionTreeLibAux(string tree)
-        {
-            string[] lines = tree.Split('\n');
-
-            Regex regex = new Regex(@"\(([^)]*)\)");
-            MatchCollection matches = regex.Matches(lines[3]);
-            
-            for (int i = 0; i < matches.Count; i++)
+            if (!isLeaf(child))
             {
-                Console.WriteLine(matches[i]);
+                string parentName = string.Concat(Regex.Matches(child, "[A-Z]").OfType<Match>().Select(match => match.Value));
+
+                foreach (string childChild in children[parentName])
+                {
+                    AddNodeLib(parentDraw, childChild);
+                }
             }
 
-            for (int i = 0; i < lines.Length; i++)
-            {
-               //MatchCollection matches = regex.Matches(lines[i]);
-            }
         }
 
         private void AccuracyPercentageTreeOrg()
