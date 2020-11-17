@@ -82,6 +82,10 @@ namespace FungiParadise.Gui
             //Root
             this.root = new TreeNode<CircleNode>(new CircleNode("null"));
             //TO DO
+
+            //AccuracyPercentage
+            AccuracyPercentageTreeLib();
+
             //Arrange
             VerticalOrientation();
         }
@@ -93,7 +97,7 @@ namespace FungiParadise.Gui
 
         private void AccuracyPercentageTreeLib()
         {
-            //TO DO
+            accuracyLabel.Text = "Accuracy Percentage: " + (manager.DecisionTreeAccuracyPercentageLib() * 100) + "%"; 
         }
 
         private void AddNode(TreeNode<CircleNode> parent, string question, DecisionTree.Model.Node child)
