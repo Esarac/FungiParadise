@@ -92,7 +92,7 @@ namespace FungiParadise.Gui
             this.root = new TreeNode<CircleNode>(new CircleNode(root));
 
             //Height of the tree
-            int height = manager.GetDesicionTreeLibHeight();
+            int height = manager.DecisionTreeLib.GetHeight();
 
             //Maps children
             MapChildren(lines, height);
