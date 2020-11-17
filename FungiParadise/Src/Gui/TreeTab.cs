@@ -12,6 +12,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.ComponentModel.Design.Serialization;
 using FungiParadise.Model;
+using System.Text.RegularExpressions;
 
 namespace FungiParadise.Gui
 {
@@ -79,15 +80,48 @@ namespace FungiParadise.Gui
             //Generate Tree
             manager.GenerateDecisionTreeLib();
 
+            string[] lines = manager.getDesicionTreeLib().Split('\n');
+
+            string root = new Regex(@"\(([^)]*)\)").Match(lines[0]).ToString();
+            root = new Regex(@"\s|[().]").Replace(root, "");
+            root = string.Concat(Regex.Matches(root, "[A-Z]").OfType<Match>().Select(match => match.Value));
+
             //Root
-            this.root = new TreeNode<CircleNode>(new CircleNode("null"));
-            //TO DO
+            this.root = new TreeNode<CircleNode>(new CircleNode(root));
+
+            for(int i = 0; i < lines.Length; i++)
+            {
+
+            }
 
             //AccuracyPercentage
             AccuracyPercentageTreeLib();
 
             //Arrange
             VerticalOrientation();
+        }
+
+        public void AddNodeLib()
+        {
+
+        }
+
+        public void GenerateDecisionTreeLibAux(string tree)
+        {
+            string[] lines = tree.Split('\n');
+
+            Regex regex = new Regex(@"\(([^)]*)\)");
+            MatchCollection matches = regex.Matches(lines[3]);
+            
+            for(int i = 0; i < matches.Count; i++)
+            {
+                Console.WriteLine(matches[i]);
+            }
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+               //MatchCollection matches = regex.Matches(lines[i]);
+            }
         }
 
         private void AccuracyPercentageTreeOrg()
