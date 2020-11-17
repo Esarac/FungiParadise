@@ -85,6 +85,10 @@ namespace FungiParadise.Gui
             }
             else
             {
+                attributeLabel.Text = "DECISION TREE";
+                valueComboBox.DataSource = new string[] { "Accord .NET Fra...", "Fungi Paradise" };
+                valueComboBox.Size = new Size(140, 30);
+
                 nextButton.Text = "Classify";
                 nextButton.Click -= new EventHandler(OnActionNextButton);
                 nextButton.Click += new EventHandler(Classify);
@@ -108,15 +112,24 @@ namespace FungiParadise.Gui
 
         public void Classify(object sender, EventArgs e)
         {
-            DataRow row = table.NewRow();
+            string classification = "";
 
-            for (int i = 0; i < values.Count; i++)
+            if (valueComboBox.SelectedIndex == 0)
             {
-                row[attributes[i]] = values[i];
+                //TO DO
             }
+            else
+            {
+                DataRow row = table.NewRow();
 
-            table.Rows.Add(row);
-            string classification = manager.DecisionTreeOrg.Classify(table)[0];
+                for (int i = 0; i < values.Count; i++)
+                {
+                    row[attributes[i]] = values[i];
+                }
+
+                table.Rows.Add(row);
+                classification = manager.DecisionTreeOrg.Classify(table)[0];
+            }
 
             MessageClassify message = new MessageClassify();
             message.InitializeClassifyMessage(attributes, values, classification, this);
@@ -128,6 +141,7 @@ namespace FungiParadise.Gui
             InitializeAttributeList();
             InitializeValueComboBox();
             InitializeAttributeLabel();
+            valueComboBox.Size = new Size(92, 30);
 
             nextButton.Text = "Next";
             nextButton.Click -= new EventHandler(Classify);
