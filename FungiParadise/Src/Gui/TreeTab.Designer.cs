@@ -37,7 +37,7 @@
             this.picPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.picTree = new System.Windows.Forms.PictureBox();
             this.styleManager = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.successLabel = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.accuracyLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.successPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.headerPanel.SuspendLayout();
             this.picPanel.SuspendLayout();
@@ -112,6 +112,7 @@
             this.typeComboBox.Size = new System.Drawing.Size(210, 27);
             this.typeComboBox.TabIndex = 5;
             this.typeComboBox.UseSelectable = true;
+            this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.GenerateDecisionTree);
             // 
             // picPanel
             // 
@@ -140,22 +141,22 @@
             this.styleManager.Owner = this;
             this.styleManager.Style = MetroFramework.MetroColorStyle.Green;
             // 
-            // successLabel
+            // accuracyLabel
             // 
-            this.successLabel.AutoScroll = true;
-            this.successLabel.AutoScrollMinSize = new System.Drawing.Size(10, 0);
-            this.successLabel.AutoSize = false;
-            this.successLabel.BackColor = System.Drawing.SystemColors.Window;
-            this.successLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.successLabel.Location = new System.Drawing.Point(0, 0);
-            this.successLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.successLabel.Name = "successLabel";
-            this.successLabel.Size = new System.Drawing.Size(298, 40);
-            this.successLabel.TabIndex = 4;
+            this.accuracyLabel.AutoScroll = true;
+            this.accuracyLabel.AutoScrollMinSize = new System.Drawing.Size(10, 0);
+            this.accuracyLabel.AutoSize = false;
+            this.accuracyLabel.BackColor = System.Drawing.SystemColors.Window;
+            this.accuracyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accuracyLabel.Location = new System.Drawing.Point(0, 0);
+            this.accuracyLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.accuracyLabel.Name = "accuracyLabel";
+            this.accuracyLabel.Size = new System.Drawing.Size(298, 40);
+            this.accuracyLabel.TabIndex = 4;
             // 
             // successPanel
             // 
-            this.successPanel.Controls.Add(this.successLabel);
+            this.successPanel.Controls.Add(this.accuracyLabel);
             this.successPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.successPanel.Location = new System.Drawing.Point(0, 582);
             this.successPanel.Name = "successPanel";
@@ -190,7 +191,7 @@
         private MetroFramework.Components.MetroStyleManager styleManager;
         private MetroFramework.Controls.MetroComboBox orientationComboBox;
         private MetroFramework.Drawing.Html.HtmlLabel orientationLabel;
-        private MetroFramework.Drawing.Html.HtmlLabel successLabel;
+        private MetroFramework.Drawing.Html.HtmlLabel accuracyLabel;
         private System.Windows.Forms.FlowLayoutPanel successPanel;
         private MetroFramework.Drawing.Html.HtmlLabel typeLabel;
         private MetroFramework.Controls.MetroComboBox typeComboBox;

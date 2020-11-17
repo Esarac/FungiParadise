@@ -12,6 +12,7 @@ using Accord.MachineLearning.DecisionTrees;
 using Accord.MachineLearning.DecisionTrees.Learning;
 using Accord.Statistics.Filters;
 using Accord.Math.Optimization.Losses;
+using Accord.MachineLearning.DecisionTrees.Rules;
 
 namespace FungiParadise.Model
 {
@@ -165,6 +166,12 @@ namespace FungiParadise.Model
             }
             
             return predictedString;
+        }
+
+        public string getDesicionTreeLib()
+        {
+            DecisionSet rules = decisionTreeLib.ToRules();
+            return rules.ToString(codebook, "TYPE", System.Globalization.CultureInfo.InvariantCulture);
         }
         //...
 

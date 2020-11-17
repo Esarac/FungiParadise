@@ -35,11 +35,6 @@ namespace FungiParadise.Gui
             orientationComboBox.Enabled = true;
         }
 
-        public void InitializeLabel()
-        {
-            successLabel.Text = "Success Percentage: " + (manager.DecisionTreeSuccessPercentageOrg() * 100) + "%";
-        }
-
         public void InitializeTypeComboBox()
         {
             typeComboBox.Items.AddRange(new string[] { "Accord .NET Framework", "Fungi Paradise" });
@@ -51,13 +46,13 @@ namespace FungiParadise.Gui
         public void InitializeTreeTab(Manager manager)
         {
             this.manager = manager;
-            GenerateDecisionTree();
+            GenerateDecisionTreeLib();
             InitializeOrientationComboBox();
-            InitializeLabel();
             InitializeTypeComboBox();
+            AccuracyPercentageTreeLib();
         }
 
-        private void GenerateDecisionTree()
+        private void GenerateDecisionTreeOrg()
         {
             //Generate Tree
             manager.GenerateDecisionTreeOrg();
@@ -71,8 +66,29 @@ namespace FungiParadise.Gui
                 AddNode(root, manager.DecisionTreeOrg.RootNode.Questions[i], manager.DecisionTreeOrg.RootNode.Children[i]);
             }
 
+            //AccuracyPercentage
+            AccuracyPercentageTreeOrg();
+
             //Arrange
             VerticalOrientation();
+            orientationComboBox.SelectedIndex = 0;
+        }
+        private void GenerateDecisionTreeLib()
+        {
+            this.root = new TreeNode<CircleNode>(new CircleNode("null"));
+            //TO DO
+            //Arrange
+            VerticalOrientation();
+        }
+
+        private void AccuracyPercentageTreeOrg()
+        {
+            accuracyLabel.Text = "Accuracy Percentage: " + (manager.DecisionTreeSuccessPercentageOrg() * 100) + "%";
+        }
+
+        private void AccuracyPercentageTreeLib()
+        {
+            //TO DO
         }
 
         private void AddNode(TreeNode<CircleNode> parent, string question, DecisionTree.Model.Node child)
@@ -129,6 +145,14 @@ namespace FungiParadise.Gui
         }
 
         //Trigger
+        public void GenerateDecisionTree(object sender, EventArgs e)
+        {
+            if (typeComboBox.SelectedIndex == 0)
+                GenerateDecisionTreeLib();
+            else
+                GenerateDecisionTreeOrg();
+        }
+
         private void PicTreePaint(object sender, PaintEventArgs e)
         {
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
