@@ -48,13 +48,13 @@
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.grid.Controls.Add(this.top, 0, 0);
             this.grid.Controls.Add(this.bottom, 0, 1);
-            this.grid.Location = new System.Drawing.Point(83, 180);
+            this.grid.Location = new System.Drawing.Point(16, 180);
             this.grid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grid.Name = "grid";
             this.grid.RowCount = 2;
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.grid.Size = new System.Drawing.Size(465, 159);
+            this.grid.Size = new System.Drawing.Size(532, 159);
             this.grid.TabIndex = 0;
             // 
             // top
@@ -65,7 +65,7 @@
             this.top.Location = new System.Drawing.Point(3, 2);
             this.top.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.top.Name = "top";
-            this.top.Size = new System.Drawing.Size(460, 75);
+            this.top.Size = new System.Drawing.Size(526, 75);
             this.top.TabIndex = 0;
             // 
             // attributeLabel
@@ -139,7 +139,7 @@
             this.bottom.Location = new System.Drawing.Point(3, 81);
             this.bottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bottom.Name = "bottom";
-            this.bottom.Size = new System.Drawing.Size(460, 76);
+            this.bottom.Size = new System.Drawing.Size(526, 76);
             this.bottom.TabIndex = 1;
             // 
             // ClassifyTab

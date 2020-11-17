@@ -86,8 +86,8 @@ namespace FungiParadise.Gui
             else
             {
                 attributeLabel.Text = "DECISION TREE";
-                valueComboBox.DataSource = new string[] { "Accord .NET Fra...", "Fungi Paradise" };
-                valueComboBox.Size = new Size(140, 30);
+                valueComboBox.DataSource = new string[] { "Accord .NET Framework", "Fungi Paradise" };
+                valueComboBox.Size = new Size(175, 30);
 
                 nextButton.Text = "Classify";
                 nextButton.Click -= new EventHandler(OnActionNextButton);

@@ -32,13 +32,13 @@
             this.headerPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.orientationLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.orientationComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.typeLabel = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.typeComboBox = new MetroFramework.Controls.MetroComboBox();
             this.picPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.picTree = new System.Windows.Forms.PictureBox();
             this.styleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.successLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.successPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.typeLabel = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.typeComboBox = new MetroFramework.Controls.MetroComboBox();
             this.headerPanel.SuspendLayout();
             this.picPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTree)).BeginInit();
@@ -85,6 +85,33 @@
             this.orientationComboBox.TabIndex = 2;
             this.orientationComboBox.UseSelectable = true;
             this.orientationComboBox.SelectedIndexChanged += new System.EventHandler(this.OrientationComboBoxSelectedIndexChanged);
+            // 
+            // typeLabel
+            // 
+            this.typeLabel.AutoScroll = true;
+            this.typeLabel.AutoScrollMinSize = new System.Drawing.Size(44, 27);
+            this.typeLabel.AutoSize = false;
+            this.typeLabel.BackColor = System.Drawing.SystemColors.Window;
+            this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLabel.Location = new System.Drawing.Point(241, 7);
+            this.typeLabel.Margin = new System.Windows.Forms.Padding(8, 7, 0, 3);
+            this.typeLabel.Name = "typeLabel";
+            this.typeLabel.Size = new System.Drawing.Size(56, 40);
+            this.typeLabel.TabIndex = 4;
+            this.typeLabel.Text = "Type";
+            // 
+            // typeComboBox
+            // 
+            this.typeComboBox.Enabled = false;
+            this.typeComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.ItemHeight = 21;
+            this.typeComboBox.Location = new System.Drawing.Point(297, 7);
+            this.typeComboBox.Margin = new System.Windows.Forms.Padding(0, 7, 3, 2);
+            this.typeComboBox.Name = "typeComboBox";
+            this.typeComboBox.Size = new System.Drawing.Size(210, 27);
+            this.typeComboBox.TabIndex = 5;
+            this.typeComboBox.UseSelectable = true;
             // 
             // picPanel
             // 
@@ -134,33 +161,6 @@
             this.successPanel.Name = "successPanel";
             this.successPanel.Size = new System.Drawing.Size(800, 18);
             this.successPanel.TabIndex = 2;
-            // 
-            // typeLabel
-            // 
-            this.typeLabel.AutoScroll = true;
-            this.typeLabel.AutoScrollMinSize = new System.Drawing.Size(44, 27);
-            this.typeLabel.AutoSize = false;
-            this.typeLabel.BackColor = System.Drawing.SystemColors.Window;
-            this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeLabel.Location = new System.Drawing.Point(241, 7);
-            this.typeLabel.Margin = new System.Windows.Forms.Padding(8, 7, 0, 3);
-            this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(56, 40);
-            this.typeLabel.TabIndex = 4;
-            this.typeLabel.Text = "Type";
-            // 
-            // typeComboBox
-            // 
-            this.typeComboBox.Enabled = false;
-            this.typeComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
-            this.typeComboBox.FormattingEnabled = true;
-            this.typeComboBox.ItemHeight = 21;
-            this.typeComboBox.Location = new System.Drawing.Point(297, 7);
-            this.typeComboBox.Margin = new System.Windows.Forms.Padding(0, 7, 3, 2);
-            this.typeComboBox.Name = "typeComboBox";
-            this.typeComboBox.Size = new System.Drawing.Size(120, 27);
-            this.typeComboBox.TabIndex = 5;
-            this.typeComboBox.UseSelectable = true;
             // 
             // TreeTab
             // 

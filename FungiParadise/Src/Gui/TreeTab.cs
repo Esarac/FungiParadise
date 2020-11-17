@@ -30,8 +30,7 @@ namespace FungiParadise.Gui
         //Initializers
         public void InitializeOrientationComboBox()
         {
-            orientationComboBox.Items.Add("Vertical");
-            orientationComboBox.Items.Add("Horizontal");
+            orientationComboBox.Items.AddRange(new string[] { "Vertical", "Horizontal" });
             orientationComboBox.SelectedIndex = 0;
             orientationComboBox.Enabled = true;
         }
@@ -43,7 +42,9 @@ namespace FungiParadise.Gui
 
         public void InitializeTypeComboBox()
         {
-            //TO DO
+            typeComboBox.Items.AddRange(new string[] { "Accord .NET Framework", "Fungi Paradise" });
+            typeComboBox.SelectedIndex = 0;
+            typeComboBox.Enabled = true;
         }
 
         //Method
@@ -53,6 +54,7 @@ namespace FungiParadise.Gui
             GenerateDecisionTree();
             InitializeOrientationComboBox();
             InitializeLabel();
+            InitializeTypeComboBox();
         }
 
         private void GenerateDecisionTree()
