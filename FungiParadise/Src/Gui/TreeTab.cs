@@ -83,15 +83,21 @@ namespace FungiParadise.Gui
             string[] lines = manager.getDesicionTreeLib().Split('\n');
 
             string root = new Regex(@"\(([^)]*)\)").Match(lines[0]).ToString();
-            root = new Regex(@"\s|[().]").Replace(root, "");
             root = string.Concat(Regex.Matches(root, "[A-Z]").OfType<Match>().Select(match => match.Value));
 
             //Root
             this.root = new TreeNode<CircleNode>(new CircleNode(root));
 
-            for(int i = 0; i < lines.Length; i++)
-            {
+            string[] children = GetChildren(lines[10]);
 
+            foreach (string child in children)
+            {
+                Console.WriteLine(child);
+            }
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                
             }
 
             //AccuracyPercentage
@@ -101,9 +107,42 @@ namespace FungiParadise.Gui
             VerticalOrientation();
         }
 
-        public void AddNodeLib()
+        public int GetHeight(string line)
         {
+            return new Regex(@"\(([^)]*)\)").Matches(line).Count;
+        }
 
+        public string[] GetChildren(string line)
+        {
+            MatchCollection matches = new Regex(@"\(([^)]*)\)").Matches(line);
+
+            string answer, variable, attribute;
+
+            string[] children = new string[matches.Count];
+
+            for (int i = 0; i < matches.Count; i++)
+            {
+                if(i + 1 == matches.Count)
+                {
+                    string[] parts = line.Split('=');
+                    answer = new Regex(@"\s|[().]").Replace(parts[0], "");
+                    variable = new Regex("[a-z]").Match(matches[i].ToString()).ToString();
+                    children[i] = variable + ". " + answer;
+                }
+                else
+                {
+                    variable = new Regex("[a-z]").Match(matches[i].ToString()).ToString();
+                    attribute = string.Concat(Regex.Matches(matches[i+1].ToString(), "[A-Z]").OfType<Match>().Select(match => match.Value));
+                    children[i] = variable + ". " + attribute; 
+                }
+            }
+            return children;
+        }
+
+        public void AddNodeLib(TreeNode<CircleNode> parent, string question, int level, string[] childs) 
+        {
+            TreeNode<CircleNode> parentDraw = new TreeNode<CircleNode>(new CircleNode(question + childs[level]));
+            parent.AddChild(parentDraw);
         }
 
         public void GenerateDecisionTreeLibAux(string tree)
@@ -113,7 +152,7 @@ namespace FungiParadise.Gui
             Regex regex = new Regex(@"\(([^)]*)\)");
             MatchCollection matches = regex.Matches(lines[3]);
             
-            for(int i = 0; i < matches.Count; i++)
+            for (int i = 0; i < matches.Count; i++)
             {
                 Console.WriteLine(matches[i]);
             }
