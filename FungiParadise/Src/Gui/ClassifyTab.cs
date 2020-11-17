@@ -116,20 +116,27 @@ namespace FungiParadise.Gui
 
             if (valueComboBox.SelectedIndex == 0)
             {
-                //TO DO
+                table = manager.GenerateEmptyTableLib();
+                table.Columns.Remove("TYPE");
+
             }
             else
+                table = manager.GenerateEmptyTable();
+
+            DataRow row = table.NewRow();
+
+            for (int i = 0; i < values.Count; i++)
             {
-                DataRow row = table.NewRow();
-
-                for (int i = 0; i < values.Count; i++)
-                {
-                    row[attributes[i]] = values[i];
-                }
-
-                table.Rows.Add(row);
-                classification = manager.DecisionTreeOrg.Classify(table)[0];
+                row[attributes[i]] = values[i];
+                Console.WriteLine(attributes[i] + " " + values[i]);
             }
+
+            table.Rows.Add(row);
+
+            if (valueComboBox.SelectedIndex == 0)
+                classification = manager.DecisionTreeClassifyLib(table)[0];
+            else
+                classification = manager.DecisionTreeOrg.Classify(table)[0];
 
             MessageClassify message = new MessageClassify();
             message.InitializeClassifyMessage(attributes, values, classification, this);

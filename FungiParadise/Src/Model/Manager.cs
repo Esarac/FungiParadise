@@ -48,7 +48,7 @@ namespace FungiParadise.Model
             decisionTreeOrg = new DecisionTree.Model.DecisionTree(GenerateTrainingDataTableOrg());
         }
 
-        public double DecisionTreeSuccessPercentageOrg()
+        public double DecisionTreeAccuracyPercentageOrg()
         {
             return decisionTreeOrg.Test(GenerateTestingDataTableOrg());
         }
@@ -114,7 +114,7 @@ namespace FungiParadise.Model
 
         }
 
-        public double DecisionTreeSuccessPercentageLib()
+        public double DecisionTreeAccuracyPercentageLib()
         {
             DataTable data = GenerateTestingDataTableLib();
 

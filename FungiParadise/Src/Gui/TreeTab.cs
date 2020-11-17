@@ -47,6 +47,7 @@ namespace FungiParadise.Gui
         {
             this.manager = manager;
             GenerateDecisionTreeLib();
+            GenerateDecisionTreeOrg();
             InitializeOrientationComboBox();
             InitializeTypeComboBox();
             AccuracyPercentageTreeLib();
@@ -71,10 +72,14 @@ namespace FungiParadise.Gui
 
             //Arrange
             VerticalOrientation();
-            orientationComboBox.SelectedIndex = 0;
         }
+
         private void GenerateDecisionTreeLib()
         {
+            //Generate Tree
+            manager.GenerateDecisionTreeLib();
+
+            //Root
             this.root = new TreeNode<CircleNode>(new CircleNode("null"));
             //TO DO
             //Arrange
@@ -83,7 +88,7 @@ namespace FungiParadise.Gui
 
         private void AccuracyPercentageTreeOrg()
         {
-            accuracyLabel.Text = "Accuracy Percentage: " + (manager.DecisionTreeSuccessPercentageOrg() * 100) + "%";
+            accuracyLabel.Text = "Accuracy Percentage: " + (manager.DecisionTreeAccuracyPercentageOrg() * 100) + "%";
         }
 
         private void AccuracyPercentageTreeLib()
@@ -151,6 +156,8 @@ namespace FungiParadise.Gui
                 GenerateDecisionTreeLib();
             else
                 GenerateDecisionTreeOrg();
+
+            orientationComboBox.SelectedIndex = 0;
         }
 
         private void PicTreePaint(object sender, PaintEventArgs e)
