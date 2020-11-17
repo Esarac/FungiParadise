@@ -113,7 +113,7 @@ namespace FungiParadise.Gui
         {
             children = new Dictionary<string, List<string>>();
 
-            for (int level = 0; level < (height - 1); level++)
+            for (int level = 0; level < height; level++)
             {
                 List<string> childrenOfThisNode = new List<string>();
 
@@ -235,14 +235,29 @@ namespace FungiParadise.Gui
         {
             root.SetTreeDrawingParameters(20, 2, 20, 8, TreeNode<CircleNode>.Orientations.Vertical);
             ArrangeTree();
-            picTree.Size = new Size(500, 900);
+
+            if (typeComboBox.SelectedIndex == 0)
+            {
+                picTree.Size = new Size(500, 815);
+            }
+            else
+            {
+                picTree.Size = new Size(500, 900);
+            }        
         }
 
         private void HorizontalOrientation()
         {
             root.SetTreeDrawingParameters(5, 80, 20, 5, TreeNode<CircleNode>.Orientations.Horizontal);
             ArrangeTree();
-            picTree.Size = new Size(2080, 600);
+            if (typeComboBox.SelectedIndex == 0)
+            {
+                picTree.Size = new Size(1750, 700);
+            }
+            else
+            {
+                picTree.Size = new Size(2070, 600);
+            }
         }
 
         private void ArrangeTree()
