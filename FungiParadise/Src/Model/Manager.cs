@@ -168,15 +168,10 @@ namespace FungiParadise.Model
             return predictedString;
         }
 
-        public string GetDesicionTreeLib()
+        public string DecisionTreeDecisionsLib()
         {
             DecisionSet rules = decisionTreeLib.ToRules();
             return rules.ToString(codebook, "TYPE", System.Globalization.CultureInfo.InvariantCulture);
-        }
-
-        public int GetDesicionTreeLibHeight()
-        {
-            return DecisionTreeLib.GetHeight();
         }
         //...
 

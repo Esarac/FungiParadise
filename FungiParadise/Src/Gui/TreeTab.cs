@@ -83,7 +83,7 @@ namespace FungiParadise.Gui
             //Generate Tree
             manager.GenerateDecisionTreeLib();
 
-            string[] lines = manager.GetDesicionTreeLib().Split('\n');
+            string[] lines = manager.DecisionTreeDecisionsLib().Split('\n');
 
             string root = new Regex(@"\(([^)]*)\)").Match(lines[0]).ToString();
             root = string.Concat(Regex.Matches(root, "[A-Z]").OfType<Match>().Select(match => match.Value));
