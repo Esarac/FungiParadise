@@ -158,7 +158,6 @@ namespace FungiParadise.Gui
         public bool isLeaf(string node)
         {
             string parent = string.Concat(Regex.Matches(node, "[A-Z]").OfType<Match>().Select(match => match.Value));
-            
             return !children.ContainsKey(parent);
         }
 
@@ -208,12 +207,15 @@ namespace FungiParadise.Gui
 
         private void AccuracyPercentageTreeOrg()
         {
-            accuracyLabel.Text = "Accuracy Percentage: " + (manager.DecisionTreeAccuracyPercentageOrg() * 100) + "%";
+
+            double percentage = manager.DecisionTreeAccuracyPercentageOrg() * 100;
+            accuracyLabel.Text = "Accuracy: " + String.Format("{0:0.###}", percentage) + "%";
         }
 
         private void AccuracyPercentageTreeLib()
         {
-            accuracyLabel.Text = "Accuracy Percentage: " + (manager.DecisionTreeAccuracyPercentageLib() * 100) + "%"; 
+            double percentage = manager.DecisionTreeAccuracyPercentageLib() * 100;
+            accuracyLabel.Text = "Accuracy: " + String.Format("{0:0.###}", percentage) + "%";
         }
 
         private void AddNode(TreeNode<CircleNode> parent, string question, DecisionTree.Model.Node child)
@@ -237,27 +239,20 @@ namespace FungiParadise.Gui
             ArrangeTree();
 
             if (typeComboBox.SelectedIndex == 0)
-            {
-                picTree.Size = new Size(500, 815);
-            }
+                picTree.Size = new Size(500, 800);
             else
-            {
-                picTree.Size = new Size(500, 900);
-            }        
+                picTree.Size = new Size(500, 885);
         }
 
         private void HorizontalOrientation()
         {
             root.SetTreeDrawingParameters(5, 80, 20, 5, TreeNode<CircleNode>.Orientations.Horizontal);
             ArrangeTree();
+
             if (typeComboBox.SelectedIndex == 0)
-            {
-                picTree.Size = new Size(1750, 700);
-            }
+                picTree.Size = new Size(1750, 690);
             else
-            {
                 picTree.Size = new Size(2070, 600);
-            }
         }
 
         private void ArrangeTree()
@@ -292,7 +287,8 @@ namespace FungiParadise.Gui
             else
                 GenerateDecisionTreeOrg();
 
-            orientationComboBox.SelectedIndex = 0;
+            if (orientationComboBox.SelectedIndex == 1)
+                changeOrientation();
         }
 
         private void PicTreePaint(object sender, PaintEventArgs e)
@@ -311,18 +307,15 @@ namespace FungiParadise.Gui
 
         public void OrientationComboBoxSelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = orientationComboBox.SelectedIndex;
+            changeOrientation();
+        }
 
-            switch (index)
-            {
-                case 0:
-                    VerticalOrientation();
-                    break;
-
-                case 1:
-                    HorizontalOrientation();
-                    break;
-            }
+        public void changeOrientation()
+        {
+            if (orientationComboBox.SelectedIndex == 0)
+                VerticalOrientation();
+            else
+                HorizontalOrientation();
         }
     }
 }

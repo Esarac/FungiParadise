@@ -32,9 +32,9 @@
             this.top = new System.Windows.Forms.FlowLayoutPanel();
             this.attributeLabel = new MetroFramework.Drawing.Html.HtmlLabel();
             this.valueComboBox = new MetroFramework.Controls.MetroComboBox();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
             this.bottom = new System.Windows.Forms.FlowLayoutPanel();
+            this.backButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
             this.grid.SuspendLayout();
             this.top.SuspendLayout();
             this.bottom.SuspendLayout();
@@ -74,17 +74,18 @@
             this.attributeLabel.AutoScrollMinSize = new System.Drawing.Size(10, 0);
             this.attributeLabel.AutoSize = false;
             this.attributeLabel.BackColor = System.Drawing.SystemColors.Window;
+            this.attributeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.attributeLabel.Location = new System.Drawing.Point(3, 7);
             this.attributeLabel.Margin = new System.Windows.Forms.Padding(3, 7, 3, 2);
             this.attributeLabel.Name = "attributeLabel";
-            this.attributeLabel.Size = new System.Drawing.Size(239, 57);
+            this.attributeLabel.Size = new System.Drawing.Size(255, 57);
             this.attributeLabel.TabIndex = 0;
             // 
             // valueComboBox
             // 
             this.valueComboBox.FormattingEnabled = true;
             this.valueComboBox.ItemHeight = 24;
-            this.valueComboBox.Location = new System.Drawing.Point(248, 2);
+            this.valueComboBox.Location = new System.Drawing.Point(264, 2);
             this.valueComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.valueComboBox.Name = "valueComboBox";
             this.valueComboBox.Size = new System.Drawing.Size(121, 30);
@@ -92,24 +93,16 @@
             this.valueComboBox.UseSelectable = true;
             this.valueComboBox.Visible = false;
             // 
-            // nextButton
+            // bottom
             // 
-            this.nextButton.BackColor = System.Drawing.Color.White;
-            this.nextButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextButton.Location = new System.Drawing.Point(198, 6);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(11, 6, 3, 2);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(99, 34);
-            this.nextButton.TabIndex = 4;
-            this.nextButton.TabStop = false;
-            this.nextButton.Text = "Next";
-            this.nextButton.UseVisualStyleBackColor = false;
-            this.nextButton.Visible = false;
-            this.nextButton.Click += new System.EventHandler(this.OnActionNextButton);
-            this.nextButton.MouseEnter += new System.EventHandler(this.OnMouseEnter);
-            this.nextButton.MouseLeave += new System.EventHandler(this.OnMouseLeave);
+            this.bottom.Controls.Add(this.backButton);
+            this.bottom.Controls.Add(this.nextButton);
+            this.bottom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bottom.Location = new System.Drawing.Point(3, 81);
+            this.bottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bottom.Name = "bottom";
+            this.bottom.Size = new System.Drawing.Size(526, 76);
+            this.bottom.TabIndex = 1;
             // 
             // backButton
             // 
@@ -131,16 +124,24 @@
             this.backButton.MouseEnter += new System.EventHandler(this.OnMouseEnter);
             this.backButton.MouseLeave += new System.EventHandler(this.OnMouseLeave);
             // 
-            // bottom
+            // nextButton
             // 
-            this.bottom.Controls.Add(this.backButton);
-            this.bottom.Controls.Add(this.nextButton);
-            this.bottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bottom.Location = new System.Drawing.Point(3, 81);
-            this.bottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bottom.Name = "bottom";
-            this.bottom.Size = new System.Drawing.Size(526, 76);
-            this.bottom.TabIndex = 1;
+            this.nextButton.BackColor = System.Drawing.Color.White;
+            this.nextButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton.Location = new System.Drawing.Point(198, 6);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(11, 6, 3, 2);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(99, 34);
+            this.nextButton.TabIndex = 4;
+            this.nextButton.TabStop = false;
+            this.nextButton.Text = "Next";
+            this.nextButton.UseVisualStyleBackColor = false;
+            this.nextButton.Visible = false;
+            this.nextButton.Click += new System.EventHandler(this.OnActionNextButton);
+            this.nextButton.MouseEnter += new System.EventHandler(this.OnMouseEnter);
+            this.nextButton.MouseLeave += new System.EventHandler(this.OnMouseLeave);
             // 
             // ClassifyTab
             // 
