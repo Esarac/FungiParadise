@@ -1,29 +1,33 @@
 @startuml Sequence1
 
-actor Actor
+actor Client
 
-Actor -> TableTab : InitializeTableTab(Manager manager)
+Client ->> TableTab : 1: InitializeTableTab(Manager manager)
 activate TableTab
 
-note left 
-METHOD: GenerateDataTable()
-Starts when the user loads
-the CSV and picks the data
-table tab 
-end note
 
-TableTab -> Manager : GenerateDataTable()
+
+TableTab -> Manager : 1.1: GenerateDataTable()
 activate Manager
 
-create DataTable
-Manager --> DataTable : GenerateEmptyTable()
-activate DataTable
+Manager ->> Manager : 1.1.1: GenerateDataTable()
+activate Manager #DarkSalmon
 
+Manager ->> Manager : 1.1.2: GenerateEmptyTable()
 
-loop for each row 
-DataTable -> DataTable : Add(row)
+loop for each mushroom
+Manager ->> Manager : 1.1.3: table.Rows.Add(row)
 end
 
-deactivate DataTable
+
+note right 
+Fill the table
+rows with
+information
+end note
+
+deactivate Manager
+
+Manager --> TableTab : 1.2: table
 
 @enduml

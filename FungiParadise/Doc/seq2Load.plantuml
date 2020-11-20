@@ -1,11 +1,29 @@
 @startuml Sequence 2
 
-actor Actor
+actor Client
 
-Actor --> Window : ?
+Client ->> Window : 1: ImportButtonClick(object, EventArgs)
 
+activate Window
 create Manager
-Window --> Manager : Manager(Filename)
+
+Window -->> Manager : 1.1: Manager(Filename)
+activate Manager
+Manager ->> Manager : 2: load(path)
+
+note right 
+Load the information
+from the CSV in the
+path
+end note
+
+activate Manager #DarkSalmon
+loop for each row 
+Manager ->> Manager : 3: dataSet.Add(Mushroom)
+
+end
+
+deactivate Manager
 
 
 
