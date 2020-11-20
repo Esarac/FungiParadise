@@ -32,21 +32,6 @@ namespace FungiParadise.Gui
         }
 
         //Initializers
-        public void InitializeOrientationComboBox()
-        {
-            orientationComboBox.Items.AddRange(new string[] { "Vertical", "Horizontal" });
-            orientationComboBox.SelectedIndex = 0;
-            orientationComboBox.Enabled = true;
-        }
-
-        public void InitializeTypeComboBox()
-        {
-            typeComboBox.Items.AddRange(new string[] { "Accord .NET Framework", "Fungi Paradise" });
-            typeComboBox.SelectedIndex = 0;
-            typeComboBox.Enabled = true;
-        }
-
-        //Method
         public void InitializeTreeTab(Manager manager)
         {
             this.manager = manager;
@@ -57,6 +42,21 @@ namespace FungiParadise.Gui
             AccuracyPercentageTreeLib();
         }
 
+        private void InitializeOrientationComboBox()
+        {
+            orientationComboBox.Items.AddRange(new string[] { "Vertical", "Horizontal" });
+            orientationComboBox.SelectedIndex = 0;
+            orientationComboBox.Enabled = true;
+        }
+
+        private void InitializeTypeComboBox()
+        {
+            typeComboBox.Items.AddRange(new string[] { "Accord .NET Framework", "Fungi Paradise" });
+            typeComboBox.SelectedIndex = 0;
+            typeComboBox.Enabled = true;
+        }
+
+        //Method
         private void GenerateDecisionTreeOrg()
         {
             //Generate Tree
@@ -109,7 +109,7 @@ namespace FungiParadise.Gui
             VerticalOrientation();
         }
 
-        public void MapChildren(string[] lines, int height)
+        private void MapChildren(string[] lines, int height)
         {
             children = new Dictionary<string, List<string>>();
 
@@ -133,7 +133,7 @@ namespace FungiParadise.Gui
             }
         }
 
-        public string GetParent(string[] lines, int level, int height)
+        private string GetParent(string[] lines, int level, int height)
         {
             string branch = null;
 
@@ -155,13 +155,13 @@ namespace FungiParadise.Gui
             return root;
         }
 
-        public bool isLeaf(string node)
+        private bool IsLeaf(string node)
         {
             string parent = string.Concat(Regex.Matches(node, "[A-Z]").OfType<Match>().Select(match => match.Value));
             return !children.ContainsKey(parent);
         }
 
-        public string[] GetNodes(string line)
+        private string[] GetNodes(string line)
         {
             MatchCollection matches = new Regex(@"\(([^)]*)\)").Matches(line);
 
@@ -188,12 +188,12 @@ namespace FungiParadise.Gui
             return nodes;
         }
 
-        public void AddNodeLib(TreeNode<CircleNode> parent, string child)
+        private void AddNodeLib(TreeNode<CircleNode> parent, string child)
         {
             TreeNode<CircleNode> parentDraw = new TreeNode<CircleNode>(new CircleNode(child));
             parent.AddChild(parentDraw);
 
-            if (!isLeaf(child))
+            if (!IsLeaf(child))
             {
                 string parentName = string.Concat(Regex.Matches(child, "[A-Z]").OfType<Match>().Select(match => match.Value));
 
@@ -280,7 +280,7 @@ namespace FungiParadise.Gui
         }
 
         //Trigger
-        public void GenerateDecisionTree(object sender, EventArgs e)
+        private void GenerateDecisionTree(object sender, EventArgs e)
         {
             if (typeComboBox.SelectedIndex == 0)
                 GenerateDecisionTreeLib();
@@ -288,7 +288,7 @@ namespace FungiParadise.Gui
                 GenerateDecisionTreeOrg();
 
             if (orientationComboBox.SelectedIndex == 1)
-                changeOrientation();
+                ChangeOrientation();
         }
 
         private void PicTreePaint(object sender, PaintEventArgs e)
@@ -305,12 +305,12 @@ namespace FungiParadise.Gui
                 ArrangeTree();
         }
 
-        public void OrientationComboBoxSelectedIndexChanged(object sender, EventArgs e)
+        private void OrientationComboBoxSelectedIndexChanged(object sender, EventArgs e)
         {
-            changeOrientation();
+            ChangeOrientation();
         }
 
-        public void changeOrientation()
+        private void ChangeOrientation()
         {
             if (orientationComboBox.SelectedIndex == 0)
                 VerticalOrientation();

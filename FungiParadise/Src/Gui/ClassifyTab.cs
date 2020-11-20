@@ -37,7 +37,7 @@ namespace FungiParadise.Gui
             InitializeButtons();
         }
 
-        public void InitializeAttributeList()
+        private void InitializeAttributeList()
         {
             table = manager.GenerateEmptyTable();
             attributes = new List<string>();
@@ -50,27 +50,27 @@ namespace FungiParadise.Gui
             attributes.RemoveAt(0);
         }
 
-        public void InitializeValueComboBox()
+        private void InitializeValueComboBox()
         {
             valueComboBox.DataSource = Mushroom.CAP_SHAPE;
             valueComboBox.Visible = true;
             values = new List<char>();
         }
-        
-        public void InitializeAttributeLabel()
+
+        private void InitializeAttributeLabel()
         {
             attributeLabel.Text = attributes[0];
             attributeIndex = 0;
         }
 
-        public void InitializeButtons()
+        private void InitializeButtons()
         {
             nextButton.Visible = true;
             backButton.Visible = true;
         }
 
         //Triggers
-        public void OnActionNextButton(object sender, EventArgs e)
+        private void OnActionNextButton(object sender, EventArgs e)
         {
             values.Add((char)valueComboBox.SelectedValue);
             if (attributeIndex == 0)
@@ -99,7 +99,7 @@ namespace FungiParadise.Gui
             }
         }
 
-        public void OnActionBackButton(object sender, EventArgs e)
+        private void OnActionBackButton(object sender, EventArgs e)
         {
             attributeIndex--;
 
@@ -110,7 +110,7 @@ namespace FungiParadise.Gui
             ChangeValueComboBox();
         }
 
-        public void Classify(object sender, EventArgs e)
+        private void Classify(object sender, EventArgs e)
         {
             string classification = "";
 
@@ -143,7 +143,7 @@ namespace FungiParadise.Gui
             message.Show();
         }
 
-        public void Reset(object sender, EventArgs e)
+        private void Reset(object sender, EventArgs e)
         {
             InitializeAttributeList();
             InitializeValueComboBox();
@@ -160,7 +160,7 @@ namespace FungiParadise.Gui
             backButton.Enabled = false;
         }
 
-        public void OnMouseEnter(object sender, EventArgs e)
+        private void OnMouseEnter(object sender, EventArgs e)
         {
             MouseEnterColor((Button)sender);
         }
@@ -171,7 +171,7 @@ namespace FungiParadise.Gui
         }
 
         //Methods
-        public void ChangeValueComboBox()
+        private void ChangeValueComboBox()
         {
             switch (attributeIndex)
             {
@@ -313,13 +313,13 @@ namespace FungiParadise.Gui
             }
         }
 
-        public void MouseEnterColor<T>(T button) where T : Button
+        private void MouseEnterColor<T>(T button) where T : Button
         {
             button.BackColor = Color.FromArgb(58, 145, 84);
             button.ForeColor = Color.White;
         }
 
-        public void MouseLeavesColor<T>(T button) where T : Button
+        private void MouseLeavesColor<T>(T button) where T : Button
         {
             button.BackColor = Color.White;
             button.ForeColor = Color.Black;

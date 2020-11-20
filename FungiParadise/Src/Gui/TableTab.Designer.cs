@@ -66,7 +66,7 @@
             this.attributeComboBox.Size = new System.Drawing.Size(250, 27);
             this.attributeComboBox.TabIndex = 0;
             this.attributeComboBox.UseSelectable = true;
-            this.attributeComboBox.SelectedIndexChanged += new System.EventHandler(this.attributeComboBoxSelectedIndexChanged);
+            this.attributeComboBox.SelectedIndexChanged += new System.EventHandler(this.AttributeComboBoxSelectedIndexChanged);
             // 
             // valueComboBox
             // 
@@ -96,7 +96,7 @@
             this.filterButton.TabStop = false;
             this.filterButton.Text = "Filter";
             this.filterButton.UseVisualStyleBackColor = false;
-            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
+            this.filterButton.Click += new System.EventHandler(this.FilterButton_Click);
             this.filterButton.MouseLeave += new System.EventHandler(this.OnMouseLeaveFilterButton);
             this.filterButton.MouseHover += new System.EventHandler(this.OnMouseHoverFilterButton);
             // 

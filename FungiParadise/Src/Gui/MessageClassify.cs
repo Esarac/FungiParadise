@@ -32,11 +32,11 @@ namespace FungiParadise.Gui
             this.values = values;
             this.classification = classification;
             this.form = form;
-            showMessage();
+            ShowMessage();
         }
 
         //Methods
-        public void showMessage()
+        private void ShowMessage()
         {
             string message = "";
 
@@ -50,7 +50,7 @@ namespace FungiParadise.Gui
             messageLabel.Text = message;
         }
 
-       //Triggers
+        //Triggers
         private void OnFormClosed(object sender, FormClosedEventArgs e)
         {
             form.Focus();

@@ -32,7 +32,7 @@ namespace FungiParadise.Gui
             filterButton.Enabled = true;
         }
 
-        public void InitializeAttributeComboBox()
+        private void InitializeAttributeComboBox()
         {
             attributeComboBox.Items.Add("All");
 
@@ -45,7 +45,7 @@ namespace FungiParadise.Gui
         }
 
         //Methods
-        public void GenerateTable()
+        private void GenerateTable()
         {
             //Config
             table.DataSource = manager.GenerateDataTable();
@@ -58,7 +58,7 @@ namespace FungiParadise.Gui
             }
         }
 
-        public void attributeComboBoxSelectedIndexChanged(object sender, EventArgs e)
+        private void AttributeComboBoxSelectedIndexChanged(object sender, EventArgs e)
         {
             int index = attributeComboBox.SelectedIndex;
 
@@ -251,7 +251,7 @@ namespace FungiParadise.Gui
             filterButton.ForeColor = Color.Black;
         }
 
-        private void filterButton_Click(object sender, EventArgs e)
+        private void FilterButton_Click(object sender, EventArgs e)
         {
             int index = attributeComboBox.SelectedIndex;
             if (index == 0)
