@@ -1,0 +1,29 @@
+@startuml Sequence1
+
+actor Actor
+
+Actor -> TableTab : InitializeTableTab(Manager manager)
+activate TableTab
+
+note left 
+METHOD: GenerateDataTable()
+Starts when the user loads
+the CSV and picks the data
+table tab 
+end note
+
+TableTab -> Manager : GenerateDataTable()
+activate Manager
+
+create DataTable
+Manager --> DataTable : GenerateEmptyTable()
+activate DataTable
+
+
+loop for each row 
+DataTable -> DataTable : Add(row)
+end
+
+deactivate DataTable
+
+@enduml
