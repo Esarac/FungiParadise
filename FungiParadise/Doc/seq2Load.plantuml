@@ -1,0 +1,12 @@
+@startuml Sequence 2
+
+actor Actor
+
+Actor --> Window : ?
+
+create Manager
+Window --> Manager : Manager(Filename)
+
+
+
+@enduml
