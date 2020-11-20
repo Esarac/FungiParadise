@@ -137,8 +137,6 @@ namespace FungiParadise.Model
 
             double error = new ZeroOneLoss(outputs).Loss(decisionTreeLib.Decide(inputs));
 
-            Console.WriteLine(1 - error);
-
             return 1 - error;
         }
 
