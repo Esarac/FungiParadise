@@ -19,7 +19,7 @@ The biologists say that we must first read the data already available regarding 
 
 [Object Diagram](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Object_Diagram.pdf)
 
-[Sequence Diagrams (Updated)](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Sequence_Diagrams.pdf)
+[Sequence Diagrams](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Sequence_Diagrams.pdf)
 
 [Class Diagram - Fungi Paradise](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Class_Diagram.pdf)
 
