@@ -9,6 +9,8 @@ The biologists say that we must first read the data already available regarding 
 
 [Video for submission #2](https://youtu.be/VBoV7-OjjQc)
 
+[Video for submission #3](https://youtu.be/Biu11r6Q5Dk)
+
 ## Database
 [http://archive.ics.uci.edu/ml/datasets/Mushroom](http://archive.ics.uci.edu/ml/datasets/Mushroom)
 
