@@ -41,6 +41,90 @@ namespace FungiParadise.Model
             Load(path);
         }
 
+        //Experiment
+        public void GenerateExperiments()
+        {
+            DataTable treatments = GenerateEmptyTableLib();
+
+            //Odor
+            for (int a = 0; a < Mushroom.ODOR.Length; a++)
+            {
+                //Stalk Surface Below Ring
+                for(int b = 0;  b < Mushroom.STALK_SURFACE_BELOW_RING.Length; b++)
+                {
+                    //Spore Print Color
+                    for (int c = 0; c < Mushroom.SPORE_PRINT_COLOR.Length; c++)
+                    {
+                        //Cap Surface
+                        for (int d = 0; d < Mushroom.CAP_SURFACE.Length; d++)
+                        {
+                            //Cap Color
+                            for (int e = 0; e < Mushroom.CAP_COLOR.Length; e++)
+                            {
+                                //Stalk Shape
+                                for(int f = 0; f < Mushroom.STALK_SHAPE.Length; f++)
+                                {
+                                    //Ring Type
+                                    for(int g = 0; g < Mushroom.RING_TYPE.Length; g++)
+                                    {
+                                        //Gill Size
+                                        for(int h = 0; h < Mushroom.GILL_SIZE.Length; h++)
+                                        {
+                                            DataRow row = treatments.NewRow();
+
+                                            row["TYPE"] = Mushroom.MushroomType.Edible;//0
+                                            row["CAP SHAPE"] = Mushroom.CAP_SHAPE[0];//1
+                                            row["BRUISES"] = Mushroom.BRUISES[0];//4
+                                            row["GILL ATTACHMENT"] = Mushroom.GILL_ATTACHMENT[0];//6
+                                            row["GILL SPACING"] = Mushroom.GILL_SPACING[0];//7
+                                            row["GILL COLOR"] = Mushroom.GILL_COLOR[0];//9
+                                            row["STALK ROOT"] = Mushroom.STALK_ROOT[0];//11
+                                            row["STALK SURFACE ABOVE RING"] = Mushroom.STALK_SURFACE_ABOVE_RING[0];//12
+                                            row["STALK COLOR ABOVE RING"] = Mushroom.STALK_COLOR_ABOVE_RING[0];//14
+                                            row["STALK COLOR BELOW RING"] = Mushroom.STALK_COLOR_BELOW_RING[0];//15
+                                            row["VEIL TYPE"] = Mushroom.VEIL_TYPE[0];//16
+                                            row["VEIL COLOR"] = Mushroom.VEIL_COLOR[0];//17
+                                            row["RING NUMBER"] = Mushroom.RING_NUMBER[0];//18
+                                            row["POPULATION"] = Mushroom.POPULATION[0];//21
+                                            row["HABITAT"] = Mushroom.HABITAT[0];//22
+
+                                            row["ODOR"] = Mushroom.ODOR[a];//5 <-- a
+                                            row["STALK SURFACE BELOW RING"] = Mushroom.STALK_SURFACE_BELOW_RING[b];//13 <-- b
+                                            row["SPORE PRINT COLOR"] = Mushroom.SPORE_PRINT_COLOR[c];//20 <-- c
+                                            row["CAP SURFACE"] = Mushroom.CAP_SURFACE[d];//2 <-- d
+                                            row["CAP COLOR"] = Mushroom.CAP_COLOR[e];//3 <-- e
+                                            row["STALK SHAPE"] = Mushroom.STALK_SHAPE[f];//10 <-- f
+                                            row["RING TYPE"] = Mushroom.RING_TYPE[g];//19 <-- g
+                                            row["GILL SIZE"] = Mushroom.GILL_SIZE[h];//8 <-- h
+
+                                            treatments.Rows.Add(row);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("Añadiendo datos");
+
+            string[] classifyOrg = decisionTreeOrg.Classify(treatments);
+            string[] classifyLib = DecisionTreeClassifyLib(treatments);
+
+            int wrong = 0;
+            for (int i = 0; i < classifyOrg.Length; i++)
+            {
+                Console.WriteLine(classifyOrg[i]+" vs "+classifyLib[i]);
+                if (!classifyOrg[i].Equals(classifyLib[i]))
+                {
+                    wrong += 1;
+                }
+            }
+            Console.WriteLine("Good: "+ (classifyOrg.Length-wrong) +"\nWrong: "+wrong);
+
+        }
+        //...
+
         //Machine Learning
         //Original
         public void GenerateDecisionTreeOrg()
@@ -121,7 +205,7 @@ namespace FungiParadise.Model
             DataTable symbols = codebook.Apply(data);
 
             int[][] inputs = DataTableToMatrix(symbols, new string[] { "CAP SHAPE" , "CAP SURFACE" , "CAP COLOR" ,
-                                                                        "BRUISES" , "ODOR","GILL ATTACHMENT",
+                                                                        "BRUISES" , "ODOR", "GILL ATTACHMENT",
                                                                         "GILL SPACING", "GILL SIZE", "GILL COLOR",
                                                                         "STALK SHAPE","STALK ROOT","STALK SURFACE ABOVE RING",
                                                                         "STALK SURFACE BELOW RING","STALK COLOR ABOVE RING","STALK COLOR BELOW RING",
@@ -157,12 +241,12 @@ namespace FungiParadise.Model
             int[] predicted = decisionTreeLib.Decide(inputs);
 
             string[] predictedString = new string[predicted.Length];
-            for(int i = 0; i < predicted.Length; i++)
+            for (int i = 0; i < predicted.Length; i++)
             {
                 predictedString[i] = codebook.Revert("TYPE", predicted[i]);
-                Console.WriteLine(predictedString[i]);
+                //Aqui se queda mucho tiempo
             }
-            
+
             return predictedString;
         }
 

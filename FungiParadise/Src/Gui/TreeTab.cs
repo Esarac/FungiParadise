@@ -40,6 +40,7 @@ namespace FungiParadise.Gui
             InitializeOrientationComboBox();
             InitializeTypeComboBox();
             AccuracyPercentageTreeLib();
+            manager.GenerateExperiments();
         }
 
         private void InitializeOrientationComboBox()
