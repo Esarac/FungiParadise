@@ -44,84 +44,23 @@ namespace FungiParadise.Model
         //Experiment
         public void GenerateExperiments()
         {
-            DataTable treatments = GenerateEmptyTableLib();
+            int[] trainQua = { 1000, 2000, 3000, 4000 };
+            int[] testQua = { 1000, 2000, 3000, 4000 };
+            int rep = 100;
 
-            //Odor
-            for (int a = 0; a < Mushroom.ODOR.Length; a++)
+            for (int i = 0; i < trainQua.Length; i++)
             {
-                //Stalk Surface Below Ring
-                for(int b = 0;  b < Mushroom.STALK_SURFACE_BELOW_RING.Length; b++)
+                for (int j = 0; j < testQua.Length; j++)
                 {
-                    //Spore Print Color
-                    for (int c = 0; c < Mushroom.SPORE_PRINT_COLOR.Length; c++)
+                    for(int k = 0; k < rep; k++)
                     {
-                        //Cap Surface
-                        for (int d = 0; d < Mushroom.CAP_SURFACE.Length; d++)
-                        {
-                            //Cap Color
-                            for (int e = 0; e < Mushroom.CAP_COLOR.Length; e++)
-                            {
-                                //Stalk Shape
-                                for(int f = 0; f < Mushroom.STALK_SHAPE.Length; f++)
-                                {
-                                    //Ring Type
-                                    for(int g = 0; g < Mushroom.RING_TYPE.Length; g++)
-                                    {
-                                        //Gill Size
-                                        for(int h = 0; h < Mushroom.GILL_SIZE.Length; h++)
-                                        {
-                                            DataRow row = treatments.NewRow();
 
-                                            row["TYPE"] = Mushroom.MushroomType.Edible;//0
-                                            row["CAP SHAPE"] = Mushroom.CAP_SHAPE[0];//1
-                                            row["BRUISES"] = Mushroom.BRUISES[0];//4
-                                            row["GILL ATTACHMENT"] = Mushroom.GILL_ATTACHMENT[0];//6
-                                            row["GILL SPACING"] = Mushroom.GILL_SPACING[0];//7
-                                            row["GILL COLOR"] = Mushroom.GILL_COLOR[0];//9
-                                            row["STALK ROOT"] = Mushroom.STALK_ROOT[0];//11
-                                            row["STALK SURFACE ABOVE RING"] = Mushroom.STALK_SURFACE_ABOVE_RING[0];//12
-                                            row["STALK COLOR ABOVE RING"] = Mushroom.STALK_COLOR_ABOVE_RING[0];//14
-                                            row["STALK COLOR BELOW RING"] = Mushroom.STALK_COLOR_BELOW_RING[0];//15
-                                            row["VEIL TYPE"] = Mushroom.VEIL_TYPE[0];//16
-                                            row["VEIL COLOR"] = Mushroom.VEIL_COLOR[0];//17
-                                            row["RING NUMBER"] = Mushroom.RING_NUMBER[0];//18
-                                            row["POPULATION"] = Mushroom.POPULATION[0];//21
-                                            row["HABITAT"] = Mushroom.HABITAT[0];//22
 
-                                            row["ODOR"] = Mushroom.ODOR[a];//5 <-- a
-                                            row["STALK SURFACE BELOW RING"] = Mushroom.STALK_SURFACE_BELOW_RING[b];//13 <-- b
-                                            row["SPORE PRINT COLOR"] = Mushroom.SPORE_PRINT_COLOR[c];//20 <-- c
-                                            row["CAP SURFACE"] = Mushroom.CAP_SURFACE[d];//2 <-- d
-                                            row["CAP COLOR"] = Mushroom.CAP_COLOR[e];//3 <-- e
-                                            row["STALK SHAPE"] = Mushroom.STALK_SHAPE[f];//10 <-- f
-                                            row["RING TYPE"] = Mushroom.RING_TYPE[g];//19 <-- g
-                                            row["GILL SIZE"] = Mushroom.GILL_SIZE[h];//8 <-- h
 
-                                            treatments.Rows.Add(row);
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
-            Console.WriteLine("Añadiendo datos");
-
-            string[] classifyOrg = decisionTreeOrg.Classify(treatments);
-            string[] classifyLib = DecisionTreeClassifyLib(treatments);
-
-            int wrong = 0;
-            for (int i = 0; i < classifyOrg.Length; i++)
-            {
-                Console.WriteLine(classifyOrg[i]+" vs "+classifyLib[i]);
-                if (!classifyOrg[i].Equals(classifyLib[i]))
-                {
-                    wrong += 1;
-                }
-            }
-            Console.WriteLine("Good: "+ (classifyOrg.Length-wrong) +"\nWrong: "+wrong);
-
+            Console.WriteLine(dataSet.Count);
         }
         //...
 
@@ -367,6 +306,89 @@ namespace FungiParadise.Model
 
             return table;
         }
+
+        //Experiment
+        public DataTable[] GenerateExperimentDataTables(int trainQua, int testQua)
+        {
+            List<Mushroom> values = new List<Mushroom>(dataSet);
+
+            Random r = new Random();
+
+            //Train
+            DataTable train = GenerateEmptyTableLib();
+            for (int i = 0; i < trainQua; i++)
+            {
+                int pos = r.Next(values.Count);
+
+                DataRow row = train.NewRow();
+                row["TYPE"] = values[pos].Type;//0
+                row["CAP SHAPE"] = values[pos].CapShape;//1
+                row["CAP SURFACE"] = values[pos].CapSurface;//2
+                row["CAP COLOR"] = values[pos].CapColor;//3
+                row["BRUISES"] = values[pos].Bruises;//4
+                row["ODOR"] = values[pos].Odor;//5
+                row["GILL ATTACHMENT"] = values[pos].GillAttachment;//6
+                row["GILL SPACING"] = values[pos].GillSpacing;//7
+                row["GILL SIZE"] = values[pos].GillSize;//8
+                row["GILL COLOR"] = values[pos].GillColor;//9
+                row["STALK SHAPE"] = values[pos].StalkShape;//10
+                row["STALK ROOT"] = values[pos].StalkRoot;//11
+                row["STALK SURFACE ABOVE RING"] = values[pos].StalkSurfaceAboveRing;//12
+                row["STALK SURFACE BELOW RING"] = values[pos].StalkSurfaceBelowRing;//13
+                row["STALK COLOR ABOVE RING"] = values[pos].StalkColorAboveRing;//14
+                row["STALK COLOR BELOW RING"] = values[pos].StalkColorBelowRing;//15
+                row["VEIL TYPE"] = values[pos].VeilType;//16
+                row["VEIL COLOR"] = values[pos].VeilColor;//17
+                row["RING NUMBER"] = values[pos].RingNumber;//18
+                row["RING TYPE"] = values[pos].RingType;//19
+                row["SPORE PRINT COLOR"] = values[pos].SporePrintColor;//20
+                row["POPULATION"] = values[pos].Population;//21
+                row["HABITAT"] = values[pos].Habitat;//22
+                train.Rows.Add(row);
+
+                values.Remove(values[pos]);
+            }
+            //...
+
+            //Test
+            DataTable test = GenerateEmptyTableLib();
+            for (int i = 0; i < testQua; i++)
+            {
+                int pos = r.Next(values.Count);
+
+                DataRow row = test.NewRow();
+                row["TYPE"] = values[pos].Type;//0
+                row["CAP SHAPE"] = values[pos].CapShape;//1
+                row["CAP SURFACE"] = values[pos].CapSurface;//2
+                row["CAP COLOR"] = values[pos].CapColor;//3
+                row["BRUISES"] = values[pos].Bruises;//4
+                row["ODOR"] = values[pos].Odor;//5
+                row["GILL ATTACHMENT"] = values[pos].GillAttachment;//6
+                row["GILL SPACING"] = values[pos].GillSpacing;//7
+                row["GILL SIZE"] = values[pos].GillSize;//8
+                row["GILL COLOR"] = values[pos].GillColor;//9
+                row["STALK SHAPE"] = values[pos].StalkShape;//10
+                row["STALK ROOT"] = values[pos].StalkRoot;//11
+                row["STALK SURFACE ABOVE RING"] = values[pos].StalkSurfaceAboveRing;//12
+                row["STALK SURFACE BELOW RING"] = values[pos].StalkSurfaceBelowRing;//13
+                row["STALK COLOR ABOVE RING"] = values[pos].StalkColorAboveRing;//14
+                row["STALK COLOR BELOW RING"] = values[pos].StalkColorBelowRing;//15
+                row["VEIL TYPE"] = values[pos].VeilType;//16
+                row["VEIL COLOR"] = values[pos].VeilColor;//17
+                row["RING NUMBER"] = values[pos].RingNumber;//18
+                row["RING TYPE"] = values[pos].RingType;//19
+                row["SPORE PRINT COLOR"] = values[pos].SporePrintColor;//20
+                row["POPULATION"] = values[pos].Population;//21
+                row["HABITAT"] = values[pos].Habitat;//22
+                test.Rows.Add(row);
+
+                values.Remove(values[pos]);
+            }
+            //...
+
+            return new DataTable[] { train, test};
+        } 
+        //..
 
         //Original
         public DataTable GenerateTrainingDataTableOrg()
