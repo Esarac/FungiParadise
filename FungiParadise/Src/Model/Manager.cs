@@ -44,8 +44,8 @@ namespace FungiParadise.Model
         //Experiment
         public void GenerateExperiments()
         {
-            int[] trainQua = { 1000, 2000, 3000, 4000 };
-            int[] testQua = { 1000, 2000, 3000, 4000 };
+            int[] trainQua = { 4, 40, 400, 4000 };
+            int[] testQua = { 4, 40, 400, 4000 };
             int rep = 100;
 
             for (int i = 0; i < trainQua.Length; i++)
@@ -54,13 +54,22 @@ namespace FungiParadise.Model
                 {
                     for(int k = 0; k < rep; k++)
                     {
+                        DataTable[] tables = GenerateExperimentDataTables(trainQua[i], testQua[j]);
 
+                        //Original
+                        DecisionTree.Model.DecisionTree original = new DecisionTree.Model.DecisionTree(tables[0]);
+                        double perOrg = original.Test(tables[1]);
+                        //...
 
+                        //Library
+                        Codification codebook = GenerateDecisionTreeLib(tables[0]);
+                        double perLib = DecisionTreeAccuracyPercentageLib(tables[1], codebook);
+                        //...
 
+                        Console.WriteLine((k+1)+". [trainQ:"+ trainQua[i]+", testQ:"+testQua[j]+"] = [dtOrg:"+perOrg+", dtLib:"+perLib+"]");
                     }
                 }
             }
-            Console.WriteLine(dataSet.Count);
         }
         //...
 
@@ -137,10 +146,92 @@ namespace FungiParadise.Model
 
         }
 
+        public Codification GenerateDecisionTreeLib(DataTable data)
+        {
+            Codification b = new Codification(data);
+
+            DataTable symbols = b.Apply(data);
+
+            int[][] inputs = DataTableToMatrix(symbols, new string[] { "CAP SHAPE" , "CAP SURFACE" , "CAP COLOR" ,
+                                                                        "BRUISES" , "ODOR","GILL ATTACHMENT",
+                                                                        "GILL SPACING", "GILL SIZE", "GILL COLOR",
+                                                                        "STALK SHAPE","STALK ROOT","STALK SURFACE ABOVE RING",
+                                                                        "STALK SURFACE BELOW RING","STALK COLOR ABOVE RING","STALK COLOR BELOW RING",
+                                                                        "VEIL TYPE","VEIL COLOR","RING NUMBER",
+                                                                        "RING TYPE","SPORE PRINT COLOR","POPULATION",
+                                                                        "HABITAT"
+            });
+
+            int[][] mOutputs = DataTableToMatrix(symbols, new string[] { "TYPE" });
+            int[] outputs = new int[mOutputs.Length];
+            for (int i = 0; i < mOutputs.Length; i++)
+                outputs[i] = mOutputs[i][0];
+
+            ID3Learning id3learning = new ID3Learning()
+            {
+                new DecisionVariable("CAP SHAPE", Mushroom.CAP_SHAPE.Length),//1
+                new DecisionVariable("CAP SURFACE", Mushroom.CAP_SURFACE.Length),//2
+                new DecisionVariable("CAP COLOR", Mushroom.CAP_COLOR.Length),//3
+
+                new DecisionVariable("BRUISES", Mushroom.BRUISES.Length),//4
+                new DecisionVariable("ODOR", Mushroom.ODOR.Length),//5
+
+                new DecisionVariable("GILL ATTACHMENT", Mushroom.GILL_ATTACHMENT.Length),//6
+                new DecisionVariable("GILL SPACING", Mushroom.GILL_SPACING.Length),//7
+                new DecisionVariable("GILL SIZE", Mushroom.GILL_SIZE.Length),//8
+                new DecisionVariable("GILL COLOR", Mushroom.GILL_COLOR.Length),//9
+
+                new DecisionVariable("STALK SHAPE", Mushroom.STALK_SHAPE.Length),//10
+                new DecisionVariable("STALK ROOT", Mushroom.STALK_ROOT.Length),//11
+                new DecisionVariable("STALK SURFACE ABOVE RING", Mushroom.STALK_SURFACE_ABOVE_RING.Length),//12
+                new DecisionVariable("STALK SURFACE BELOW RING", Mushroom.STALK_SURFACE_BELOW_RING.Length),//13
+                new DecisionVariable("STALK COLOR ABOVE RING", Mushroom.STALK_COLOR_ABOVE_RING.Length),//14
+                new DecisionVariable("STALK COLOR BELOW RING", Mushroom.STALK_COLOR_BELOW_RING.Length),//15
+
+                new DecisionVariable("VEIL TYPE", Mushroom.VEIL_TYPE.Length),//16
+                new DecisionVariable("VEIL COLOR", Mushroom.VEIL_COLOR.Length),//17
+
+                new DecisionVariable("RING NUMBER", Mushroom.RING_NUMBER.Length),//18
+                new DecisionVariable("RING TYPE", Mushroom.RING_TYPE.Length),//19
+
+                new DecisionVariable("SPORE PRINT COLOR", Mushroom.SPORE_PRINT_COLOR.Length),//20
+                new DecisionVariable("POPULATION", Mushroom.POPULATION.Length),//21
+                new DecisionVariable("HABITAT", Mushroom.HABITAT.Length)//22
+            };
+
+            decisionTreeLib = id3learning.Learn(inputs, outputs);
+
+            return b;
+        }
+
         public double DecisionTreeAccuracyPercentageLib()
         {
             DataTable data = GenerateTestingDataTableLib();
 
+            DataTable symbols = codebook.Apply(data);
+
+            int[][] inputs = DataTableToMatrix(symbols, new string[] { "CAP SHAPE" , "CAP SURFACE" , "CAP COLOR" ,
+                                                                        "BRUISES" , "ODOR", "GILL ATTACHMENT",
+                                                                        "GILL SPACING", "GILL SIZE", "GILL COLOR",
+                                                                        "STALK SHAPE","STALK ROOT","STALK SURFACE ABOVE RING",
+                                                                        "STALK SURFACE BELOW RING","STALK COLOR ABOVE RING","STALK COLOR BELOW RING",
+                                                                        "VEIL TYPE","VEIL COLOR","RING NUMBER",
+                                                                        "RING TYPE","SPORE PRINT COLOR","POPULATION",
+                                                                        "HABITAT"
+            });
+
+            int[][] mOutputs = DataTableToMatrix(symbols, new string[] { "TYPE" });
+            int[] outputs = new int[mOutputs.Length];
+            for (int i = 0; i < mOutputs.Length; i++)
+                outputs[i] = mOutputs[i][0];
+
+            double error = new ZeroOneLoss(outputs).Loss(decisionTreeLib.Decide(inputs));
+
+            return 1 - error;
+        }
+
+        public double DecisionTreeAccuracyPercentageLib(DataTable data, Codification codebook)
+        {
             DataTable symbols = codebook.Apply(data);
 
             int[][] inputs = DataTableToMatrix(symbols, new string[] { "CAP SHAPE" , "CAP SURFACE" , "CAP COLOR" ,
