@@ -71,8 +71,8 @@ namespace FungiParadise.Model
                         //...
 
                         Console.WriteLine((k + 1) + ". [trainQ:" + trainQua[i] + ", testQ:" + testQua[j] + "] = [dtOrg:" + perOrg + ", dtLib:" + perLib + "]");
-                        rowsOrg.Add((k + 1) + "," + trainQua[i] + "," + testQua[j] + "," + perOrg);
-                        rowsLib.Add((k + 1) + "," + trainQua[i] + "," + testQua[j] + "," + perLib);
+                        rowsOrg.Add("Org" + "," + trainQua[i] + "," + testQua[j] + "," + rep + "," + perOrg);
+                        rowsLib.Add("Lib" + "," + trainQua[i] + "," + testQua[j] + "," + rep + ", " + perLib);
                     }
                 }
             }
@@ -82,7 +82,7 @@ namespace FungiParadise.Model
 
         public void AddHeaders(List<string> list)
         {
-            list.Add("Decision Tree," + "Train Quantity," + "Test Quantity," + "Repetition");
+            list.Add("Decision Tree," + "Train Quantity," + "Test Quantity," + "Repetition," + "Accuracy");
         }
 
         public void ExportResults(List<string> listA, List<string> listB)
