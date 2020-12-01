@@ -47,6 +47,8 @@ namespace FungiParadise.Model
             int[] trainQua = { 4, 40, 400, 4000 };
             int[] testQua = { 4, 40, 400, 4000 };
             int rep = 100;
+            List<String> rowsOrg = new List<string>();
+            List<String> rowsLib = new List<string>();
 
             for (int i = 0; i < trainQua.Length; i++)
             {
