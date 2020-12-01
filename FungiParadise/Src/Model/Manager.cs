@@ -47,8 +47,10 @@ namespace FungiParadise.Model
             int[] trainQua = { 4, 40, 400, 4000 };
             int[] testQua = { 4, 40, 400, 4000 };
             int rep = 100;
-            List<String> rowsOrg = new List<string>();
-            List<String> rowsLib = new List<string>();
+            List<string> rowsOrg = new List<string>();
+            List<string> rowsLib = new List<string>();
+
+            AddHeaders(rowsOrg);
 
             for (int i = 0; i < trainQua.Length; i++)
             {
@@ -68,12 +70,27 @@ namespace FungiParadise.Model
                         double perLib = DecisionTreeAccuracyPercentageLib(tables[1], codebook);
                         //...
 
+                        Console.WriteLine((k + 1) + ". [trainQ:" + trainQua[i] + ", testQ:" + testQua[j] + "] = [dtOrg:" + perOrg + ", dtLib:" + perLib + "]");
                         rowsOrg.Add((k + 1) + "," + trainQua[i] + "," + testQua[j] + "," + perOrg);
                         rowsLib.Add((k + 1) + "," + trainQua[i] + "," + testQua[j] + "," + perLib);
                     }
                 }
             }
+
+            ExportResults(rowsOrg, rowsLib);
         }
+
+        public void AddHeaders(List<string> list)
+        {
+            //TO DO
+        }
+
+        public void ExportResults(List<string> listA, List<string> listB)
+        {
+            listA.AddRange(listB);
+            File.WriteAllLines("../../Doc/result.csv", listA);
+        }
+
         //...
 
         //Machine Learning
