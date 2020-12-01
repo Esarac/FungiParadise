@@ -82,13 +82,13 @@ namespace FungiParadise.Model
 
         public void AddHeaders(List<string> list)
         {
-            //TO DO
+            list.Add("Decision Tree," + "Train Quantity," + "Test Quantity," + "Repetition");
         }
 
         public void ExportResults(List<string> listA, List<string> listB)
         {
             listA.AddRange(listB);
-            File.WriteAllLines("../../Doc/result.csv", listA);
+            File.WriteAllLines("../../Doc/results.csv", listA);
         }
 
         //...
