@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FungiParadise.Model;
+using System.Threading;
 
 namespace FungiParadise.Src.Gui
 {
@@ -15,6 +16,9 @@ namespace FungiParadise.Src.Gui
     {
         //Attributes
         private Manager manager;
+        private delegate void ProgressBarValueDelegate(int value);
+        private delegate void LogConsoleTextDelegate(string text);
+        private delegate void EnableButtonDelegate(bool enable);
 
         public ExperimentTab()
         {
@@ -49,9 +53,61 @@ namespace FungiParadise.Src.Gui
         private void OnClickRunExperiment(object sender, EventArgs e)
         {
             experimentProgBar.Visible = true;
+            experimentProgBar.Maximum = manager.TotalLoadedData;
+            logConsole.Text = "";
+            runButton.Enabled = false;
+            new Thread(() => { manager.GenerateExperiments(); }).Start();
+            new Thread(ProgressBar).Start();
         }
 
         //Methods
+        private void ProgressBar()
+        {
+            string previousLine = "";
+
+            int loadedData = manager.LoadedData;
+            int totalLoadedData = manager.TotalLoadedData;
+
+            while(loadedData < totalLoadedData)
+            {
+                Console.WriteLine("LoadedData = " + manager.LoadedData + " TotalLoadedData = " + manager.TotalLoadedData);
+                experimentProgBar.Invoke(new ProgressBarValueDelegate(ProgressBarValue), manager.LoadedData);
+                string text = logConsole.Text;
+                string actual = manager.ActualLine;
+                text += actual;
+                if (!(string.Compare(previousLine, actual) == 0))
+                {
+                    logConsole.Invoke(new LogConsoleTextDelegate(LogConsoleText), text);
+                    previousLine = actual;
+                }
+
+                loadedData = manager.LoadedData;
+                totalLoadedData = manager.TotalLoadedData;
+            }
+
+            string done = logConsole.Text;
+            done += "<p>Done!<p>";
+            logConsole.Invoke(new LogConsoleTextDelegate(LogConsoleText), done);
+            experimentProgBar.Invoke(new ProgressBarValueDelegate(ProgressBarValue), manager.TotalLoadedData);
+            manager.LoadedData = 0;
+            runButton.Invoke(new EnableButtonDelegate(EnableButton), true);
+        }
+
+        private void ProgressBarValue(int value)
+        {
+            experimentProgBar.Value = value;
+        }
+
+        private void LogConsoleText(string text)
+        {
+            logConsole.Text = text;
+        }
+
+        private void EnableButton(bool enable)
+        {
+            runButton.Enabled = enable;
+        }
+
         private void MouseEnterColor<T>(T button) where T : Button
         {
             button.BackColor = Color.FromArgb(58, 145, 84);

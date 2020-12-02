@@ -41,7 +41,7 @@
             // experimentProgBar
             // 
             this.experimentProgBar.Location = new System.Drawing.Point(357, 3);
-            this.experimentProgBar.Margin = new System.Windows.Forms.Padding(357, 3, 3, 7);
+            this.experimentProgBar.Margin = new System.Windows.Forms.Padding(357, 3, 3, 15);
             this.experimentProgBar.Name = "experimentProgBar";
             this.experimentProgBar.Size = new System.Drawing.Size(181, 23);
             this.experimentProgBar.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.runButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.runButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.runButton.Location = new System.Drawing.Point(410, 146);
-            this.runButton.Margin = new System.Windows.Forms.Padding(410, 7, 3, 2);
+            this.runButton.Margin = new System.Windows.Forms.Padding(410, 15, 3, 2);
             this.runButton.Name = "runButton";
             this.runButton.Size = new System.Drawing.Size(99, 34);
             this.runButton.TabIndex = 5;
@@ -72,9 +72,9 @@
             this.logConsole.AutoScrollMinSize = new System.Drawing.Size(928, 0);
             this.logConsole.BackColor = System.Drawing.SystemColors.Window;
             this.logConsole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logConsole.Location = new System.Drawing.Point(3, 36);
+            this.logConsole.Location = new System.Drawing.Point(3, 44);
             this.logConsole.Name = "logConsole";
-            this.logConsole.Size = new System.Drawing.Size(903, 100);
+            this.logConsole.Size = new System.Drawing.Size(903, 84);
             this.logConsole.TabIndex = 6;
             this.logConsole.Visible = false;
             // 

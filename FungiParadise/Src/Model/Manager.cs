@@ -20,7 +20,7 @@ namespace FungiParadise.Model
     {
         //Constants
         public const double TRAINING_PERCENTAGE = 0.8;
-        public const int TREATMENT_REP = 100;
+        public const int TREATMENT_REP = 1;
         public static readonly int[] TRAIN_QUANTITY = { 4, 40, 400, 4000 };
         public static readonly int[] TEST_QUANTITY = { 4, 40, 400, 4000 };
 
@@ -37,12 +37,14 @@ namespace FungiParadise.Model
         public Accord.MachineLearning.DecisionTrees.DecisionTree DecisionTreeLib { get { return decisionTreeLib; } }
         public Codification Codebook { get { return codebook; } }
         public int LoadedData { get; set; }
+        public string ActualLine { get; set; }
         public int TotalLoadedData { get { return TREATMENT_REP * TRAIN_QUANTITY.Length * TEST_QUANTITY.Length; } }
 
         //Constructor
         public Manager(string path)
         {
             this.LoadedData = 0;
+            this.ActualLine = "";
             dataSet = new List<Mushroom>();
             Load(path);
         }
@@ -61,7 +63,7 @@ namespace FungiParadise.Model
             {
                 for (int j = 0; j < testQua.Length; j++)
                 {
-                    for(int k = 0; k < TREATMENT_REP; k++)
+                    for (int k = 0; k < TREATMENT_REP; k++)
                     {
                         DataTable[] tables = GenerateExperimentDataTables(trainQua[i], testQua[j]);
 
@@ -79,12 +81,12 @@ namespace FungiParadise.Model
                         rowsLib.Add("Library" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + perLib);
 
                         LoadedData++;
+                        ActualLine = "<p>" + rowsOrg[rowsOrg.Count - 1] + "<p>" + "<p>" + rowsLib[rowsLib.Count - 1] + "<p>";
                     }
                 }
             }
 
             ExportResults(rowsOrg, rowsLib);
-            LoadedData = 0;
         }
 
         public void AddHeaders(List<string> list)
