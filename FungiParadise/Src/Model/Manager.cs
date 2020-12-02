@@ -20,23 +20,29 @@ namespace FungiParadise.Model
     {
         //Constants
         public const double TRAINING_PERCENTAGE = 0.8;
+        public const int TREATMENT_REP = 100;
+        public static readonly int[] TRAIN_QUANTITY = { 4, 40, 400, 4000 };
+        public static readonly int[] TEST_QUANTITY = { 4, 40, 400, 4000 };
 
         //Attributes
         private List<Mushroom> dataSet;
-
         private DecisionTree.Model.DecisionTree decisionTreeOrg;
-
-        private Codification codebook;
         private Accord.MachineLearning.DecisionTrees.DecisionTree decisionTreeLib;
+
+        //Aux
+        private Codification codebook;
 
         //Property
         public DecisionTree.Model.DecisionTree DecisionTreeOrg{ get { return decisionTreeOrg; } }
-        public Codification Codebook { get { return codebook; } }
         public Accord.MachineLearning.DecisionTrees.DecisionTree DecisionTreeLib { get { return decisionTreeLib; } }
+        public Codification Codebook { get { return codebook; } }
+        public int LoadedData { get; set; }
+        public int TotalLoadedData { get { return TREATMENT_REP * TRAIN_QUANTITY.Length * TEST_QUANTITY.Length; } }
 
         //Constructor
         public Manager(string path)
         {
+            this.LoadedData = 0;
             dataSet = new List<Mushroom>();
             Load(path);
         }
@@ -46,7 +52,6 @@ namespace FungiParadise.Model
         {
             int[] trainQua = { 4, 40, 400, 4000 };
             int[] testQua = { 4, 40, 400, 4000 };
-            int rep = 100;
             List<string> rowsOrg = new List<string>();
             List<string> rowsLib = new List<string>();
 
@@ -56,7 +61,7 @@ namespace FungiParadise.Model
             {
                 for (int j = 0; j < testQua.Length; j++)
                 {
-                    for(int k = 0; k < rep; k++)
+                    for(int k = 0; k < TREATMENT_REP; k++)
                     {
                         DataTable[] tables = GenerateExperimentDataTables(trainQua[i], testQua[j]);
 
@@ -72,11 +77,14 @@ namespace FungiParadise.Model
 
                         rowsOrg.Add("Original" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + "," + perOrg);
                         rowsLib.Add("Library" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + perLib);
+
+                        LoadedData++;
                     }
                 }
             }
 
             ExportResults(rowsOrg, rowsLib);
+            LoadedData = 0;
         }
 
         public void AddHeaders(List<string> list)
@@ -89,7 +97,6 @@ namespace FungiParadise.Model
             listA.AddRange(listB);
             File.WriteAllLines("../../Doc/results.csv", listA);
         }
-
         //...
 
         //Machine Learning
