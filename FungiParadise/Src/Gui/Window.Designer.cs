@@ -44,6 +44,7 @@
             this.classifyTab = new FungiParadise.Gui.ClassifyTab();
             this.tabInfo = new MetroFramework.Controls.MetroTabPage();
             this.infoTab = new FungiParadise.Gui.InfoTab();
+            this.tabExperiment = new MetroFramework.Controls.MetroTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.styleManager)).BeginInit();
             this.panel.SuspendLayout();
             this.tabMenu.SuspendLayout();
@@ -94,11 +95,12 @@
             this.tabMenu.Controls.Add(this.tabTree);
             this.tabMenu.Controls.Add(this.tabClassify);
             this.tabMenu.Controls.Add(this.tabInfo);
+            this.tabMenu.Controls.Add(this.tabExperiment);
             this.tabMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabMenu.Location = new System.Drawing.Point(20, 114);
             this.tabMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabMenu.Name = "tabMenu";
-            this.tabMenu.SelectedIndex = 0;
+            this.tabMenu.SelectedIndex = 5;
             this.tabMenu.Size = new System.Drawing.Size(1040, 586);
             this.tabMenu.TabIndex = 0;
             this.tabMenu.UseSelectable = true;
@@ -197,6 +199,7 @@
             this.classifyTab.BackColor = System.Drawing.Color.White;
             this.classifyTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.classifyTab.Location = new System.Drawing.Point(0, 0);
+            this.classifyTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.classifyTab.Name = "classifyTab";
             this.classifyTab.Size = new System.Drawing.Size(1032, 544);
             this.classifyTab.TabIndex = 2;
@@ -224,6 +227,20 @@
             this.infoTab.Name = "infoTab";
             this.infoTab.Size = new System.Drawing.Size(1032, 544);
             this.infoTab.TabIndex = 3;
+            // 
+            // tabExperiment
+            // 
+            this.tabExperiment.HorizontalScrollbarBarColor = true;
+            this.tabExperiment.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabExperiment.HorizontalScrollbarSize = 10;
+            this.tabExperiment.Location = new System.Drawing.Point(4, 38);
+            this.tabExperiment.Name = "tabExperiment";
+            this.tabExperiment.Size = new System.Drawing.Size(1032, 544);
+            this.tabExperiment.TabIndex = 6;
+            this.tabExperiment.Text = " Experiment";
+            this.tabExperiment.VerticalScrollbarBarColor = true;
+            this.tabExperiment.VerticalScrollbarHighlightOnWheel = false;
+            this.tabExperiment.VerticalScrollbarSize = 10;
             // 
             // Window
             // 
@@ -268,5 +285,6 @@
         private Gui.ClassifyTab classifyTab;
         private MetroFramework.Controls.MetroTabPage tabInfo;
         private InfoTab infoTab;
+        private MetroFramework.Controls.MetroTabPage tabExperiment;
     }
 }
