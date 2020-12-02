@@ -70,8 +70,8 @@ namespace FungiParadise.Model
                         double perLib = DecisionTreeAccuracyPercentageLib(tables[1], codebook);
                         //...
 
-                        rowsOrg.Add("Org" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + "," + perOrg);
-                        rowsLib.Add("Lib" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + perLib);
+                        rowsOrg.Add("Original" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + "," + perOrg);
+                        rowsLib.Add("Library" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + perLib);
                     }
                 }
             }
