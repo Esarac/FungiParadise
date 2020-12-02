@@ -20,7 +20,7 @@ namespace FungiParadise.Model
     {
         //Constants
         public const double TRAINING_PERCENTAGE = 0.8;
-        public const int TREATMENT_REP = 1;
+        public const int TREATMENT_REP = 100;
         public static readonly int[] TRAIN_QUANTITY = { 4, 40, 400, 4000 };
         public static readonly int[] TEST_QUANTITY = { 4, 40, 400, 4000 };
 
