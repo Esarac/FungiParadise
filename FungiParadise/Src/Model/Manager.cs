@@ -81,7 +81,7 @@ namespace FungiParadise.Model
                         rowsLib.Add("Library" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + perLib);
 
                         LoadedData++;
-                        ActualLine = "<p>" + rowsOrg[rowsOrg.Count - 1] + "<p>" + "<p>" + rowsLib[rowsLib.Count - 1] + "<p>";
+                        ActualLine = rowsOrg[rowsOrg.Count - 1] + " " + rowsLib[rowsLib.Count - 1];
                     }
                 }
             }
