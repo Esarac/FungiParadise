@@ -45,6 +45,7 @@
             this.tabInfo = new MetroFramework.Controls.MetroTabPage();
             this.infoTab = new FungiParadise.Gui.InfoTab();
             this.tabExperiment = new MetroFramework.Controls.MetroTabPage();
+            this.experimentTab = new FungiParadise.Src.Gui.ExperimentTab();
             ((System.ComponentModel.ISupportInitialize)(this.styleManager)).BeginInit();
             this.panel.SuspendLayout();
             this.tabMenu.SuspendLayout();
@@ -53,6 +54,7 @@
             this.tabTree.SuspendLayout();
             this.tabClassify.SuspendLayout();
             this.tabInfo.SuspendLayout();
+            this.tabExperiment.SuspendLayout();
             this.SuspendLayout();
             // 
             // styleManager
@@ -230,9 +232,10 @@
             // 
             // tabExperiment
             // 
+            this.tabExperiment.Controls.Add(this.experimentTab);
             this.tabExperiment.HorizontalScrollbarBarColor = true;
             this.tabExperiment.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabExperiment.HorizontalScrollbarSize = 10;
+            this.tabExperiment.HorizontalScrollbarSize = 0;
             this.tabExperiment.Location = new System.Drawing.Point(4, 38);
             this.tabExperiment.Name = "tabExperiment";
             this.tabExperiment.Size = new System.Drawing.Size(1032, 544);
@@ -240,7 +243,16 @@
             this.tabExperiment.Text = " Experiment";
             this.tabExperiment.VerticalScrollbarBarColor = true;
             this.tabExperiment.VerticalScrollbarHighlightOnWheel = false;
-            this.tabExperiment.VerticalScrollbarSize = 10;
+            this.tabExperiment.VerticalScrollbarSize = 0;
+            // 
+            // experimentTab
+            // 
+            this.experimentTab.BackColor = System.Drawing.Color.White;
+            this.experimentTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.experimentTab.Location = new System.Drawing.Point(0, 0);
+            this.experimentTab.Name = "experimentTab";
+            this.experimentTab.Size = new System.Drawing.Size(1032, 544);
+            this.experimentTab.TabIndex = 2;
             // 
             // Window
             // 
@@ -265,6 +277,7 @@
             this.tabTree.ResumeLayout(false);
             this.tabClassify.ResumeLayout(false);
             this.tabInfo.ResumeLayout(false);
+            this.tabExperiment.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -286,5 +299,6 @@
         private MetroFramework.Controls.MetroTabPage tabInfo;
         private InfoTab infoTab;
         private MetroFramework.Controls.MetroTabPage tabExperiment;
+        private Src.Gui.ExperimentTab experimentTab;
     }
 }

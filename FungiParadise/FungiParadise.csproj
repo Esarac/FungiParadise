@@ -89,6 +89,12 @@
     <Compile Include="Src\Gui\ClassifyTab.designer.cs">
       <DependentUpon>ClassifyTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Src\Gui\ExperimentTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Src\Gui\ExperimentTab.Designer.cs">
+      <DependentUpon>ExperimentTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Src\Gui\MessageClassify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Src\Gui\ClassifyTab.resx">
       <DependentUpon>ClassifyTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src\Gui\ExperimentTab.resx">
+      <DependentUpon>ExperimentTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Src\Gui\InfoTab.resx">
       <DependentUpon>InfoTab.cs</DependentUpon>

@@ -108,3 +108,4 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\b
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\Accord.Math.xml
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\Accord.Math.Core.xml
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\bin\Debug\Accord.Statistics.xml
+C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\FungiParadise\FungiParadise\obj\Debug\FungiParadise.Src.Gui.ExperimentTab.resources
