@@ -13,6 +13,7 @@ using Accord.MachineLearning.DecisionTrees.Learning;
 using Accord.Statistics.Filters;
 using Accord.Math.Optimization.Losses;
 using Accord.MachineLearning.DecisionTrees.Rules;
+using System.Globalization;
 
 namespace FungiParadise.Model
 {
@@ -58,6 +59,7 @@ namespace FungiParadise.Model
             List<string> rowsLib = new List<string>();
 
             AddHeaders(rowsOrg);
+            CultureInfo lng = new CultureInfo("en-US");
 
             for (int i = 0; i < trainQua.Length; i++)
             {
@@ -77,8 +79,8 @@ namespace FungiParadise.Model
                         double perLib = DecisionTreeAccuracyPercentageLib(tables[1], codebook);
                         //...
 
-                        rowsOrg.Add("Original" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + "," + String.Format("{0:0.#####}", perOrg));
-                        rowsLib.Add("Library" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + String.Format("{0:0.#####}", perLib));
+                        rowsOrg.Add("Original" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + "," + perOrg.ToString("0.#####", lng));
+                        rowsLib.Add("Library" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + perLib.ToString("0.#####", lng));
 
                         LoadedData++;
                         ActualLine = "#Train Quantity:" + trainQua[i] + " #Test Quantity:" + testQua[j] + " #Repetition: " + (k + 1);
