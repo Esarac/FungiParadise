@@ -44,6 +44,7 @@ namespace FungiParadise.Gui
 
         private void InitializeOrientationComboBox()
         {
+            orientationComboBox.Items.Clear();
             orientationComboBox.Items.AddRange(new string[] { "Vertical", "Horizontal" });
             orientationComboBox.SelectedIndex = 0;
             orientationComboBox.Enabled = true;
@@ -51,6 +52,7 @@ namespace FungiParadise.Gui
 
         private void InitializeTypeComboBox()
         {
+            typeComboBox.Items.Clear();
             typeComboBox.Items.AddRange(new string[] { "Accord .NET Framework", "Fungi Paradise" });
             typeComboBox.SelectedIndex = 0;
             typeComboBox.Enabled = true;

@@ -77,11 +77,11 @@ namespace FungiParadise.Model
                         double perLib = DecisionTreeAccuracyPercentageLib(tables[1], codebook);
                         //...
 
-                        rowsOrg.Add("Original" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + "," + perOrg);
-                        rowsLib.Add("Library" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + perLib);
+                        rowsOrg.Add("Original" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + "," + String.Format("{0:0.#####}", perOrg));
+                        rowsLib.Add("Library" + "," + trainQua[i] + "," + testQua[j] + "," + (k + 1) + ", " + String.Format("{0:0.#####}", perLib));
 
                         LoadedData++;
-                        ActualLine = rowsOrg[rowsOrg.Count - 1] + " " + rowsLib[rowsLib.Count - 1];
+                        ActualLine = "#Train Quantity:" + trainQua[i] + " #Test Quantity:" + testQua[j] + " #Repetition: " + (k + 1);
                     }
                 }
             }

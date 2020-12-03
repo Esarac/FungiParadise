@@ -34,6 +34,7 @@ namespace FungiParadise.Gui
 
         private void InitializeAttributeComboBox()
         {
+            attributeComboBox.Items.Clear();
             attributeComboBox.Items.Add("All");
 
             for (int i = 0; i < table.Columns.Count; i++)

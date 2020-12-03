@@ -63,32 +63,23 @@ namespace FungiParadise.Src.Gui
         //Methods
         private void ProgressBar()
         {
-            string previousLine = "";
-
             int loadedData = manager.LoadedData;
             int totalLoadedData = manager.TotalLoadedData;
 
             while(loadedData < totalLoadedData)
             {
-                Console.WriteLine("LoadedData = " + manager.LoadedData + " TotalLoadedData = " + manager.TotalLoadedData);
+                string text = manager.ActualLine;
+
                 experimentProgBar.Invoke(new ProgressBarValueDelegate(ProgressBarValue), manager.LoadedData);
-                string text = logConsole.Text;
-                string actual = manager.ActualLine;
-                text += actual;
-                if (!(string.Compare(previousLine, actual) == 0))
-                {
-                    logConsole.Invoke(new LogConsoleTextDelegate(LogConsoleText), text);
-                    previousLine = actual;
-                }
+                logConsole.Invoke(new LogConsoleTextDelegate(LogConsoleText), text);
 
                 loadedData = manager.LoadedData;
                 totalLoadedData = manager.TotalLoadedData;
             }
 
-            string done = logConsole.Text;
-            done += "<p>Done!<p>";
-            logConsole.Invoke(new LogConsoleTextDelegate(LogConsoleText), done);
             experimentProgBar.Invoke(new ProgressBarValueDelegate(ProgressBarValue), manager.TotalLoadedData);
+            logConsole.Invoke(new LogConsoleTextDelegate(LogConsoleText), "Done!");
+
             manager.LoadedData = 0;
             runButton.Invoke(new EnableButtonDelegate(EnableButton), true);
         }
