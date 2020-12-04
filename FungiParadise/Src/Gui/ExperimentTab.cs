@@ -33,7 +33,7 @@ namespace FungiParadise.Src.Gui
             VisibleComponents();
         }
 
-        public void VisibleComponents()
+        private void VisibleComponents()
         {
             runButton.Visible = true;
             logConsole.Visible = true;
