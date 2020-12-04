@@ -56,8 +56,14 @@ namespace FungiParadise.Src.Gui
             experimentProgBar.Maximum = manager.TotalLoadedData;
             logConsole.Text = "";
             runButton.Enabled = false;
-            new Thread(() => { manager.GenerateExperiments(); }).Start();
-            new Thread(ProgressBar).Start();
+
+            Thread thrExperiment = new Thread(() => { manager.GenerateExperiments(); });
+            thrExperiment.IsBackground = true;
+            thrExperiment.Start();
+
+            Thread thrProgressBar = new Thread(ProgressBar);
+            thrProgressBar.IsBackground = true;
+            thrProgressBar.Start();
         }
 
         //Methods
