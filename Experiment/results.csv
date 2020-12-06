@@ -1,0 +1,3201 @@
+Decision Tree,Train Quantity,Test Quantity,Repetition,Accuracy
+Original,4,4,1,0.25
+Original,4,4,2,0.25
+Original,4,4,3,0.25
+Original,4,4,4,0.25
+Original,4,4,5,0.5
+Original,4,4,6,0.5
+Original,4,4,7,0.5
+Original,4,4,8,0.5
+Original,4,4,9,0.75
+Original,4,4,10,0.75
+Original,4,4,11,0.75
+Original,4,4,12,0.75
+Original,4,4,13,0.75
+Original,4,4,14,0.5
+Original,4,4,15,0.5
+Original,4,4,16,0.5
+Original,4,4,17,0.5
+Original,4,4,18,0.5
+Original,4,4,19,0.25
+Original,4,4,20,0.25
+Original,4,4,21,0.25
+Original,4,4,22,0.25
+Original,4,4,23,0.25
+Original,4,4,24,0
+Original,4,4,25,0
+Original,4,4,26,0
+Original,4,4,27,0
+Original,4,4,28,0.75
+Original,4,4,29,0.75
+Original,4,4,30,0.75
+Original,4,4,31,0.75
+Original,4,4,32,0.75
+Original,4,4,33,0.75
+Original,4,4,34,0.75
+Original,4,4,35,0.5
+Original,4,4,36,0.5
+Original,4,4,37,0.5
+Original,4,4,38,0.5
+Original,4,4,39,0.75
+Original,4,4,40,0.75
+Original,4,4,41,0.75
+Original,4,4,42,0.75
+Original,4,4,43,0.75
+Original,4,4,44,0.5
+Original,4,4,45,0.5
+Original,4,4,46,0.5
+Original,4,4,47,0.5
+Original,4,4,48,0.5
+Original,4,4,49,0.5
+Original,4,4,50,0.5
+Original,4,4,51,0.5
+Original,4,4,52,0.5
+Original,4,4,53,0.5
+Original,4,4,54,0.75
+Original,4,4,55,0.75
+Original,4,4,56,0.75
+Original,4,4,57,0.75
+Original,4,4,58,0.75
+Original,4,4,59,0.5
+Original,4,4,60,0.5
+Original,4,4,61,0.5
+Original,4,4,62,0.5
+Original,4,4,63,1
+Original,4,4,64,1
+Original,4,4,65,1
+Original,4,4,66,1
+Original,4,4,67,1
+Original,4,4,68,1
+Original,4,4,69,1
+Original,4,4,70,1
+Original,4,4,71,1
+Original,4,4,72,1
+Original,4,4,73,1
+Original,4,4,74,0.5
+Original,4,4,75,0.5
+Original,4,4,76,0.5
+Original,4,4,77,0.5
+Original,4,4,78,0.5
+Original,4,4,79,0.5
+Original,4,4,80,0.5
+Original,4,4,81,0.5
+Original,4,4,82,0.5
+Original,4,4,83,0.5
+Original,4,4,84,0.25
+Original,4,4,85,0.25
+Original,4,4,86,0.25
+Original,4,4,87,0.25
+Original,4,4,88,0.75
+Original,4,4,89,0.75
+Original,4,4,90,0.75
+Original,4,4,91,1
+Original,4,4,92,0.75
+Original,4,4,93,0.75
+Original,4,4,94,0.75
+Original,4,4,95,0.75
+Original,4,4,96,0.75
+Original,4,4,97,0.75
+Original,4,4,98,0.75
+Original,4,4,99,0.75
+Original,4,4,100,0.75
+Original,4,40,1,0.475
+Original,4,40,2,0.5
+Original,4,40,3,0.5
+Original,4,40,4,0.55
+Original,4,40,5,0.55
+Original,4,40,6,0.525
+Original,4,40,7,0.525
+Original,4,40,8,0.525
+Original,4,40,9,0.525
+Original,4,40,10,0.45
+Original,4,40,11,0.475
+Original,4,40,12,0.475
+Original,4,40,13,0.575
+Original,4,40,14,0.575
+Original,4,40,15,0.35
+Original,4,40,16,0.35
+Original,4,40,17,0.75
+Original,4,40,18,0.425
+Original,4,40,19,0.425
+Original,4,40,20,0.725
+Original,4,40,21,0.725
+Original,4,40,22,0.4
+Original,4,40,23,0.875
+Original,4,40,24,0.55
+Original,4,40,25,0.55
+Original,4,40,26,0.725
+Original,4,40,27,0.725
+Original,4,40,28,0.925
+Original,4,40,29,0.85
+Original,4,40,30,0.35
+Original,4,40,31,0.95
+Original,4,40,32,0.95
+Original,4,40,33,0.6
+Original,4,40,34,0.6
+Original,4,40,35,0.525
+Original,4,40,36,0.525
+Original,4,40,37,0.375
+Original,4,40,38,0.375
+Original,4,40,39,0.425
+Original,4,40,40,0.425
+Original,4,40,41,0.525
+Original,4,40,42,0.525
+Original,4,40,43,0.65
+Original,4,40,44,0.65
+Original,4,40,45,0.9
+Original,4,40,46,0.925
+Original,4,40,47,0.575
+Original,4,40,48,0.65
+Original,4,40,49,0.65
+Original,4,40,50,0.575
+Original,4,40,51,0.575
+Original,4,40,52,0.375
+Original,4,40,53,0.375
+Original,4,40,54,0.45
+Original,4,40,55,0.45
+Original,4,40,56,0.5
+Original,4,40,57,0.5
+Original,4,40,58,0.8
+Original,4,40,59,0.8
+Original,4,40,60,0.65
+Original,4,40,61,0.725
+Original,4,40,62,0.625
+Original,4,40,63,0.625
+Original,4,40,64,0.5
+Original,4,40,65,0.5
+Original,4,40,66,0.5
+Original,4,40,67,0.675
+Original,4,40,68,0.675
+Original,4,40,69,0.4
+Original,4,40,70,0.4
+Original,4,40,71,0.475
+Original,4,40,72,0.5
+Original,4,40,73,0.475
+Original,4,40,74,0.6
+Original,4,40,75,0.6
+Original,4,40,76,0.65
+Original,4,40,77,0.65
+Original,4,40,78,0.475
+Original,4,40,79,0.475
+Original,4,40,80,0.675
+Original,4,40,81,0.675
+Original,4,40,82,0.5
+Original,4,40,83,0.475
+Original,4,40,84,0.525
+Original,4,40,85,0.525
+Original,4,40,86,0.4
+Original,4,40,87,0.4
+Original,4,40,88,0.475
+Original,4,40,89,0.4
+Original,4,40,90,0.775
+Original,4,40,91,0.75
+Original,4,40,92,0.5
+Original,4,40,93,0.45
+Original,4,40,94,0.9
+Original,4,40,95,0.5
+Original,4,40,96,0.5
+Original,4,40,97,0.675
+Original,4,40,98,0.675
+Original,4,40,99,0.575
+Original,4,40,100,0.575
+Original,4,400,1,0.4425
+Original,4,400,2,0.5425
+Original,4,400,3,0.685
+Original,4,400,4,0.53
+Original,4,400,5,0.7475
+Original,4,400,6,0.7325
+Original,4,400,7,0.5375
+Original,4,400,8,0.89
+Original,4,400,9,0.64
+Original,4,400,10,0.4875
+Original,4,400,11,0.525
+Original,4,400,12,0.5325
+Original,4,400,13,0.8625
+Original,4,400,14,0.9125
+Original,4,400,15,0.5175
+Original,4,400,16,0.8775
+Original,4,400,17,0.73
+Original,4,400,18,0.5225
+Original,4,400,19,0.48
+Original,4,400,20,0.3975
+Original,4,400,21,0.5675
+Original,4,400,22,0.805
+Original,4,400,23,0.4825
+Original,4,400,24,0.5625
+Original,4,400,25,0.5625
+Original,4,400,26,0.58
+Original,4,400,27,0.53
+Original,4,400,28,0.5225
+Original,4,400,29,0.55
+Original,4,400,30,0.535
+Original,4,400,31,0.7
+Original,4,400,32,0.56
+Original,4,400,33,0.855
+Original,4,400,34,0.48
+Original,4,400,35,0.5825
+Original,4,400,36,0.505
+Original,4,400,37,0.4825
+Original,4,400,38,0.4625
+Original,4,400,39,0.53
+Original,4,400,40,0.8825
+Original,4,400,41,0.5075
+Original,4,400,42,0.485
+Original,4,400,43,0.53
+Original,4,400,44,0.565
+Original,4,400,45,0.5
+Original,4,400,46,0.4925
+Original,4,400,47,0.53
+Original,4,400,48,0.51
+Original,4,400,49,0.5325
+Original,4,400,50,0.51
+Original,4,400,51,0.5
+Original,4,400,52,0.725
+Original,4,400,53,0.5425
+Original,4,400,54,0.4275
+Original,4,400,55,0.5025
+Original,4,400,56,0.625
+Original,4,400,57,0.48
+Original,4,400,58,0.8925
+Original,4,400,59,0.5125
+Original,4,400,60,0.4075
+Original,4,400,61,0.5525
+Original,4,400,62,0.8025
+Original,4,400,63,0.885
+Original,4,400,64,0.5075
+Original,4,400,65,0.505
+Original,4,400,66,0.5225
+Original,4,400,67,0.885
+Original,4,400,68,0.535
+Original,4,400,69,0.535
+Original,4,400,70,0.515
+Original,4,400,71,0.6375
+Original,4,400,72,0.5725
+Original,4,400,73,0.55
+Original,4,400,74,0.5
+Original,4,400,75,0.7275
+Original,4,400,76,0.5725
+Original,4,400,77,0.8275
+Original,4,400,78,0.54
+Original,4,400,79,0.755
+Original,4,400,80,0.5725
+Original,4,400,81,0.5675
+Original,4,400,82,0.525
+Original,4,400,83,0.565
+Original,4,400,84,0.59
+Original,4,400,85,0.4625
+Original,4,400,86,0.5475
+Original,4,400,87,0.5125
+Original,4,400,88,0.7675
+Original,4,400,89,0.475
+Original,4,400,90,0.855
+Original,4,400,91,0.43
+Original,4,400,92,0.4225
+Original,4,400,93,0.87
+Original,4,400,94,0.475
+Original,4,400,95,0.8625
+Original,4,400,96,0.545
+Original,4,400,97,0.4975
+Original,4,400,98,0.8075
+Original,4,400,99,0.48
+Original,4,400,100,0.53
+Original,4,4000,1,0.74475
+Original,4,4000,2,0.58025
+Original,4,4000,3,0.50525
+Original,4,4000,4,0.52775
+Original,4,4000,5,0.54175
+Original,4,4000,6,0.52525
+Original,4,4000,7,0.48225
+Original,4,4000,8,0.7425
+Original,4,4000,9,0.54425
+Original,4,4000,10,0.83425
+Original,4,4000,11,0.57975
+Original,4,4000,12,0.505
+Original,4,4000,13,0.50075
+Original,4,4000,14,0.88675
+Original,4,4000,15,0.54275
+Original,4,4000,16,0.8835
+Original,4,4000,17,0.82925
+Original,4,4000,18,0.55725
+Original,4,4000,19,0.48275
+Original,4,4000,20,0.50125
+Original,4,4000,21,0.876
+Original,4,4000,22,0.75425
+Original,4,4000,23,0.51725
+Original,4,4000,24,0.481
+Original,4,4000,25,0.5005
+Original,4,4000,26,0.514
+Original,4,4000,27,0.56425
+Original,4,4000,28,0.5545
+Original,4,4000,29,0.578
+Original,4,4000,30,0.5555
+Original,4,4000,31,0.541
+Original,4,4000,32,0.747
+Original,4,4000,33,0.7415
+Original,4,4000,34,0.516
+Original,4,4000,35,0.74025
+Original,4,4000,36,0.47775
+Original,4,4000,37,0.509
+Original,4,4000,38,0.88
+Original,4,4000,39,0.56075
+Original,4,4000,40,0.451
+Original,4,4000,41,0.52875
+Original,4,4000,42,0.74025
+Original,4,4000,43,0.474
+Original,4,4000,44,0.54825
+Original,4,4000,45,0.531
+Original,4,4000,46,0.7385
+Original,4,4000,47,0.51075
+Original,4,4000,48,0.4795
+Original,4,4000,49,0.50475
+Original,4,4000,50,0.53875
+Original,4,4000,51,0.498
+Original,4,4000,52,0.53825
+Original,4,4000,53,0.48875
+Original,4,4000,54,0.561
+Original,4,4000,55,0.4815
+Original,4,4000,56,0.499
+Original,4,4000,57,0.54725
+Original,4,4000,58,0.87225
+Original,4,4000,59,0.54975
+Original,4,4000,60,0.559
+Original,4,4000,61,0.57625
+Original,4,4000,62,0.48725
+Original,4,4000,63,0.7385
+Original,4,4000,64,0.83525
+Original,4,4000,65,0.50675
+Original,4,4000,66,0.5755
+Original,4,4000,67,0.8815
+Original,4,4000,68,0.51375
+Original,4,4000,69,0.48425
+Original,4,4000,70,0.50125
+Original,4,4000,71,0.529
+Original,4,4000,72,0.5475
+Original,4,4000,73,0.54075
+Original,4,4000,74,0.54275
+Original,4,4000,75,0.487
+Original,4,4000,76,0.491
+Original,4,4000,77,0.546
+Original,4,4000,78,0.529
+Original,4,4000,79,0.54725
+Original,4,4000,80,0.54175
+Original,4,4000,81,0.5235
+Original,4,4000,82,0.4975
+Original,4,4000,83,0.547
+Original,4,4000,84,0.48775
+Original,4,4000,85,0.53325
+Original,4,4000,86,0.4805
+Original,4,4000,87,0.4815
+Original,4,4000,88,0.5165
+Original,4,4000,89,0.44625
+Original,4,4000,90,0.584
+Original,4,4000,91,0.87125
+Original,4,4000,92,0.83275
+Original,4,4000,93,0.73275
+Original,4,4000,94,0.43575
+Original,4,4000,95,0.5185
+Original,4,4000,96,0.51125
+Original,4,4000,97,0.57325
+Original,4,4000,98,0.50375
+Original,4,4000,99,0.4305
+Original,4,4000,100,0.5915
+Original,40,4,1,1
+Original,40,4,2,1
+Original,40,4,3,1
+Original,40,4,4,1
+Original,40,4,5,1
+Original,40,4,6,1
+Original,40,4,7,1
+Original,40,4,8,1
+Original,40,4,9,1
+Original,40,4,10,1
+Original,40,4,11,1
+Original,40,4,12,1
+Original,40,4,13,1
+Original,40,4,14,0.75
+Original,40,4,15,0.75
+Original,40,4,16,1
+Original,40,4,17,0.75
+Original,40,4,18,0.75
+Original,40,4,19,1
+Original,40,4,20,1
+Original,40,4,21,1
+Original,40,4,22,1
+Original,40,4,23,1
+Original,40,4,24,1
+Original,40,4,25,1
+Original,40,4,26,1
+Original,40,4,27,1
+Original,40,4,28,1
+Original,40,4,29,1
+Original,40,4,30,1
+Original,40,4,31,1
+Original,40,4,32,1
+Original,40,4,33,1
+Original,40,4,34,1
+Original,40,4,35,1
+Original,40,4,36,1
+Original,40,4,37,1
+Original,40,4,38,1
+Original,40,4,39,1
+Original,40,4,40,1
+Original,40,4,41,1
+Original,40,4,42,1
+Original,40,4,43,1
+Original,40,4,44,1
+Original,40,4,45,1
+Original,40,4,46,0.75
+Original,40,4,47,0.75
+Original,40,4,48,0.75
+Original,40,4,49,1
+Original,40,4,50,1
+Original,40,4,51,1
+Original,40,4,52,1
+Original,40,4,53,1
+Original,40,4,54,1
+Original,40,4,55,0.5
+Original,40,4,56,0.5
+Original,40,4,57,0.5
+Original,40,4,58,1
+Original,40,4,59,1
+Original,40,4,60,1
+Original,40,4,61,1
+Original,40,4,62,1
+Original,40,4,63,1
+Original,40,4,64,1
+Original,40,4,65,1
+Original,40,4,66,1
+Original,40,4,67,1
+Original,40,4,68,1
+Original,40,4,69,1
+Original,40,4,70,1
+Original,40,4,71,0.75
+Original,40,4,72,0.75
+Original,40,4,73,1
+Original,40,4,74,1
+Original,40,4,75,1
+Original,40,4,76,1
+Original,40,4,77,1
+Original,40,4,78,1
+Original,40,4,79,1
+Original,40,4,80,1
+Original,40,4,81,1
+Original,40,4,82,1
+Original,40,4,83,1
+Original,40,4,84,1
+Original,40,4,85,1
+Original,40,4,86,1
+Original,40,4,87,1
+Original,40,4,88,1
+Original,40,4,89,1
+Original,40,4,90,1
+Original,40,4,91,1
+Original,40,4,92,1
+Original,40,4,93,1
+Original,40,4,94,1
+Original,40,4,95,1
+Original,40,4,96,1
+Original,40,4,97,1
+Original,40,4,98,1
+Original,40,4,99,1
+Original,40,4,100,1
+Original,40,40,1,1
+Original,40,40,2,1
+Original,40,40,3,1
+Original,40,40,4,1
+Original,40,40,5,0.975
+Original,40,40,6,0.975
+Original,40,40,7,0.875
+Original,40,40,8,0.9
+Original,40,40,9,0.95
+Original,40,40,10,1
+Original,40,40,11,1
+Original,40,40,12,0.95
+Original,40,40,13,1
+Original,40,40,14,0.925
+Original,40,40,15,0.975
+Original,40,40,16,0.975
+Original,40,40,17,0.95
+Original,40,40,18,0.975
+Original,40,40,19,0.975
+Original,40,40,20,1
+Original,40,40,21,1
+Original,40,40,22,0.975
+Original,40,40,23,0.975
+Original,40,40,24,0.925
+Original,40,40,25,0.95
+Original,40,40,26,0.975
+Original,40,40,27,1
+Original,40,40,28,1
+Original,40,40,29,1
+Original,40,40,30,1
+Original,40,40,31,1
+Original,40,40,32,1
+Original,40,40,33,1
+Original,40,40,34,1
+Original,40,40,35,0.925
+Original,40,40,36,0.925
+Original,40,40,37,1
+Original,40,40,38,0.975
+Original,40,40,39,0.975
+Original,40,40,40,0.95
+Original,40,40,41,1
+Original,40,40,42,1
+Original,40,40,43,0.975
+Original,40,40,44,0.95
+Original,40,40,45,0.95
+Original,40,40,46,0.975
+Original,40,40,47,0.95
+Original,40,40,48,1
+Original,40,40,49,0.975
+Original,40,40,50,0.975
+Original,40,40,51,0.975
+Original,40,40,52,0.975
+Original,40,40,53,1
+Original,40,40,54,0.925
+Original,40,40,55,0.95
+Original,40,40,56,0.975
+Original,40,40,57,0.95
+Original,40,40,58,0.95
+Original,40,40,59,1
+Original,40,40,60,0.95
+Original,40,40,61,0.975
+Original,40,40,62,0.95
+Original,40,40,63,0.95
+Original,40,40,64,1
+Original,40,40,65,1
+Original,40,40,66,0.975
+Original,40,40,67,0.975
+Original,40,40,68,0.975
+Original,40,40,69,0.975
+Original,40,40,70,1
+Original,40,40,71,0.95
+Original,40,40,72,0.975
+Original,40,40,73,0.975
+Original,40,40,74,0.975
+Original,40,40,75,0.875
+Original,40,40,76,0.875
+Original,40,40,77,0.975
+Original,40,40,78,0.975
+Original,40,40,79,0.85
+Original,40,40,80,0.95
+Original,40,40,81,0.95
+Original,40,40,82,0.95
+Original,40,40,83,0.975
+Original,40,40,84,0.975
+Original,40,40,85,0.95
+Original,40,40,86,0.95
+Original,40,40,87,1
+Original,40,40,88,1
+Original,40,40,89,0.975
+Original,40,40,90,0.975
+Original,40,40,91,0.975
+Original,40,40,92,0.875
+Original,40,40,93,0.925
+Original,40,40,94,0.95
+Original,40,40,95,0.95
+Original,40,40,96,0.975
+Original,40,40,97,0.95
+Original,40,40,98,1
+Original,40,40,99,1
+Original,40,40,100,0.975
+Original,40,400,1,0.9575
+Original,40,400,2,0.9725
+Original,40,400,3,0.95
+Original,40,400,4,0.9575
+Original,40,400,5,0.89
+Original,40,400,6,0.94
+Original,40,400,7,0.9425
+Original,40,400,8,0.93
+Original,40,400,9,0.9425
+Original,40,400,10,0.9225
+Original,40,400,11,0.91
+Original,40,400,12,0.9625
+Original,40,400,13,0.9825
+Original,40,400,14,0.975
+Original,40,400,15,0.9875
+Original,40,400,16,0.8825
+Original,40,400,17,0.9675
+Original,40,400,18,0.9775
+Original,40,400,19,0.9525
+Original,40,400,20,0.965
+Original,40,400,21,0.92
+Original,40,400,22,0.79
+Original,40,400,23,0.995
+Original,40,400,24,0.94
+Original,40,400,25,0.985
+Original,40,400,26,0.8875
+Original,40,400,27,0.9225
+Original,40,400,28,0.985
+Original,40,400,29,0.985
+Original,40,400,30,0.98
+Original,40,400,31,0.975
+Original,40,400,32,0.9925
+Original,40,400,33,0.96
+Original,40,400,34,0.9425
+Original,40,400,35,0.955
+Original,40,400,36,0.935
+Original,40,400,37,0.935
+Original,40,400,38,0.93
+Original,40,400,39,0.8625
+Original,40,400,40,0.985
+Original,40,400,41,0.9425
+Original,40,400,42,0.91
+Original,40,400,43,0.9125
+Original,40,400,44,0.9775
+Original,40,400,45,0.975
+Original,40,400,46,0.9825
+Original,40,400,47,0.98
+Original,40,400,48,0.9875
+Original,40,400,49,0.925
+Original,40,400,50,0.97
+Original,40,400,51,0.9575
+Original,40,400,52,0.915
+Original,40,400,53,0.9575
+Original,40,400,54,0.9775
+Original,40,400,55,0.9325
+Original,40,400,56,0.935
+Original,40,400,57,0.8125
+Original,40,400,58,0.94
+Original,40,400,59,0.9575
+Original,40,400,60,0.995
+Original,40,400,61,0.9175
+Original,40,400,62,0.9525
+Original,40,400,63,0.9775
+Original,40,400,64,0.97
+Original,40,400,65,0.95
+Original,40,400,66,0.965
+Original,40,400,67,0.9325
+Original,40,400,68,0.965
+Original,40,400,69,0.895
+Original,40,400,70,0.9425
+Original,40,400,71,0.9425
+Original,40,400,72,0.9475
+Original,40,400,73,0.9875
+Original,40,400,74,0.965
+Original,40,400,75,0.985
+Original,40,400,76,0.9125
+Original,40,400,77,0.985
+Original,40,400,78,0.9575
+Original,40,400,79,0.9525
+Original,40,400,80,0.9375
+Original,40,400,81,0.9675
+Original,40,400,82,0.97
+Original,40,400,83,0.96
+Original,40,400,84,0.9425
+Original,40,400,85,0.96
+Original,40,400,86,0.9375
+Original,40,400,87,0.9725
+Original,40,400,88,0.9125
+Original,40,400,89,0.9775
+Original,40,400,90,0.98
+Original,40,400,91,0.98
+Original,40,400,92,0.9825
+Original,40,400,93,0.975
+Original,40,400,94,0.9725
+Original,40,400,95,0.9
+Original,40,400,96,0.99
+Original,40,400,97,0.9875
+Original,40,400,98,0.8725
+Original,40,400,99,0.985
+Original,40,400,100,0.9375
+Original,40,4000,1,0.98175
+Original,40,4000,2,0.93975
+Original,40,4000,3,0.972
+Original,40,4000,4,0.951
+Original,40,4000,5,0.97675
+Original,40,4000,6,0.9855
+Original,40,4000,7,0.983
+Original,40,4000,8,0.97225
+Original,40,4000,9,0.971
+Original,40,4000,10,0.9515
+Original,40,4000,11,0.899
+Original,40,4000,12,0.9745
+Original,40,4000,13,0.9735
+Original,40,4000,14,0.981
+Original,40,4000,15,0.97375
+Original,40,4000,16,0.9845
+Original,40,4000,17,0.97025
+Original,40,4000,18,0.9535
+Original,40,4000,19,0.93375
+Original,40,4000,20,0.91975
+Original,40,4000,21,0.93925
+Original,40,4000,22,0.96325
+Original,40,4000,23,0.96225
+Original,40,4000,24,0.991
+Original,40,4000,25,0.922
+Original,40,4000,26,0.94175
+Original,40,4000,27,0.9515
+Original,40,4000,28,0.983
+Original,40,4000,29,0.96575
+Original,40,4000,30,0.96975
+Original,40,4000,31,0.92525
+Original,40,4000,32,0.97425
+Original,40,4000,33,0.9695
+Original,40,4000,34,0.93925
+Original,40,4000,35,0.98275
+Original,40,4000,36,0.95225
+Original,40,4000,37,0.927
+Original,40,4000,38,0.922
+Original,40,4000,39,0.9885
+Original,40,4000,40,0.95
+Original,40,4000,41,0.94775
+Original,40,4000,42,0.943
+Original,40,4000,43,0.94275
+Original,40,4000,44,0.93375
+Original,40,4000,45,0.93525
+Original,40,4000,46,0.92525
+Original,40,4000,47,0.9495
+Original,40,4000,48,0.98075
+Original,40,4000,49,0.9045
+Original,40,4000,50,0.97275
+Original,40,4000,51,0.97
+Original,40,4000,52,0.95825
+Original,40,4000,53,0.97175
+Original,40,4000,54,0.953
+Original,40,4000,55,0.975
+Original,40,4000,56,0.97075
+Original,40,4000,57,0.974
+Original,40,4000,58,0.96375
+Original,40,4000,59,0.97375
+Original,40,4000,60,0.95575
+Original,40,4000,61,0.9395
+Original,40,4000,62,0.92275
+Original,40,4000,63,0.9825
+Original,40,4000,64,0.955
+Original,40,4000,65,0.942
+Original,40,4000,66,0.92775
+Original,40,4000,67,0.936
+Original,40,4000,68,0.97975
+Original,40,4000,69,0.98525
+Original,40,4000,70,0.9715
+Original,40,4000,71,0.97625
+Original,40,4000,72,0.92325
+Original,40,4000,73,0.97575
+Original,40,4000,74,0.96925
+Original,40,4000,75,0.97125
+Original,40,4000,76,0.94425
+Original,40,4000,77,0.98575
+Original,40,4000,78,0.992
+Original,40,4000,79,0.95375
+Original,40,4000,80,0.956
+Original,40,4000,81,0.96975
+Original,40,4000,82,0.9625
+Original,40,4000,83,0.9485
+Original,40,4000,84,0.97475
+Original,40,4000,85,0.9805
+Original,40,4000,86,0.9375
+Original,40,4000,87,0.97175
+Original,40,4000,88,0.9455
+Original,40,4000,89,0.9175
+Original,40,4000,90,0.9665
+Original,40,4000,91,0.9835
+Original,40,4000,92,0.9795
+Original,40,4000,93,0.94475
+Original,40,4000,94,0.93925
+Original,40,4000,95,0.965
+Original,40,4000,96,0.93675
+Original,40,4000,97,0.9715
+Original,40,4000,98,0.97
+Original,40,4000,99,0.95775
+Original,40,4000,100,0.976
+Original,400,4,1,1
+Original,400,4,2,1
+Original,400,4,3,1
+Original,400,4,4,1
+Original,400,4,5,1
+Original,400,4,6,1
+Original,400,4,7,1
+Original,400,4,8,1
+Original,400,4,9,1
+Original,400,4,10,1
+Original,400,4,11,1
+Original,400,4,12,1
+Original,400,4,13,1
+Original,400,4,14,1
+Original,400,4,15,1
+Original,400,4,16,0.75
+Original,400,4,17,1
+Original,400,4,18,0.75
+Original,400,4,19,0.75
+Original,400,4,20,1
+Original,400,4,21,1
+Original,400,4,22,1
+Original,400,4,23,1
+Original,400,4,24,1
+Original,400,4,25,1
+Original,400,4,26,1
+Original,400,4,27,1
+Original,400,4,28,1
+Original,400,4,29,1
+Original,400,4,30,1
+Original,400,4,31,1
+Original,400,4,32,1
+Original,400,4,33,1
+Original,400,4,34,1
+Original,400,4,35,1
+Original,400,4,36,1
+Original,400,4,37,1
+Original,400,4,38,1
+Original,400,4,39,1
+Original,400,4,40,1
+Original,400,4,41,1
+Original,400,4,42,1
+Original,400,4,43,1
+Original,400,4,44,1
+Original,400,4,45,1
+Original,400,4,46,1
+Original,400,4,47,1
+Original,400,4,48,1
+Original,400,4,49,1
+Original,400,4,50,1
+Original,400,4,51,1
+Original,400,4,52,1
+Original,400,4,53,1
+Original,400,4,54,1
+Original,400,4,55,1
+Original,400,4,56,1
+Original,400,4,57,1
+Original,400,4,58,1
+Original,400,4,59,1
+Original,400,4,60,1
+Original,400,4,61,1
+Original,400,4,62,1
+Original,400,4,63,1
+Original,400,4,64,1
+Original,400,4,65,1
+Original,400,4,66,1
+Original,400,4,67,0.75
+Original,400,4,68,1
+Original,400,4,69,1
+Original,400,4,70,1
+Original,400,4,71,1
+Original,400,4,72,1
+Original,400,4,73,1
+Original,400,4,74,1
+Original,400,4,75,1
+Original,400,4,76,1
+Original,400,4,77,1
+Original,400,4,78,1
+Original,400,4,79,1
+Original,400,4,80,1
+Original,400,4,81,1
+Original,400,4,82,1
+Original,400,4,83,1
+Original,400,4,84,1
+Original,400,4,85,1
+Original,400,4,86,1
+Original,400,4,87,1
+Original,400,4,88,1
+Original,400,4,89,1
+Original,400,4,90,1
+Original,400,4,91,1
+Original,400,4,92,1
+Original,400,4,93,1
+Original,400,4,94,1
+Original,400,4,95,1
+Original,400,4,96,1
+Original,400,4,97,0.75
+Original,400,4,98,1
+Original,400,4,99,1
+Original,400,4,100,1
+Original,400,40,1,1
+Original,400,40,2,1
+Original,400,40,3,0.975
+Original,400,40,4,1
+Original,400,40,5,1
+Original,400,40,6,1
+Original,400,40,7,1
+Original,400,40,8,1
+Original,400,40,9,0.975
+Original,400,40,10,1
+Original,400,40,11,0.975
+Original,400,40,12,0.975
+Original,400,40,13,1
+Original,400,40,14,1
+Original,400,40,15,1
+Original,400,40,16,1
+Original,400,40,17,1
+Original,400,40,18,1
+Original,400,40,19,1
+Original,400,40,20,0.95
+Original,400,40,21,1
+Original,400,40,22,1
+Original,400,40,23,1
+Original,400,40,24,1
+Original,400,40,25,1
+Original,400,40,26,1
+Original,400,40,27,0.975
+Original,400,40,28,1
+Original,400,40,29,1
+Original,400,40,30,1
+Original,400,40,31,1
+Original,400,40,32,1
+Original,400,40,33,1
+Original,400,40,34,1
+Original,400,40,35,1
+Original,400,40,36,1
+Original,400,40,37,1
+Original,400,40,38,1
+Original,400,40,39,1
+Original,400,40,40,1
+Original,400,40,41,0.975
+Original,400,40,42,1
+Original,400,40,43,1
+Original,400,40,44,1
+Original,400,40,45,1
+Original,400,40,46,1
+Original,400,40,47,1
+Original,400,40,48,1
+Original,400,40,49,1
+Original,400,40,50,1
+Original,400,40,51,1
+Original,400,40,52,1
+Original,400,40,53,0.975
+Original,400,40,54,1
+Original,400,40,55,1
+Original,400,40,56,1
+Original,400,40,57,0.975
+Original,400,40,58,1
+Original,400,40,59,1
+Original,400,40,60,1
+Original,400,40,61,1
+Original,400,40,62,0.975
+Original,400,40,63,1
+Original,400,40,64,1
+Original,400,40,65,0.975
+Original,400,40,66,0.975
+Original,400,40,67,1
+Original,400,40,68,1
+Original,400,40,69,1
+Original,400,40,70,1
+Original,400,40,71,0.975
+Original,400,40,72,1
+Original,400,40,73,0.975
+Original,400,40,74,1
+Original,400,40,75,0.975
+Original,400,40,76,1
+Original,400,40,77,1
+Original,400,40,78,0.95
+Original,400,40,79,0.975
+Original,400,40,80,0.975
+Original,400,40,81,1
+Original,400,40,82,1
+Original,400,40,83,1
+Original,400,40,84,1
+Original,400,40,85,1
+Original,400,40,86,1
+Original,400,40,87,1
+Original,400,40,88,0.975
+Original,400,40,89,1
+Original,400,40,90,1
+Original,400,40,91,1
+Original,400,40,92,1
+Original,400,40,93,1
+Original,400,40,94,1
+Original,400,40,95,1
+Original,400,40,96,1
+Original,400,40,97,1
+Original,400,40,98,1
+Original,400,40,99,1
+Original,400,40,100,1
+Original,400,400,1,0.9925
+Original,400,400,2,0.9925
+Original,400,400,3,0.9875
+Original,400,400,4,1
+Original,400,400,5,0.9975
+Original,400,400,6,0.99
+Original,400,400,7,0.9925
+Original,400,400,8,0.9825
+Original,400,400,9,0.99
+Original,400,400,10,0.9875
+Original,400,400,11,0.9975
+Original,400,400,12,0.99
+Original,400,400,13,0.9875
+Original,400,400,14,0.995
+Original,400,400,15,0.995
+Original,400,400,16,0.9975
+Original,400,400,17,0.9975
+Original,400,400,18,0.9925
+Original,400,400,19,1
+Original,400,400,20,0.995
+Original,400,400,21,0.9875
+Original,400,400,22,0.9975
+Original,400,400,23,0.99
+Original,400,400,24,0.995
+Original,400,400,25,0.9975
+Original,400,400,26,1
+Original,400,400,27,0.9825
+Original,400,400,28,0.995
+Original,400,400,29,0.98
+Original,400,400,30,0.995
+Original,400,400,31,0.995
+Original,400,400,32,0.985
+Original,400,400,33,0.9975
+Original,400,400,34,0.9925
+Original,400,400,35,1
+Original,400,400,36,0.995
+Original,400,400,37,0.9875
+Original,400,400,38,0.995
+Original,400,400,39,0.995
+Original,400,400,40,0.9825
+Original,400,400,41,1
+Original,400,400,42,1
+Original,400,400,43,0.9975
+Original,400,400,44,0.9975
+Original,400,400,45,0.9975
+Original,400,400,46,0.9975
+Original,400,400,47,0.9975
+Original,400,400,48,0.9925
+Original,400,400,49,1
+Original,400,400,50,0.9875
+Original,400,400,51,0.99
+Original,400,400,52,0.995
+Original,400,400,53,0.995
+Original,400,400,54,0.9975
+Original,400,400,55,0.995
+Original,400,400,56,0.9975
+Original,400,400,57,0.995
+Original,400,400,58,0.9975
+Original,400,400,59,0.995
+Original,400,400,60,1
+Original,400,400,61,0.9975
+Original,400,400,62,0.9925
+Original,400,400,63,0.995
+Original,400,400,64,1
+Original,400,400,65,0.995
+Original,400,400,66,1
+Original,400,400,67,0.9975
+Original,400,400,68,0.995
+Original,400,400,69,0.99
+Original,400,400,70,0.995
+Original,400,400,71,0.9975
+Original,400,400,72,0.99
+Original,400,400,73,1
+Original,400,400,74,0.9975
+Original,400,400,75,1
+Original,400,400,76,1
+Original,400,400,77,0.9975
+Original,400,400,78,0.9975
+Original,400,400,79,0.9925
+Original,400,400,80,0.99
+Original,400,400,81,0.995
+Original,400,400,82,1
+Original,400,400,83,0.995
+Original,400,400,84,0.98
+Original,400,400,85,0.9925
+Original,400,400,86,0.9975
+Original,400,400,87,1
+Original,400,400,88,0.99
+Original,400,400,89,0.9925
+Original,400,400,90,0.985
+Original,400,400,91,0.985
+Original,400,400,92,1
+Original,400,400,93,0.995
+Original,400,400,94,0.9975
+Original,400,400,95,0.99
+Original,400,400,96,0.99
+Original,400,400,97,0.9925
+Original,400,400,98,0.9975
+Original,400,400,99,0.9975
+Original,400,400,100,0.995
+Original,400,4000,1,0.9945
+Original,400,4000,2,0.997
+Original,400,4000,3,0.997
+Original,400,4000,4,0.9885
+Original,400,4000,5,0.9975
+Original,400,4000,6,0.99625
+Original,400,4000,7,0.9975
+Original,400,4000,8,0.99275
+Original,400,4000,9,0.99675
+Original,400,4000,10,0.99225
+Original,400,4000,11,0.9965
+Original,400,4000,12,0.9935
+Original,400,4000,13,0.98825
+Original,400,4000,14,0.99625
+Original,400,4000,15,0.997
+Original,400,4000,16,0.99825
+Original,400,4000,17,0.99575
+Original,400,4000,18,0.9945
+Original,400,4000,19,0.99425
+Original,400,4000,20,0.99725
+Original,400,4000,21,0.99775
+Original,400,4000,22,0.99125
+Original,400,4000,23,0.995
+Original,400,4000,24,0.9925
+Original,400,4000,25,0.99775
+Original,400,4000,26,0.992
+Original,400,4000,27,0.9885
+Original,400,4000,28,0.9965
+Original,400,4000,29,0.9965
+Original,400,4000,30,0.9945
+Original,400,4000,31,0.9935
+Original,400,4000,32,0.999
+Original,400,4000,33,0.98275
+Original,400,4000,34,0.991
+Original,400,4000,35,0.99425
+Original,400,4000,36,0.99675
+Original,400,4000,37,0.9965
+Original,400,4000,38,0.99775
+Original,400,4000,39,0.9975
+Original,400,4000,40,0.99675
+Original,400,4000,41,0.99625
+Original,400,4000,42,0.9955
+Original,400,4000,43,0.9925
+Original,400,4000,44,0.99625
+Original,400,4000,45,0.9975
+Original,400,4000,46,0.99675
+Original,400,4000,47,0.992
+Original,400,4000,48,0.99475
+Original,400,4000,49,0.99675
+Original,400,4000,50,0.99425
+Original,400,4000,51,0.99225
+Original,400,4000,52,0.9945
+Original,400,4000,53,0.99675
+Original,400,4000,54,0.991
+Original,400,4000,55,0.98425
+Original,400,4000,56,0.99375
+Original,400,4000,57,0.99425
+Original,400,4000,58,0.99625
+Original,400,4000,59,0.9945
+Original,400,4000,60,0.9985
+Original,400,4000,61,0.98825
+Original,400,4000,62,0.99325
+Original,400,4000,63,0.99725
+Original,400,4000,64,0.9935
+Original,400,4000,65,0.9975
+Original,400,4000,66,0.99075
+Original,400,4000,67,0.9955
+Original,400,4000,68,0.99575
+Original,400,4000,69,0.9975
+Original,400,4000,70,0.99375
+Original,400,4000,71,0.9975
+Original,400,4000,72,0.99525
+Original,400,4000,73,0.98725
+Original,400,4000,74,0.996
+Original,400,4000,75,0.99625
+Original,400,4000,76,0.999
+Original,400,4000,77,0.9925
+Original,400,4000,78,0.98675
+Original,400,4000,79,0.99875
+Original,400,4000,80,0.997
+Original,400,4000,81,0.99525
+Original,400,4000,82,0.9985
+Original,400,4000,83,0.9965
+Original,400,4000,84,0.99725
+Original,400,4000,85,0.9965
+Original,400,4000,86,0.9945
+Original,400,4000,87,0.98825
+Original,400,4000,88,0.997
+Original,400,4000,89,0.9975
+Original,400,4000,90,0.9945
+Original,400,4000,91,0.9955
+Original,400,4000,92,0.99125
+Original,400,4000,93,0.98775
+Original,400,4000,94,0.98975
+Original,400,4000,95,0.99025
+Original,400,4000,96,0.996
+Original,400,4000,97,0.98975
+Original,400,4000,98,0.99725
+Original,400,4000,99,0.9915
+Original,400,4000,100,0.99125
+Original,4000,4,1,1
+Original,4000,4,2,1
+Original,4000,4,3,1
+Original,4000,4,4,1
+Original,4000,4,5,1
+Original,4000,4,6,1
+Original,4000,4,7,1
+Original,4000,4,8,1
+Original,4000,4,9,1
+Original,4000,4,10,1
+Original,4000,4,11,1
+Original,4000,4,12,1
+Original,4000,4,13,1
+Original,4000,4,14,1
+Original,4000,4,15,1
+Original,4000,4,16,1
+Original,4000,4,17,1
+Original,4000,4,18,1
+Original,4000,4,19,1
+Original,4000,4,20,1
+Original,4000,4,21,1
+Original,4000,4,22,1
+Original,4000,4,23,1
+Original,4000,4,24,1
+Original,4000,4,25,1
+Original,4000,4,26,1
+Original,4000,4,27,1
+Original,4000,4,28,1
+Original,4000,4,29,1
+Original,4000,4,30,1
+Original,4000,4,31,1
+Original,4000,4,32,1
+Original,4000,4,33,1
+Original,4000,4,34,1
+Original,4000,4,35,1
+Original,4000,4,36,1
+Original,4000,4,37,1
+Original,4000,4,38,1
+Original,4000,4,39,1
+Original,4000,4,40,1
+Original,4000,4,41,1
+Original,4000,4,42,1
+Original,4000,4,43,1
+Original,4000,4,44,1
+Original,4000,4,45,1
+Original,4000,4,46,1
+Original,4000,4,47,1
+Original,4000,4,48,1
+Original,4000,4,49,1
+Original,4000,4,50,1
+Original,4000,4,51,1
+Original,4000,4,52,1
+Original,4000,4,53,1
+Original,4000,4,54,1
+Original,4000,4,55,1
+Original,4000,4,56,1
+Original,4000,4,57,1
+Original,4000,4,58,1
+Original,4000,4,59,1
+Original,4000,4,60,1
+Original,4000,4,61,1
+Original,4000,4,62,1
+Original,4000,4,63,1
+Original,4000,4,64,1
+Original,4000,4,65,1
+Original,4000,4,66,1
+Original,4000,4,67,1
+Original,4000,4,68,1
+Original,4000,4,69,1
+Original,4000,4,70,1
+Original,4000,4,71,1
+Original,4000,4,72,1
+Original,4000,4,73,1
+Original,4000,4,74,1
+Original,4000,4,75,1
+Original,4000,4,76,1
+Original,4000,4,77,1
+Original,4000,4,78,1
+Original,4000,4,79,1
+Original,4000,4,80,1
+Original,4000,4,81,1
+Original,4000,4,82,1
+Original,4000,4,83,1
+Original,4000,4,84,1
+Original,4000,4,85,1
+Original,4000,4,86,1
+Original,4000,4,87,1
+Original,4000,4,88,1
+Original,4000,4,89,1
+Original,4000,4,90,1
+Original,4000,4,91,1
+Original,4000,4,92,1
+Original,4000,4,93,1
+Original,4000,4,94,1
+Original,4000,4,95,1
+Original,4000,4,96,1
+Original,4000,4,97,1
+Original,4000,4,98,1
+Original,4000,4,99,1
+Original,4000,4,100,1
+Original,4000,40,1,1
+Original,4000,40,2,1
+Original,4000,40,3,1
+Original,4000,40,4,1
+Original,4000,40,5,1
+Original,4000,40,6,1
+Original,4000,40,7,1
+Original,4000,40,8,1
+Original,4000,40,9,1
+Original,4000,40,10,1
+Original,4000,40,11,1
+Original,4000,40,12,1
+Original,4000,40,13,1
+Original,4000,40,14,1
+Original,4000,40,15,1
+Original,4000,40,16,1
+Original,4000,40,17,1
+Original,4000,40,18,1
+Original,4000,40,19,1
+Original,4000,40,20,1
+Original,4000,40,21,1
+Original,4000,40,22,1
+Original,4000,40,23,1
+Original,4000,40,24,1
+Original,4000,40,25,1
+Original,4000,40,26,1
+Original,4000,40,27,1
+Original,4000,40,28,1
+Original,4000,40,29,1
+Original,4000,40,30,1
+Original,4000,40,31,1
+Original,4000,40,32,1
+Original,4000,40,33,1
+Original,4000,40,34,1
+Original,4000,40,35,1
+Original,4000,40,36,1
+Original,4000,40,37,1
+Original,4000,40,38,1
+Original,4000,40,39,1
+Original,4000,40,40,1
+Original,4000,40,41,0.975
+Original,4000,40,42,1
+Original,4000,40,43,1
+Original,4000,40,44,1
+Original,4000,40,45,1
+Original,4000,40,46,1
+Original,4000,40,47,1
+Original,4000,40,48,0.975
+Original,4000,40,49,1
+Original,4000,40,50,1
+Original,4000,40,51,1
+Original,4000,40,52,1
+Original,4000,40,53,1
+Original,4000,40,54,1
+Original,4000,40,55,1
+Original,4000,40,56,1
+Original,4000,40,57,1
+Original,4000,40,58,1
+Original,4000,40,59,1
+Original,4000,40,60,1
+Original,4000,40,61,1
+Original,4000,40,62,1
+Original,4000,40,63,1
+Original,4000,40,64,1
+Original,4000,40,65,1
+Original,4000,40,66,1
+Original,4000,40,67,1
+Original,4000,40,68,1
+Original,4000,40,69,1
+Original,4000,40,70,1
+Original,4000,40,71,1
+Original,4000,40,72,1
+Original,4000,40,73,1
+Original,4000,40,74,1
+Original,4000,40,75,1
+Original,4000,40,76,1
+Original,4000,40,77,1
+Original,4000,40,78,0.975
+Original,4000,40,79,1
+Original,4000,40,80,1
+Original,4000,40,81,1
+Original,4000,40,82,1
+Original,4000,40,83,1
+Original,4000,40,84,1
+Original,4000,40,85,1
+Original,4000,40,86,1
+Original,4000,40,87,1
+Original,4000,40,88,1
+Original,4000,40,89,1
+Original,4000,40,90,1
+Original,4000,40,91,1
+Original,4000,40,92,1
+Original,4000,40,93,1
+Original,4000,40,94,1
+Original,4000,40,95,1
+Original,4000,40,96,1
+Original,4000,40,97,1
+Original,4000,40,98,1
+Original,4000,40,99,1
+Original,4000,40,100,1
+Original,4000,400,1,1
+Original,4000,400,2,1
+Original,4000,400,3,1
+Original,4000,400,4,1
+Original,4000,400,5,1
+Original,4000,400,6,1
+Original,4000,400,7,1
+Original,4000,400,8,1
+Original,4000,400,9,1
+Original,4000,400,10,1
+Original,4000,400,11,1
+Original,4000,400,12,1
+Original,4000,400,13,1
+Original,4000,400,14,1
+Original,4000,400,15,1
+Original,4000,400,16,1
+Original,4000,400,17,1
+Original,4000,400,18,1
+Original,4000,400,19,1
+Original,4000,400,20,1
+Original,4000,400,21,1
+Original,4000,400,22,1
+Original,4000,400,23,0.9975
+Original,4000,400,24,1
+Original,4000,400,25,1
+Original,4000,400,26,1
+Original,4000,400,27,1
+Original,4000,400,28,1
+Original,4000,400,29,1
+Original,4000,400,30,1
+Original,4000,400,31,1
+Original,4000,400,32,1
+Original,4000,400,33,1
+Original,4000,400,34,1
+Original,4000,400,35,1
+Original,4000,400,36,1
+Original,4000,400,37,1
+Original,4000,400,38,1
+Original,4000,400,39,1
+Original,4000,400,40,1
+Original,4000,400,41,1
+Original,4000,400,42,1
+Original,4000,400,43,1
+Original,4000,400,44,1
+Original,4000,400,45,1
+Original,4000,400,46,1
+Original,4000,400,47,1
+Original,4000,400,48,1
+Original,4000,400,49,1
+Original,4000,400,50,1
+Original,4000,400,51,1
+Original,4000,400,52,1
+Original,4000,400,53,1
+Original,4000,400,54,1
+Original,4000,400,55,0.9975
+Original,4000,400,56,1
+Original,4000,400,57,1
+Original,4000,400,58,1
+Original,4000,400,59,1
+Original,4000,400,60,1
+Original,4000,400,61,1
+Original,4000,400,62,1
+Original,4000,400,63,1
+Original,4000,400,64,1
+Original,4000,400,65,1
+Original,4000,400,66,1
+Original,4000,400,67,1
+Original,4000,400,68,0.9975
+Original,4000,400,69,1
+Original,4000,400,70,1
+Original,4000,400,71,1
+Original,4000,400,72,1
+Original,4000,400,73,1
+Original,4000,400,74,1
+Original,4000,400,75,1
+Original,4000,400,76,1
+Original,4000,400,77,1
+Original,4000,400,78,1
+Original,4000,400,79,1
+Original,4000,400,80,1
+Original,4000,400,81,1
+Original,4000,400,82,1
+Original,4000,400,83,1
+Original,4000,400,84,1
+Original,4000,400,85,1
+Original,4000,400,86,1
+Original,4000,400,87,1
+Original,4000,400,88,1
+Original,4000,400,89,1
+Original,4000,400,90,1
+Original,4000,400,91,1
+Original,4000,400,92,1
+Original,4000,400,93,1
+Original,4000,400,94,1
+Original,4000,400,95,1
+Original,4000,400,96,1
+Original,4000,400,97,1
+Original,4000,400,98,1
+Original,4000,400,99,1
+Original,4000,400,100,1
+Original,4000,4000,1,0.998
+Original,4000,4000,2,1
+Original,4000,4000,3,0.999
+Original,4000,4000,4,1
+Original,4000,4000,5,0.9995
+Original,4000,4000,6,1
+Original,4000,4000,7,1
+Original,4000,4000,8,1
+Original,4000,4000,9,0.999
+Original,4000,4000,10,1
+Original,4000,4000,11,1
+Original,4000,4000,12,0.999
+Original,4000,4000,13,1
+Original,4000,4000,14,0.99875
+Original,4000,4000,15,1
+Original,4000,4000,16,1
+Original,4000,4000,17,1
+Original,4000,4000,18,1
+Original,4000,4000,19,1
+Original,4000,4000,20,1
+Original,4000,4000,21,1
+Original,4000,4000,22,1
+Original,4000,4000,23,0.9985
+Original,4000,4000,24,1
+Original,4000,4000,25,1
+Original,4000,4000,26,1
+Original,4000,4000,27,0.99925
+Original,4000,4000,28,0.9995
+Original,4000,4000,29,1
+Original,4000,4000,30,1
+Original,4000,4000,31,0.99925
+Original,4000,4000,32,1
+Original,4000,4000,33,0.99925
+Original,4000,4000,34,1
+Original,4000,4000,35,0.99975
+Original,4000,4000,36,0.9995
+Original,4000,4000,37,1
+Original,4000,4000,38,1
+Original,4000,4000,39,0.99925
+Original,4000,4000,40,1
+Original,4000,4000,41,1
+Original,4000,4000,42,1
+Original,4000,4000,43,1
+Original,4000,4000,44,1
+Original,4000,4000,45,1
+Original,4000,4000,46,1
+Original,4000,4000,47,1
+Original,4000,4000,48,1
+Original,4000,4000,49,1
+Original,4000,4000,50,1
+Original,4000,4000,51,0.999
+Original,4000,4000,52,1
+Original,4000,4000,53,1
+Original,4000,4000,54,0.99875
+Original,4000,4000,55,0.999
+Original,4000,4000,56,1
+Original,4000,4000,57,1
+Original,4000,4000,58,1
+Original,4000,4000,59,1
+Original,4000,4000,60,1
+Original,4000,4000,61,1
+Original,4000,4000,62,1
+Original,4000,4000,63,1
+Original,4000,4000,64,1
+Original,4000,4000,65,1
+Original,4000,4000,66,1
+Original,4000,4000,67,1
+Original,4000,4000,68,1
+Original,4000,4000,69,1
+Original,4000,4000,70,1
+Original,4000,4000,71,0.9995
+Original,4000,4000,72,1
+Original,4000,4000,73,1
+Original,4000,4000,74,1
+Original,4000,4000,75,1
+Original,4000,4000,76,1
+Original,4000,4000,77,0.99925
+Original,4000,4000,78,1
+Original,4000,4000,79,0.999
+Original,4000,4000,80,1
+Original,4000,4000,81,1
+Original,4000,4000,82,1
+Original,4000,4000,83,1
+Original,4000,4000,84,1
+Original,4000,4000,85,1
+Original,4000,4000,86,1
+Original,4000,4000,87,1
+Original,4000,4000,88,1
+Original,4000,4000,89,1
+Original,4000,4000,90,1
+Original,4000,4000,91,1
+Original,4000,4000,92,1
+Original,4000,4000,93,1
+Original,4000,4000,94,0.99925
+Original,4000,4000,95,1
+Original,4000,4000,96,1
+Original,4000,4000,97,1
+Original,4000,4000,98,0.999
+Original,4000,4000,99,1
+Original,4000,4000,100,1
+Library,4,4,1, 0.5
+Library,4,4,2, 0.5
+Library,4,4,3, 0.5
+Library,4,4,4, 0.5
+Library,4,4,5, 0.5
+Library,4,4,6, 0.5
+Library,4,4,7, 0.5
+Library,4,4,8, 0.5
+Library,4,4,9, 1
+Library,4,4,10, 1
+Library,4,4,11, 1
+Library,4,4,12, 1
+Library,4,4,13, 1
+Library,4,4,14, 0.5
+Library,4,4,15, 0.5
+Library,4,4,16, 0.5
+Library,4,4,17, 0.5
+Library,4,4,18, 0.5
+Library,4,4,19, 0.25
+Library,4,4,20, 0.25
+Library,4,4,21, 0.25
+Library,4,4,22, 0.25
+Library,4,4,23, 0.25
+Library,4,4,24, 0
+Library,4,4,25, 0
+Library,4,4,26, 0
+Library,4,4,27, 0
+Library,4,4,28, 0.75
+Library,4,4,29, 0.75
+Library,4,4,30, 0.75
+Library,4,4,31, 0.75
+Library,4,4,32, 0.75
+Library,4,4,33, 0.75
+Library,4,4,34, 0.75
+Library,4,4,35, 0.25
+Library,4,4,36, 0.25
+Library,4,4,37, 0.25
+Library,4,4,38, 0.25
+Library,4,4,39, 0.75
+Library,4,4,40, 0.75
+Library,4,4,41, 0.75
+Library,4,4,42, 0.75
+Library,4,4,43, 0.75
+Library,4,4,44, 0.5
+Library,4,4,45, 0.5
+Library,4,4,46, 0.5
+Library,4,4,47, 0.5
+Library,4,4,48, 0.5
+Library,4,4,49, 0.5
+Library,4,4,50, 0.5
+Library,4,4,51, 0.5
+Library,4,4,52, 0.5
+Library,4,4,53, 0.5
+Library,4,4,54, 0.25
+Library,4,4,55, 0.25
+Library,4,4,56, 0.25
+Library,4,4,57, 0.25
+Library,4,4,58, 0.25
+Library,4,4,59, 0.5
+Library,4,4,60, 0.5
+Library,4,4,61, 0.5
+Library,4,4,62, 0.5
+Library,4,4,63, 0.25
+Library,4,4,64, 0.25
+Library,4,4,65, 0.25
+Library,4,4,66, 0.25
+Library,4,4,67, 0.25
+Library,4,4,68, 1
+Library,4,4,69, 1
+Library,4,4,70, 1
+Library,4,4,71, 1
+Library,4,4,72, 1
+Library,4,4,73, 1
+Library,4,4,74, 0
+Library,4,4,75, 0
+Library,4,4,76, 0
+Library,4,4,77, 0
+Library,4,4,78, 0
+Library,4,4,79, 0.5
+Library,4,4,80, 0.5
+Library,4,4,81, 0.5
+Library,4,4,82, 0.5
+Library,4,4,83, 0.5
+Library,4,4,84, 0.75
+Library,4,4,85, 0.75
+Library,4,4,86, 0.75
+Library,4,4,87, 0.75
+Library,4,4,88, 0.75
+Library,4,4,89, 0.75
+Library,4,4,90, 0.75
+Library,4,4,91, 0.75
+Library,4,4,92, 1
+Library,4,4,93, 1
+Library,4,4,94, 1
+Library,4,4,95, 1
+Library,4,4,96, 0.75
+Library,4,4,97, 0.75
+Library,4,4,98, 0.75
+Library,4,4,99, 0.75
+Library,4,4,100, 0.75
+Library,4,40,1, 0.775
+Library,4,40,2, 0.5
+Library,4,40,3, 0.5
+Library,4,40,4, 0.55
+Library,4,40,5, 0.55
+Library,4,40,6, 0.75
+Library,4,40,7, 0.6
+Library,4,40,8, 0.6
+Library,4,40,9, 0.6
+Library,4,40,10, 0.9
+Library,4,40,11, 0.475
+Library,4,40,12, 0.475
+Library,4,40,13, 0.575
+Library,4,40,14, 0.575
+Library,4,40,15, 0.8
+Library,4,40,16, 0.8
+Library,4,40,17, 0.75
+Library,4,40,18, 0.525
+Library,4,40,19, 0.525
+Library,4,40,20, 0.725
+Library,4,40,21, 0.725
+Library,4,40,22, 0.525
+Library,4,40,23, 0.675
+Library,4,40,24, 0.85
+Library,4,40,25, 0.85
+Library,4,40,26, 0.725
+Library,4,40,27, 0.725
+Library,4,40,28, 0.85
+Library,4,40,29, 0.85
+Library,4,40,30, 0.5
+Library,4,40,31, 0.725
+Library,4,40,32, 0.725
+Library,4,40,33, 0.6
+Library,4,40,34, 0.6
+Library,4,40,35, 0.55
+Library,4,40,36, 0.55
+Library,4,40,37, 0.375
+Library,4,40,38, 0.375
+Library,4,40,39, 0.425
+Library,4,40,40, 0.425
+Library,4,40,41, 0.5
+Library,4,40,42, 0.5
+Library,4,40,43, 0.525
+Library,4,40,44, 0.525
+Library,4,40,45, 0.775
+Library,4,40,46, 0.775
+Library,4,40,47, 0.825
+Library,4,40,48, 0.65
+Library,4,40,49, 0.65
+Library,4,40,50, 0.625
+Library,4,40,51, 0.625
+Library,4,40,52, 0.75
+Library,4,40,53, 0.75
+Library,4,40,54, 0.325
+Library,4,40,55, 0.325
+Library,4,40,56, 0.5
+Library,4,40,57, 0.5
+Library,4,40,58, 0.825
+Library,4,40,59, 0.825
+Library,4,40,60, 0.8
+Library,4,40,61, 0.8
+Library,4,40,62, 0.8
+Library,4,40,63, 0.8
+Library,4,40,64, 0.65
+Library,4,40,65, 0.5
+Library,4,40,66, 0.5
+Library,4,40,67, 0.6
+Library,4,40,68, 0.6
+Library,4,40,69, 0.775
+Library,4,40,70, 0.775
+Library,4,40,71, 0.675
+Library,4,40,72, 0.675
+Library,4,40,73, 0.475
+Library,4,40,74, 0.65
+Library,4,40,75, 0.65
+Library,4,40,76, 0.75
+Library,4,40,77, 0.75
+Library,4,40,78, 0.65
+Library,4,40,79, 0.65
+Library,4,40,80, 0.85
+Library,4,40,81, 0.85
+Library,4,40,82, 0.8
+Library,4,40,83, 0.8
+Library,4,40,84, 0.775
+Library,4,40,85, 0.775
+Library,4,40,86, 0.275
+Library,4,40,87, 0.275
+Library,4,40,88, 0.5
+Library,4,40,89, 0.5
+Library,4,40,90, 0.675
+Library,4,40,91, 0.675
+Library,4,40,92, 0.475
+Library,4,40,93, 0.475
+Library,4,40,94, 0.875
+Library,4,40,95, 0.65
+Library,4,40,96, 0.65
+Library,4,40,97, 0.65
+Library,4,40,98, 0.65
+Library,4,40,99, 0.625
+Library,4,40,100, 0.625
+Library,4,400,1, 0.375
+Library,4,400,2, 0.575
+Library,4,400,3, 0.685
+Library,4,400,4, 0.7675
+Library,4,400,5, 0.7475
+Library,4,400,6, 0.5875
+Library,4,400,7, 0.5375
+Library,4,400,8, 0.5175
+Library,4,400,9, 0.77
+Library,4,400,10, 0.765
+Library,4,400,11, 0.55
+Library,4,400,12, 0.79
+Library,4,400,13, 0.86
+Library,4,400,14, 0.9125
+Library,4,400,15, 0.5175
+Library,4,400,16, 0.8975
+Library,4,400,17, 0.73
+Library,4,400,18, 0.5225
+Library,4,400,19, 0.55
+Library,4,400,20, 0.7
+Library,4,400,21, 0.5675
+Library,4,400,22, 0.87
+Library,4,400,23, 0.485
+Library,4,400,24, 0.6325
+Library,4,400,25, 0.8875
+Library,4,400,26, 0.5475
+Library,4,400,27, 0.7725
+Library,4,400,28, 0.61
+Library,4,400,29, 0.55
+Library,4,400,30, 0.75
+Library,4,400,31, 0.7
+Library,4,400,32, 0.5075
+Library,4,400,33, 0.625
+Library,4,400,34, 0.715
+Library,4,400,35, 0.6275
+Library,4,400,36, 0.4625
+Library,4,400,37, 0.8575
+Library,4,400,38, 0.76
+Library,4,400,39, 0.6025
+Library,4,400,40, 0.5825
+Library,4,400,41, 0.545
+Library,4,400,42, 0.485
+Library,4,400,43, 0.53
+Library,4,400,44, 0.9
+Library,4,400,45, 0.8575
+Library,4,400,46, 0.8
+Library,4,400,47, 0.575
+Library,4,400,48, 0.63
+Library,4,400,49, 0.7525
+Library,4,400,50, 0.4275
+Library,4,400,51, 0.52
+Library,4,400,52, 0.725
+Library,4,400,53, 0.7775
+Library,4,400,54, 0.7525
+Library,4,400,55, 0.345
+Library,4,400,56, 0.9075
+Library,4,400,57, 0.8075
+Library,4,400,58, 0.45
+Library,4,400,59, 0.735
+Library,4,400,60, 0.6025
+Library,4,400,61, 0.575
+Library,4,400,62, 0.8025
+Library,4,400,63, 0.435
+Library,4,400,64, 0.5075
+Library,4,400,65, 0.505
+Library,4,400,66, 0.7975
+Library,4,400,67, 0.905
+Library,4,400,68, 0.51
+Library,4,400,69, 0.5425
+Library,4,400,70, 0.515
+Library,4,400,71, 0.715
+Library,4,400,72, 0.575
+Library,4,400,73, 0.7925
+Library,4,400,74, 0.4725
+Library,4,400,75, 0.7275
+Library,4,400,76, 0.5575
+Library,4,400,77, 0.87
+Library,4,400,78, 0.535
+Library,4,400,79, 0.755
+Library,4,400,80, 0.5725
+Library,4,400,81, 0.875
+Library,4,400,82, 0.525
+Library,4,400,83, 0.785
+Library,4,400,84, 0.645
+Library,4,400,85, 0.78
+Library,4,400,86, 0.885
+Library,4,400,87, 0.5125
+Library,4,400,88, 0.7675
+Library,4,400,89, 0.7175
+Library,4,400,90, 0.8175
+Library,4,400,91, 0.43
+Library,4,400,92, 0.545
+Library,4,400,93, 0.65
+Library,4,400,94, 0.495
+Library,4,400,95, 0.76
+Library,4,400,96, 0.79
+Library,4,400,97, 0.755
+Library,4,400,98, 0.8075
+Library,4,400,99, 0.745
+Library,4,400,100, 0.55
+Library,4,4000,1, 0.74475
+Library,4,4000,2, 0.74425
+Library,4,4000,3, 0.506
+Library,4,4000,4, 0.56475
+Library,4,4000,5, 0.6215
+Library,4,4000,6, 0.52525
+Library,4,4000,7, 0.4805
+Library,4,4000,8, 0.7425
+Library,4,4000,9, 0.7395
+Library,4,4000,10, 0.88175
+Library,4,4000,11, 0.732
+Library,4,4000,12, 0.7405
+Library,4,4000,13, 0.497
+Library,4,4000,14, 0.8785
+Library,4,4000,15, 0.74725
+Library,4,4000,16, 0.62125
+Library,4,4000,17, 0.76575
+Library,4,4000,18, 0.7505
+Library,4,4000,19, 0.755
+Library,4,4000,20, 0.61225
+Library,4,4000,21, 0.6165
+Library,4,4000,22, 0.75425
+Library,4,4000,23, 0.75575
+Library,4,4000,24, 0.481
+Library,4,4000,25, 0.74175
+Library,4,4000,26, 0.442
+Library,4,4000,27, 0.5445
+Library,4,4000,28, 0.5535
+Library,4,4000,29, 0.7735
+Library,4,4000,30, 0.568
+Library,4,4000,31, 0.78525
+Library,4,4000,32, 0.747
+Library,4,4000,33, 0.7415
+Library,4,4000,34, 0.547
+Library,4,4000,35, 0.74025
+Library,4,4000,36, 0.61175
+Library,4,4000,37, 0.50925
+Library,4,4000,38, 0.621
+Library,4,4000,39, 0.7845
+Library,4,4000,40, 0.7135
+Library,4,4000,41, 0.757
+Library,4,4000,42, 0.5815
+Library,4,4000,43, 0.59075
+Library,4,4000,44, 0.73725
+Library,4,4000,45, 0.745
+Library,4,4000,46, 0.7385
+Library,4,4000,47, 0.88925
+Library,4,4000,48, 0.48375
+Library,4,4000,49, 0.48025
+Library,4,4000,50, 0.76325
+Library,4,4000,51, 0.57825
+Library,4,4000,52, 0.74675
+Library,4,4000,53, 0.5635
+Library,4,4000,54, 0.59425
+Library,4,4000,55, 0.489
+Library,4,4000,56, 0.54475
+Library,4,4000,57, 0.75575
+Library,4,4000,58, 0.6205
+Library,4,4000,59, 0.74175
+Library,4,4000,60, 0.889
+Library,4,4000,61, 0.5765
+Library,4,4000,62, 0.55275
+Library,4,4000,63, 0.7385
+Library,4,4000,64, 0.7815
+Library,4,4000,65, 0.74475
+Library,4,4000,66, 0.5495
+Library,4,4000,67, 0.496
+Library,4,4000,68, 0.51875
+Library,4,4000,69, 0.59
+Library,4,4000,70, 0.6195
+Library,4,4000,71, 0.7625
+Library,4,4000,72, 0.77125
+Library,4,4000,73, 0.7495
+Library,4,4000,74, 0.61175
+Library,4,4000,75, 0.487
+Library,4,4000,76, 0.58375
+Library,4,4000,77, 0.59775
+Library,4,4000,78, 0.75175
+Library,4,4000,79, 0.78925
+Library,4,4000,80, 0.78575
+Library,4,4000,81, 0.7475
+Library,4,4000,82, 0.44925
+Library,4,4000,83, 0.777
+Library,4,4000,84, 0.4745
+Library,4,4000,85, 0.51675
+Library,4,4000,86, 0.74575
+Library,4,4000,87, 0.4815
+Library,4,4000,88, 0.439
+Library,4,4000,89, 0.53475
+Library,4,4000,90, 0.759
+Library,4,4000,91, 0.54125
+Library,4,4000,92, 0.74125
+Library,4,4000,93, 0.73275
+Library,4,4000,94, 0.61475
+Library,4,4000,95, 0.75225
+Library,4,4000,96, 0.88475
+Library,4,4000,97, 0.7375
+Library,4,4000,98, 0.54375
+Library,4,4000,99, 0.7425
+Library,4,4000,100, 0.5535
+Library,40,4,1, 1
+Library,40,4,2, 0.75
+Library,40,4,3, 0.75
+Library,40,4,4, 0.75
+Library,40,4,5, 0.75
+Library,40,4,6, 0.75
+Library,40,4,7, 0.75
+Library,40,4,8, 0.75
+Library,40,4,9, 1
+Library,40,4,10, 1
+Library,40,4,11, 1
+Library,40,4,12, 1
+Library,40,4,13, 1
+Library,40,4,14, 0.75
+Library,40,4,15, 0.75
+Library,40,4,16, 0.75
+Library,40,4,17, 0.75
+Library,40,4,18, 0.75
+Library,40,4,19, 1
+Library,40,4,20, 1
+Library,40,4,21, 1
+Library,40,4,22, 1
+Library,40,4,23, 1
+Library,40,4,24, 1
+Library,40,4,25, 1
+Library,40,4,26, 1
+Library,40,4,27, 1
+Library,40,4,28, 1
+Library,40,4,29, 1
+Library,40,4,30, 1
+Library,40,4,31, 1
+Library,40,4,32, 1
+Library,40,4,33, 1
+Library,40,4,34, 1
+Library,40,4,35, 1
+Library,40,4,36, 1
+Library,40,4,37, 1
+Library,40,4,38, 0.5
+Library,40,4,39, 0.5
+Library,40,4,40, 1
+Library,40,4,41, 1
+Library,40,4,42, 1
+Library,40,4,43, 1
+Library,40,4,44, 1
+Library,40,4,45, 1
+Library,40,4,46, 0.75
+Library,40,4,47, 0.75
+Library,40,4,48, 0.75
+Library,40,4,49, 0.75
+Library,40,4,50, 1
+Library,40,4,51, 1
+Library,40,4,52, 1
+Library,40,4,53, 1
+Library,40,4,54, 1
+Library,40,4,55, 0.5
+Library,40,4,56, 0.5
+Library,40,4,57, 0.5
+Library,40,4,58, 1
+Library,40,4,59, 1
+Library,40,4,60, 1
+Library,40,4,61, 1
+Library,40,4,62, 1
+Library,40,4,63, 1
+Library,40,4,64, 1
+Library,40,4,65, 1
+Library,40,4,66, 1
+Library,40,4,67, 1
+Library,40,4,68, 1
+Library,40,4,69, 1
+Library,40,4,70, 1
+Library,40,4,71, 1
+Library,40,4,72, 1
+Library,40,4,73, 1
+Library,40,4,74, 1
+Library,40,4,75, 1
+Library,40,4,76, 1
+Library,40,4,77, 1
+Library,40,4,78, 0.75
+Library,40,4,79, 0.75
+Library,40,4,80, 1
+Library,40,4,81, 1
+Library,40,4,82, 1
+Library,40,4,83, 1
+Library,40,4,84, 1
+Library,40,4,85, 1
+Library,40,4,86, 1
+Library,40,4,87, 1
+Library,40,4,88, 1
+Library,40,4,89, 1
+Library,40,4,90, 1
+Library,40,4,91, 0.75
+Library,40,4,92, 0.75
+Library,40,4,93, 1
+Library,40,4,94, 1
+Library,40,4,95, 1
+Library,40,4,96, 1
+Library,40,4,97, 1
+Library,40,4,98, 1
+Library,40,4,99, 1
+Library,40,4,100, 1
+Library,40,40,1, 0.975
+Library,40,40,2, 0.975
+Library,40,40,3, 1
+Library,40,40,4, 1
+Library,40,40,5, 0.875
+Library,40,40,6, 0.875
+Library,40,40,7, 0.925
+Library,40,40,8, 0.925
+Library,40,40,9, 0.975
+Library,40,40,10, 1
+Library,40,40,11, 1
+Library,40,40,12, 0.8
+Library,40,40,13, 0.8
+Library,40,40,14, 0.925
+Library,40,40,15, 0.925
+Library,40,40,16, 0.925
+Library,40,40,17, 0.925
+Library,40,40,18, 0.975
+Library,40,40,19, 0.975
+Library,40,40,20, 1
+Library,40,40,21, 1
+Library,40,40,22, 0.925
+Library,40,40,23, 0.925
+Library,40,40,24, 0.85
+Library,40,40,25, 0.85
+Library,40,40,26, 0.975
+Library,40,40,27, 0.975
+Library,40,40,28, 0.975
+Library,40,40,29, 1
+Library,40,40,30, 1
+Library,40,40,31, 0.95
+Library,40,40,32, 0.95
+Library,40,40,33, 1
+Library,40,40,34, 1
+Library,40,40,35, 0.925
+Library,40,40,36, 0.925
+Library,40,40,37, 0.875
+Library,40,40,38, 0.875
+Library,40,40,39, 1
+Library,40,40,40, 0.925
+Library,40,40,41, 0.975
+Library,40,40,42, 0.975
+Library,40,40,43, 0.875
+Library,40,40,44, 0.9
+Library,40,40,45, 0.9
+Library,40,40,46, 0.95
+Library,40,40,47, 0.95
+Library,40,40,48, 0.975
+Library,40,40,49, 1
+Library,40,40,50, 1
+Library,40,40,51, 0.95
+Library,40,40,52, 0.95
+Library,40,40,53, 1
+Library,40,40,54, 0.925
+Library,40,40,55, 0.925
+Library,40,40,56, 0.975
+Library,40,40,57, 0.875
+Library,40,40,58, 0.875
+Library,40,40,59, 0.975
+Library,40,40,60, 0.95
+Library,40,40,61, 0.875
+Library,40,40,62, 0.925
+Library,40,40,63, 0.925
+Library,40,40,64, 0.975
+Library,40,40,65, 0.975
+Library,40,40,66, 0.95
+Library,40,40,67, 0.95
+Library,40,40,68, 0.95
+Library,40,40,69, 0.95
+Library,40,40,70, 0.95
+Library,40,40,71, 0.9
+Library,40,40,72, 0.9
+Library,40,40,73, 0.9
+Library,40,40,74, 0.9
+Library,40,40,75, 0.875
+Library,40,40,76, 0.875
+Library,40,40,77, 0.975
+Library,40,40,78, 0.975
+Library,40,40,79, 0.8
+Library,40,40,80, 0.925
+Library,40,40,81, 0.95
+Library,40,40,82, 0.95
+Library,40,40,83, 0.975
+Library,40,40,84, 0.975
+Library,40,40,85, 0.925
+Library,40,40,86, 0.925
+Library,40,40,87, 1
+Library,40,40,88, 1
+Library,40,40,89, 0.975
+Library,40,40,90, 0.975
+Library,40,40,91, 0.975
+Library,40,40,92, 1
+Library,40,40,93, 1
+Library,40,40,94, 0.975
+Library,40,40,95, 0.975
+Library,40,40,96, 1
+Library,40,40,97, 1
+Library,40,40,98, 1
+Library,40,40,99, 1
+Library,40,40,100, 1
+Library,40,400,1, 0.9725
+Library,40,400,2, 0.9525
+Library,40,400,3, 0.985
+Library,40,400,4, 0.9525
+Library,40,400,5, 0.8625
+Library,40,400,6, 0.8775
+Library,40,400,7, 0.9475
+Library,40,400,8, 0.9425
+Library,40,400,9, 0.9525
+Library,40,400,10, 0.805
+Library,40,400,11, 0.79
+Library,40,400,12, 0.9575
+Library,40,400,13, 0.9825
+Library,40,400,14, 0.965
+Library,40,400,15, 0.99
+Library,40,400,16, 0.8725
+Library,40,400,17, 0.945
+Library,40,400,18, 0.905
+Library,40,400,19, 0.875
+Library,40,400,20, 0.93
+Library,40,400,21, 0.8675
+Library,40,400,22, 0.8225
+Library,40,400,23, 0.9875
+Library,40,400,24, 0.9
+Library,40,400,25, 0.985
+Library,40,400,26, 0.885
+Library,40,400,27, 0.96
+Library,40,400,28, 0.985
+Library,40,400,29, 0.99
+Library,40,400,30, 0.9775
+Library,40,400,31, 0.9775
+Library,40,400,32, 0.9925
+Library,40,400,33, 0.885
+Library,40,400,34, 0.92
+Library,40,400,35, 0.855
+Library,40,400,36, 0.945
+Library,40,400,37, 0.8975
+Library,40,400,38, 0.92
+Library,40,400,39, 0.8675
+Library,40,400,40, 0.9625
+Library,40,400,41, 0.88
+Library,40,400,42, 0.9175
+Library,40,400,43, 0.9
+Library,40,400,44, 0.9475
+Library,40,400,45, 0.975
+Library,40,400,46, 0.9575
+Library,40,400,47, 0.9025
+Library,40,400,48, 0.9875
+Library,40,400,49, 0.965
+Library,40,400,50, 0.955
+Library,40,400,51, 0.975
+Library,40,400,52, 0.9525
+Library,40,400,53, 0.9425
+Library,40,400,54, 0.96
+Library,40,400,55, 0.9525
+Library,40,400,56, 0.925
+Library,40,400,57, 0.795
+Library,40,400,58, 0.975
+Library,40,400,59, 0.895
+Library,40,400,60, 0.905
+Library,40,400,61, 0.91
+Library,40,400,62, 0.855
+Library,40,400,63, 0.975
+Library,40,400,64, 0.935
+Library,40,400,65, 0.9375
+Library,40,400,66, 0.82
+Library,40,400,67, 0.9425
+Library,40,400,68, 0.935
+Library,40,400,69, 0.945
+Library,40,400,70, 0.895
+Library,40,400,71, 0.9075
+Library,40,400,72, 0.925
+Library,40,400,73, 0.925
+Library,40,400,74, 0.9025
+Library,40,400,75, 0.98
+Library,40,400,76, 0.945
+Library,40,400,77, 0.9575
+Library,40,400,78, 0.9225
+Library,40,400,79, 0.9725
+Library,40,400,80, 0.8175
+Library,40,400,81, 0.955
+Library,40,400,82, 0.985
+Library,40,400,83, 0.975
+Library,40,400,84, 0.935
+Library,40,400,85, 0.9475
+Library,40,400,86, 0.8825
+Library,40,400,87, 0.945
+Library,40,400,88, 0.92
+Library,40,400,89, 0.9675
+Library,40,400,90, 0.965
+Library,40,400,91, 0.9825
+Library,40,400,92, 0.9575
+Library,40,400,93, 0.9025
+Library,40,400,94, 0.9375
+Library,40,400,95, 0.8525
+Library,40,400,96, 0.945
+Library,40,400,97, 0.905
+Library,40,400,98, 0.865
+Library,40,400,99, 0.9875
+Library,40,400,100, 0.965
+Library,40,4000,1, 0.929
+Library,40,4000,2, 0.87425
+Library,40,4000,3, 0.98425
+Library,40,4000,4, 0.98625
+Library,40,4000,5, 0.8935
+Library,40,4000,6, 0.893
+Library,40,4000,7, 0.80425
+Library,40,4000,8, 0.9495
+Library,40,4000,9, 0.98525
+Library,40,4000,10, 0.98075
+Library,40,4000,11, 0.98125
+Library,40,4000,12, 0.937
+Library,40,4000,13, 0.91025
+Library,40,4000,14, 0.9825
+Library,40,4000,15, 0.86775
+Library,40,4000,16, 0.982
+Library,40,4000,17, 0.93475
+Library,40,4000,18, 0.98725
+Library,40,4000,19, 0.97675
+Library,40,4000,20, 0.8855
+Library,40,4000,21, 0.957
+Library,40,4000,22, 0.961
+Library,40,4000,23, 0.944
+Library,40,4000,24, 0.99075
+Library,40,4000,25, 0.899
+Library,40,4000,26, 0.90725
+Library,40,4000,27, 0.923
+Library,40,4000,28, 0.985
+Library,40,4000,29, 0.98575
+Library,40,4000,30, 0.97525
+Library,40,4000,31, 0.9745
+Library,40,4000,32, 0.89125
+Library,40,4000,33, 0.89475
+Library,40,4000,34, 0.96875
+Library,40,4000,35, 0.86825
+Library,40,4000,36, 0.931
+Library,40,4000,37, 0.91125
+Library,40,4000,38, 0.94175
+Library,40,4000,39, 0.978
+Library,40,4000,40, 0.96425
+Library,40,4000,41, 0.981
+Library,40,4000,42, 0.9345
+Library,40,4000,43, 0.9375
+Library,40,4000,44, 0.942
+Library,40,4000,45, 0.97175
+Library,40,4000,46, 0.9525
+Library,40,4000,47, 0.9795
+Library,40,4000,48, 0.98275
+Library,40,4000,49, 0.9225
+Library,40,4000,50, 0.988
+Library,40,4000,51, 0.94475
+Library,40,4000,52, 0.915
+Library,40,4000,53, 0.9875
+Library,40,4000,54, 0.98475
+Library,40,4000,55, 0.899
+Library,40,4000,56, 0.905
+Library,40,4000,57, 0.457
+Library,40,4000,58, 0.94875
+Library,40,4000,59, 0.986
+Library,40,4000,60, 0.87925
+Library,40,4000,61, 0.936
+Library,40,4000,62, 0.87675
+Library,40,4000,63, 0.98425
+Library,40,4000,64, 0.92375
+Library,40,4000,65, 0.8845
+Library,40,4000,66, 0.93125
+Library,40,4000,67, 0.87975
+Library,40,4000,68, 0.9815
+Library,40,4000,69, 0.98275
+Library,40,4000,70, 0.984
+Library,40,4000,71, 0.98775
+Library,40,4000,72, 0.88625
+Library,40,4000,73, 0.91175
+Library,40,4000,74, 0.914
+Library,40,4000,75, 0.895
+Library,40,4000,76, 0.96625
+Library,40,4000,77, 0.98575
+Library,40,4000,78, 0.994
+Library,40,4000,79, 0.9215
+Library,40,4000,80, 0.89975
+Library,40,4000,81, 0.951
+Library,40,4000,82, 0.926
+Library,40,4000,83, 0.95875
+Library,40,4000,84, 0.95925
+Library,40,4000,85, 0.97875
+Library,40,4000,86, 0.89575
+Library,40,4000,87, 0.95125
+Library,40,4000,88, 0.93225
+Library,40,4000,89, 0.93775
+Library,40,4000,90, 0.9665
+Library,40,4000,91, 0.98175
+Library,40,4000,92, 0.89675
+Library,40,4000,93, 0.97975
+Library,40,4000,94, 0.975
+Library,40,4000,95, 0.93175
+Library,40,4000,96, 0.9235
+Library,40,4000,97, 0.7935
+Library,40,4000,98, 0.951
+Library,40,4000,99, 0.7945
+Library,40,4000,100, 0.9585
+Library,400,4,1, 1
+Library,400,4,2, 1
+Library,400,4,3, 1
+Library,400,4,4, 1
+Library,400,4,5, 1
+Library,400,4,6, 1
+Library,400,4,7, 1
+Library,400,4,8, 0.75
+Library,400,4,9, 1
+Library,400,4,10, 1
+Library,400,4,11, 1
+Library,400,4,12, 1
+Library,400,4,13, 1
+Library,400,4,14, 1
+Library,400,4,15, 1
+Library,400,4,16, 1
+Library,400,4,17, 1
+Library,400,4,18, 1
+Library,400,4,19, 0.75
+Library,400,4,20, 1
+Library,400,4,21, 1
+Library,400,4,22, 1
+Library,400,4,23, 1
+Library,400,4,24, 1
+Library,400,4,25, 1
+Library,400,4,26, 1
+Library,400,4,27, 1
+Library,400,4,28, 1
+Library,400,4,29, 1
+Library,400,4,30, 1
+Library,400,4,31, 1
+Library,400,4,32, 1
+Library,400,4,33, 1
+Library,400,4,34, 1
+Library,400,4,35, 1
+Library,400,4,36, 1
+Library,400,4,37, 1
+Library,400,4,38, 1
+Library,400,4,39, 1
+Library,400,4,40, 1
+Library,400,4,41, 1
+Library,400,4,42, 1
+Library,400,4,43, 1
+Library,400,4,44, 1
+Library,400,4,45, 1
+Library,400,4,46, 1
+Library,400,4,47, 1
+Library,400,4,48, 1
+Library,400,4,49, 1
+Library,400,4,50, 1
+Library,400,4,51, 1
+Library,400,4,52, 1
+Library,400,4,53, 1
+Library,400,4,54, 1
+Library,400,4,55, 1
+Library,400,4,56, 1
+Library,400,4,57, 1
+Library,400,4,58, 1
+Library,400,4,59, 1
+Library,400,4,60, 1
+Library,400,4,61, 1
+Library,400,4,62, 1
+Library,400,4,63, 1
+Library,400,4,64, 1
+Library,400,4,65, 1
+Library,400,4,66, 1
+Library,400,4,67, 0.75
+Library,400,4,68, 1
+Library,400,4,69, 1
+Library,400,4,70, 1
+Library,400,4,71, 1
+Library,400,4,72, 1
+Library,400,4,73, 1
+Library,400,4,74, 1
+Library,400,4,75, 1
+Library,400,4,76, 1
+Library,400,4,77, 1
+Library,400,4,78, 1
+Library,400,4,79, 1
+Library,400,4,80, 1
+Library,400,4,81, 1
+Library,400,4,82, 1
+Library,400,4,83, 1
+Library,400,4,84, 1
+Library,400,4,85, 1
+Library,400,4,86, 1
+Library,400,4,87, 1
+Library,400,4,88, 1
+Library,400,4,89, 1
+Library,400,4,90, 1
+Library,400,4,91, 1
+Library,400,4,92, 1
+Library,400,4,93, 1
+Library,400,4,94, 1
+Library,400,4,95, 1
+Library,400,4,96, 1
+Library,400,4,97, 0.75
+Library,400,4,98, 1
+Library,400,4,99, 1
+Library,400,4,100, 1
+Library,400,40,1, 1
+Library,400,40,2, 0.975
+Library,400,40,3, 0.975
+Library,400,40,4, 1
+Library,400,40,5, 1
+Library,400,40,6, 1
+Library,400,40,7, 1
+Library,400,40,8, 1
+Library,400,40,9, 1
+Library,400,40,10, 1
+Library,400,40,11, 0.975
+Library,400,40,12, 1
+Library,400,40,13, 1
+Library,400,40,14, 1
+Library,400,40,15, 1
+Library,400,40,16, 1
+Library,400,40,17, 1
+Library,400,40,18, 1
+Library,400,40,19, 1
+Library,400,40,20, 1
+Library,400,40,21, 1
+Library,400,40,22, 1
+Library,400,40,23, 1
+Library,400,40,24, 1
+Library,400,40,25, 1
+Library,400,40,26, 1
+Library,400,40,27, 1
+Library,400,40,28, 1
+Library,400,40,29, 0.975
+Library,400,40,30, 1
+Library,400,40,31, 1
+Library,400,40,32, 1
+Library,400,40,33, 1
+Library,400,40,34, 1
+Library,400,40,35, 1
+Library,400,40,36, 1
+Library,400,40,37, 1
+Library,400,40,38, 0.975
+Library,400,40,39, 1
+Library,400,40,40, 1
+Library,400,40,41, 1
+Library,400,40,42, 1
+Library,400,40,43, 1
+Library,400,40,44, 1
+Library,400,40,45, 1
+Library,400,40,46, 1
+Library,400,40,47, 1
+Library,400,40,48, 1
+Library,400,40,49, 1
+Library,400,40,50, 1
+Library,400,40,51, 1
+Library,400,40,52, 1
+Library,400,40,53, 1
+Library,400,40,54, 1
+Library,400,40,55, 1
+Library,400,40,56, 1
+Library,400,40,57, 0.95
+Library,400,40,58, 1
+Library,400,40,59, 0.975
+Library,400,40,60, 1
+Library,400,40,61, 0.95
+Library,400,40,62, 0.975
+Library,400,40,63, 1
+Library,400,40,64, 1
+Library,400,40,65, 1
+Library,400,40,66, 1
+Library,400,40,67, 1
+Library,400,40,68, 1
+Library,400,40,69, 1
+Library,400,40,70, 1
+Library,400,40,71, 1
+Library,400,40,72, 1
+Library,400,40,73, 1
+Library,400,40,74, 1
+Library,400,40,75, 1
+Library,400,40,76, 1
+Library,400,40,77, 1
+Library,400,40,78, 0.975
+Library,400,40,79, 0.975
+Library,400,40,80, 0.95
+Library,400,40,81, 1
+Library,400,40,82, 1
+Library,400,40,83, 0.975
+Library,400,40,84, 0.975
+Library,400,40,85, 1
+Library,400,40,86, 1
+Library,400,40,87, 1
+Library,400,40,88, 0.95
+Library,400,40,89, 1
+Library,400,40,90, 1
+Library,400,40,91, 1
+Library,400,40,92, 1
+Library,400,40,93, 1
+Library,400,40,94, 0.975
+Library,400,40,95, 1
+Library,400,40,96, 1
+Library,400,40,97, 1
+Library,400,40,98, 1
+Library,400,40,99, 1
+Library,400,40,100, 1
+Library,400,400,1, 0.9925
+Library,400,400,2, 0.9925
+Library,400,400,3, 0.985
+Library,400,400,4, 1
+Library,400,400,5, 1
+Library,400,400,6, 0.9825
+Library,400,400,7, 1
+Library,400,400,8, 0.9875
+Library,400,400,9, 0.9925
+Library,400,400,10, 0.99
+Library,400,400,11, 0.9975
+Library,400,400,12, 0.9975
+Library,400,400,13, 0.9975
+Library,400,400,14, 0.995
+Library,400,400,15, 0.995
+Library,400,400,16, 0.9975
+Library,400,400,17, 0.9975
+Library,400,400,18, 1
+Library,400,400,19, 0.9975
+Library,400,400,20, 0.995
+Library,400,400,21, 1
+Library,400,400,22, 0.995
+Library,400,400,23, 1
+Library,400,400,24, 0.9925
+Library,400,400,25, 1
+Library,400,400,26, 1
+Library,400,400,27, 0.9925
+Library,400,400,28, 0.995
+Library,400,400,29, 1
+Library,400,400,30, 0.995
+Library,400,400,31, 0.9925
+Library,400,400,32, 0.9975
+Library,400,400,33, 0.985
+Library,400,400,34, 0.995
+Library,400,400,35, 0.9975
+Library,400,400,36, 0.99
+Library,400,400,37, 0.9875
+Library,400,400,38, 0.9975
+Library,400,400,39, 0.995
+Library,400,400,40, 1
+Library,400,400,41, 1
+Library,400,400,42, 1
+Library,400,400,43, 0.9975
+Library,400,400,44, 0.995
+Library,400,400,45, 1
+Library,400,400,46, 0.9975
+Library,400,400,47, 0.9975
+Library,400,400,48, 0.995
+Library,400,400,49, 1
+Library,400,400,50, 0.99
+Library,400,400,51, 0.99
+Library,400,400,52, 0.985
+Library,400,400,53, 1
+Library,400,400,54, 1
+Library,400,400,55, 0.9925
+Library,400,400,56, 1
+Library,400,400,57, 1
+Library,400,400,58, 0.9975
+Library,400,400,59, 0.9925
+Library,400,400,60, 0.9975
+Library,400,400,61, 1
+Library,400,400,62, 0.995
+Library,400,400,63, 1
+Library,400,400,64, 0.67
+Library,400,400,65, 0.99
+Library,400,400,66, 1
+Library,400,400,67, 0.9975
+Library,400,400,68, 0.9975
+Library,400,400,69, 0.9875
+Library,400,400,70, 0.995
+Library,400,400,71, 0.995
+Library,400,400,72, 0.9925
+Library,400,400,73, 1
+Library,400,400,74, 1
+Library,400,400,75, 0.995
+Library,400,400,76, 1
+Library,400,400,77, 1
+Library,400,400,78, 1
+Library,400,400,79, 0.995
+Library,400,400,80, 0.9875
+Library,400,400,81, 0.9975
+Library,400,400,82, 0.995
+Library,400,400,83, 0.9975
+Library,400,400,84, 0.98
+Library,400,400,85, 1
+Library,400,400,86, 0.995
+Library,400,400,87, 0.995
+Library,400,400,88, 0.9825
+Library,400,400,89, 0.9925
+Library,400,400,90, 0.9825
+Library,400,400,91, 1
+Library,400,400,92, 1
+Library,400,400,93, 0.995
+Library,400,400,94, 0.9975
+Library,400,400,95, 0.9925
+Library,400,400,96, 0.99
+Library,400,400,97, 0.9925
+Library,400,400,98, 0.9975
+Library,400,400,99, 0.985
+Library,400,400,100, 0.995
+Library,400,4000,1, 0.9945
+Library,400,4000,2, 0.998
+Library,400,4000,3, 0.9945
+Library,400,4000,4, 1
+Library,400,4000,5, 0.991
+Library,400,4000,6, 0.99625
+Library,400,4000,7, 0.99475
+Library,400,4000,8, 0.99375
+Library,400,4000,9, 0.99875
+Library,400,4000,10, 0.98675
+Library,400,4000,11, 0.99525
+Library,400,4000,12, 0.99475
+Library,400,4000,13, 0.9945
+Library,400,4000,14, 0.9935
+Library,400,4000,15, 0.99825
+Library,400,4000,16, 0.98725
+Library,400,4000,17, 0.9985
+Library,400,4000,18, 0.9945
+Library,400,4000,19, 0.99875
+Library,400,4000,20, 1
+Library,400,4000,21, 0.9935
+Library,400,4000,22, 0.99525
+Library,400,4000,23, 0.9965
+Library,400,4000,24, 0.9925
+Library,400,4000,25, 0.99675
+Library,400,4000,26, 0.998
+Library,400,4000,27, 0.9905
+Library,400,4000,28, 0.993
+Library,400,4000,29, 0.99825
+Library,400,4000,30, 0.992
+Library,400,4000,31, 0.9935
+Library,400,4000,32, 0.999
+Library,400,4000,33, 0.996
+Library,400,4000,34, 0.9935
+Library,400,4000,35, 0.9905
+Library,400,4000,36, 0.9985
+Library,400,4000,37, 0.99725
+Library,400,4000,38, 0.999
+Library,400,4000,39, 0.9975
+Library,400,4000,40, 0.99375
+Library,400,4000,41, 0.98875
+Library,400,4000,42, 0.9985
+Library,400,4000,43, 0.9925
+Library,400,4000,44, 0.99475
+Library,400,4000,45, 0.99275
+Library,400,4000,46, 0.9975
+Library,400,4000,47, 0.99175
+Library,400,4000,48, 0.99425
+Library,400,4000,49, 0.99875
+Library,400,4000,50, 0.99425
+Library,400,4000,51, 0.99475
+Library,400,4000,52, 0.99875
+Library,400,4000,53, 0.999
+Library,400,4000,54, 0.998
+Library,400,4000,55, 0.997
+Library,400,4000,56, 0.99425
+Library,400,4000,57, 0.993
+Library,400,4000,58, 0.999
+Library,400,4000,59, 0.98925
+Library,400,4000,60, 0.99625
+Library,400,4000,61, 0.98925
+Library,400,4000,62, 0.9945
+Library,400,4000,63, 0.9855
+Library,400,4000,64, 0.9935
+Library,400,4000,65, 1
+Library,400,4000,66, 0.99475
+Library,400,4000,67, 1
+Library,400,4000,68, 0.993
+Library,400,4000,69, 1
+Library,400,4000,70, 0.9905
+Library,400,4000,71, 0.999
+Library,400,4000,72, 0.9955
+Library,400,4000,73, 0.98975
+Library,400,4000,74, 0.996
+Library,400,4000,75, 0.99325
+Library,400,4000,76, 0.993
+Library,400,4000,77, 0.98975
+Library,400,4000,78, 0.97425
+Library,400,4000,79, 0.99875
+Library,400,4000,80, 0.996
+Library,400,4000,81, 0.99325
+Library,400,4000,82, 0.9985
+Library,400,4000,83, 0.994
+Library,400,4000,84, 0.9995
+Library,400,4000,85, 0.99975
+Library,400,4000,86, 0.9945
+Library,400,4000,87, 0.9915
+Library,400,4000,88, 0.9985
+Library,400,4000,89, 0.99875
+Library,400,4000,90, 0.995
+Library,400,4000,91, 0.99725
+Library,400,4000,92, 0.9975
+Library,400,4000,93, 0.99075
+Library,400,4000,94, 0.992
+Library,400,4000,95, 0.9895
+Library,400,4000,96, 0.9915
+Library,400,4000,97, 0.98925
+Library,400,4000,98, 0.991
+Library,400,4000,99, 0.99525
+Library,400,4000,100, 0.99375
+Library,4000,4,1, 1
+Library,4000,4,2, 1
+Library,4000,4,3, 1
+Library,4000,4,4, 1
+Library,4000,4,5, 1
+Library,4000,4,6, 1
+Library,4000,4,7, 1
+Library,4000,4,8, 1
+Library,4000,4,9, 1
+Library,4000,4,10, 1
+Library,4000,4,11, 1
+Library,4000,4,12, 1
+Library,4000,4,13, 1
+Library,4000,4,14, 1
+Library,4000,4,15, 1
+Library,4000,4,16, 1
+Library,4000,4,17, 1
+Library,4000,4,18, 1
+Library,4000,4,19, 1
+Library,4000,4,20, 1
+Library,4000,4,21, 1
+Library,4000,4,22, 1
+Library,4000,4,23, 1
+Library,4000,4,24, 1
+Library,4000,4,25, 1
+Library,4000,4,26, 1
+Library,4000,4,27, 1
+Library,4000,4,28, 1
+Library,4000,4,29, 1
+Library,4000,4,30, 1
+Library,4000,4,31, 1
+Library,4000,4,32, 1
+Library,4000,4,33, 1
+Library,4000,4,34, 1
+Library,4000,4,35, 1
+Library,4000,4,36, 1
+Library,4000,4,37, 1
+Library,4000,4,38, 1
+Library,4000,4,39, 1
+Library,4000,4,40, 1
+Library,4000,4,41, 1
+Library,4000,4,42, 1
+Library,4000,4,43, 1
+Library,4000,4,44, 1
+Library,4000,4,45, 1
+Library,4000,4,46, 1
+Library,4000,4,47, 1
+Library,4000,4,48, 1
+Library,4000,4,49, 1
+Library,4000,4,50, 1
+Library,4000,4,51, 1
+Library,4000,4,52, 1
+Library,4000,4,53, 1
+Library,4000,4,54, 1
+Library,4000,4,55, 1
+Library,4000,4,56, 1
+Library,4000,4,57, 1
+Library,4000,4,58, 1
+Library,4000,4,59, 1
+Library,4000,4,60, 1
+Library,4000,4,61, 1
+Library,4000,4,62, 1
+Library,4000,4,63, 1
+Library,4000,4,64, 1
+Library,4000,4,65, 1
+Library,4000,4,66, 1
+Library,4000,4,67, 1
+Library,4000,4,68, 1
+Library,4000,4,69, 1
+Library,4000,4,70, 1
+Library,4000,4,71, 1
+Library,4000,4,72, 1
+Library,4000,4,73, 1
+Library,4000,4,74, 1
+Library,4000,4,75, 1
+Library,4000,4,76, 1
+Library,4000,4,77, 1
+Library,4000,4,78, 1
+Library,4000,4,79, 1
+Library,4000,4,80, 1
+Library,4000,4,81, 1
+Library,4000,4,82, 1
+Library,4000,4,83, 1
+Library,4000,4,84, 1
+Library,4000,4,85, 1
+Library,4000,4,86, 1
+Library,4000,4,87, 1
+Library,4000,4,88, 1
+Library,4000,4,89, 1
+Library,4000,4,90, 1
+Library,4000,4,91, 1
+Library,4000,4,92, 1
+Library,4000,4,93, 1
+Library,4000,4,94, 1
+Library,4000,4,95, 1
+Library,4000,4,96, 1
+Library,4000,4,97, 1
+Library,4000,4,98, 1
+Library,4000,4,99, 1
+Library,4000,4,100, 1
+Library,4000,40,1, 1
+Library,4000,40,2, 1
+Library,4000,40,3, 1
+Library,4000,40,4, 1
+Library,4000,40,5, 1
+Library,4000,40,6, 1
+Library,4000,40,7, 1
+Library,4000,40,8, 1
+Library,4000,40,9, 1
+Library,4000,40,10, 1
+Library,4000,40,11, 1
+Library,4000,40,12, 1
+Library,4000,40,13, 1
+Library,4000,40,14, 1
+Library,4000,40,15, 1
+Library,4000,40,16, 1
+Library,4000,40,17, 1
+Library,4000,40,18, 1
+Library,4000,40,19, 1
+Library,4000,40,20, 1
+Library,4000,40,21, 1
+Library,4000,40,22, 1
+Library,4000,40,23, 1
+Library,4000,40,24, 1
+Library,4000,40,25, 1
+Library,4000,40,26, 1
+Library,4000,40,27, 1
+Library,4000,40,28, 1
+Library,4000,40,29, 1
+Library,4000,40,30, 1
+Library,4000,40,31, 1
+Library,4000,40,32, 1
+Library,4000,40,33, 1
+Library,4000,40,34, 1
+Library,4000,40,35, 1
+Library,4000,40,36, 1
+Library,4000,40,37, 1
+Library,4000,40,38, 1
+Library,4000,40,39, 1
+Library,4000,40,40, 1
+Library,4000,40,41, 1
+Library,4000,40,42, 1
+Library,4000,40,43, 1
+Library,4000,40,44, 1
+Library,4000,40,45, 1
+Library,4000,40,46, 1
+Library,4000,40,47, 1
+Library,4000,40,48, 1
+Library,4000,40,49, 1
+Library,4000,40,50, 1
+Library,4000,40,51, 1
+Library,4000,40,52, 1
+Library,4000,40,53, 1
+Library,4000,40,54, 1
+Library,4000,40,55, 1
+Library,4000,40,56, 1
+Library,4000,40,57, 1
+Library,4000,40,58, 1
+Library,4000,40,59, 1
+Library,4000,40,60, 1
+Library,4000,40,61, 1
+Library,4000,40,62, 1
+Library,4000,40,63, 1
+Library,4000,40,64, 1
+Library,4000,40,65, 1
+Library,4000,40,66, 1
+Library,4000,40,67, 1
+Library,4000,40,68, 1
+Library,4000,40,69, 1
+Library,4000,40,70, 1
+Library,4000,40,71, 1
+Library,4000,40,72, 1
+Library,4000,40,73, 1
+Library,4000,40,74, 1
+Library,4000,40,75, 1
+Library,4000,40,76, 1
+Library,4000,40,77, 1
+Library,4000,40,78, 1
+Library,4000,40,79, 1
+Library,4000,40,80, 1
+Library,4000,40,81, 1
+Library,4000,40,82, 1
+Library,4000,40,83, 1
+Library,4000,40,84, 1
+Library,4000,40,85, 1
+Library,4000,40,86, 1
+Library,4000,40,87, 1
+Library,4000,40,88, 1
+Library,4000,40,89, 1
+Library,4000,40,90, 1
+Library,4000,40,91, 1
+Library,4000,40,92, 1
+Library,4000,40,93, 1
+Library,4000,40,94, 1
+Library,4000,40,95, 1
+Library,4000,40,96, 1
+Library,4000,40,97, 1
+Library,4000,40,98, 1
+Library,4000,40,99, 1
+Library,4000,40,100, 1
+Library,4000,400,1, 1
+Library,4000,400,2, 1
+Library,4000,400,3, 1
+Library,4000,400,4, 1
+Library,4000,400,5, 1
+Library,4000,400,6, 1
+Library,4000,400,7, 1
+Library,4000,400,8, 1
+Library,4000,400,9, 1
+Library,4000,400,10, 1
+Library,4000,400,11, 1
+Library,4000,400,12, 1
+Library,4000,400,13, 1
+Library,4000,400,14, 1
+Library,4000,400,15, 1
+Library,4000,400,16, 1
+Library,4000,400,17, 1
+Library,4000,400,18, 1
+Library,4000,400,19, 1
+Library,4000,400,20, 1
+Library,4000,400,21, 1
+Library,4000,400,22, 1
+Library,4000,400,23, 1
+Library,4000,400,24, 1
+Library,4000,400,25, 1
+Library,4000,400,26, 1
+Library,4000,400,27, 1
+Library,4000,400,28, 1
+Library,4000,400,29, 1
+Library,4000,400,30, 1
+Library,4000,400,31, 1
+Library,4000,400,32, 1
+Library,4000,400,33, 1
+Library,4000,400,34, 1
+Library,4000,400,35, 1
+Library,4000,400,36, 1
+Library,4000,400,37, 1
+Library,4000,400,38, 1
+Library,4000,400,39, 1
+Library,4000,400,40, 1
+Library,4000,400,41, 1
+Library,4000,400,42, 1
+Library,4000,400,43, 1
+Library,4000,400,44, 1
+Library,4000,400,45, 1
+Library,4000,400,46, 1
+Library,4000,400,47, 1
+Library,4000,400,48, 1
+Library,4000,400,49, 1
+Library,4000,400,50, 1
+Library,4000,400,51, 1
+Library,4000,400,52, 1
+Library,4000,400,53, 1
+Library,4000,400,54, 1
+Library,4000,400,55, 1
+Library,4000,400,56, 1
+Library,4000,400,57, 1
+Library,4000,400,58, 1
+Library,4000,400,59, 1
+Library,4000,400,60, 1
+Library,4000,400,61, 1
+Library,4000,400,62, 1
+Library,4000,400,63, 1
+Library,4000,400,64, 1
+Library,4000,400,65, 1
+Library,4000,400,66, 1
+Library,4000,400,67, 1
+Library,4000,400,68, 1
+Library,4000,400,69, 1
+Library,4000,400,70, 1
+Library,4000,400,71, 1
+Library,4000,400,72, 1
+Library,4000,400,73, 1
+Library,4000,400,74, 1
+Library,4000,400,75, 1
+Library,4000,400,76, 1
+Library,4000,400,77, 1
+Library,4000,400,78, 1
+Library,4000,400,79, 1
+Library,4000,400,80, 1
+Library,4000,400,81, 1
+Library,4000,400,82, 1
+Library,4000,400,83, 1
+Library,4000,400,84, 1
+Library,4000,400,85, 1
+Library,4000,400,86, 1
+Library,4000,400,87, 1
+Library,4000,400,88, 1
+Library,4000,400,89, 1
+Library,4000,400,90, 1
+Library,4000,400,91, 1
+Library,4000,400,92, 1
+Library,4000,400,93, 1
+Library,4000,400,94, 1
+Library,4000,400,95, 1
+Library,4000,400,96, 1
+Library,4000,400,97, 1
+Library,4000,400,98, 1
+Library,4000,400,99, 1
+Library,4000,400,100, 1
+Library,4000,4000,1, 0.998
+Library,4000,4000,2, 1
+Library,4000,4000,3, 1
+Library,4000,4000,4, 1
+Library,4000,4000,5, 1
+Library,4000,4000,6, 1
+Library,4000,4000,7, 1
+Library,4000,4000,8, 1
+Library,4000,4000,9, 1
+Library,4000,4000,10, 1
+Library,4000,4000,11, 1
+Library,4000,4000,12, 1
+Library,4000,4000,13, 1
+Library,4000,4000,14, 1
+Library,4000,4000,15, 1
+Library,4000,4000,16, 1
+Library,4000,4000,17, 1
+Library,4000,4000,18, 1
+Library,4000,4000,19, 1
+Library,4000,4000,20, 1
+Library,4000,4000,21, 1
+Library,4000,4000,22, 1
+Library,4000,4000,23, 1
+Library,4000,4000,24, 1
+Library,4000,4000,25, 1
+Library,4000,4000,26, 1
+Library,4000,4000,27, 1
+Library,4000,4000,28, 1
+Library,4000,4000,29, 1
+Library,4000,4000,30, 1
+Library,4000,4000,31, 1
+Library,4000,4000,32, 1
+Library,4000,4000,33, 1
+Library,4000,4000,34, 1
+Library,4000,4000,35, 1
+Library,4000,4000,36, 1
+Library,4000,4000,37, 1
+Library,4000,4000,38, 1
+Library,4000,4000,39, 1
+Library,4000,4000,40, 1
+Library,4000,4000,41, 1
+Library,4000,4000,42, 1
+Library,4000,4000,43, 1
+Library,4000,4000,44, 1
+Library,4000,4000,45, 1
+Library,4000,4000,46, 1
+Library,4000,4000,47, 1
+Library,4000,4000,48, 1
+Library,4000,4000,49, 1
+Library,4000,4000,50, 1
+Library,4000,4000,51, 1
+Library,4000,4000,52, 1
+Library,4000,4000,53, 1
+Library,4000,4000,54, 1
+Library,4000,4000,55, 1
+Library,4000,4000,56, 1
+Library,4000,4000,57, 1
+Library,4000,4000,58, 1
+Library,4000,4000,59, 1
+Library,4000,4000,60, 1
+Library,4000,4000,61, 1
+Library,4000,4000,62, 1
+Library,4000,4000,63, 1
+Library,4000,4000,64, 1
+Library,4000,4000,65, 1
+Library,4000,4000,66, 1
+Library,4000,4000,67, 1
+Library,4000,4000,68, 1
+Library,4000,4000,69, 1
+Library,4000,4000,70, 1
+Library,4000,4000,71, 1
+Library,4000,4000,72, 1
+Library,4000,4000,73, 1
+Library,4000,4000,74, 1
+Library,4000,4000,75, 1
+Library,4000,4000,76, 1
+Library,4000,4000,77, 1
+Library,4000,4000,78, 1
+Library,4000,4000,79, 1
+Library,4000,4000,80, 1
+Library,4000,4000,81, 1
+Library,4000,4000,82, 1
+Library,4000,4000,83, 1
+Library,4000,4000,84, 1
+Library,4000,4000,85, 1
+Library,4000,4000,86, 1
+Library,4000,4000,87, 1
+Library,4000,4000,88, 1
+Library,4000,4000,89, 1
+Library,4000,4000,90, 1
+Library,4000,4000,91, 1
+Library,4000,4000,92, 1
+Library,4000,4000,93, 1
+Library,4000,4000,94, 1
+Library,4000,4000,95, 1
+Library,4000,4000,96, 1
+Library,4000,4000,97, 1
+Library,4000,4000,98, 1
+Library,4000,4000,99, 1
+Library,4000,4000,100, 1
