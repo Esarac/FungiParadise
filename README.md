@@ -27,8 +27,6 @@ The biologists say that we must first read the data already available regarding 
 
 [Team Roles](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/Roles.pdf)
 
-[Instructions](https://github.com/Esarac/FungiParadise/blob/master/FungiParadise/Doc/instructions.html)
-
 Written in C# in a Windows 10 Machine
 
 This project uses classification decision trees 
