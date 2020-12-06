@@ -99,7 +99,7 @@ namespace FungiParadise.Model
         public void ExportResults(List<string> listA, List<string> listB)
         {
             listA.AddRange(listB);
-            File.WriteAllLines("../../Doc/results.csv", listA);
+            File.WriteAllLines("../../Doc/Results.csv", listA);
         }
         //...
 
